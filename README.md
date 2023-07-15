@@ -11,12 +11,12 @@ ___
 
 ### Habilidades implementadas:
 
-| Técnologías   | Soft skills                |
-|---------------|----------------------------|
-| HTML          | Trabajo en equipo          |
-| CSS           | Comunicación asertiva      |
-| Boostrap      | Orientación al detalle     |
-| Javascript    |                            |
+| ***Técnologías***   | ***Soft skills***          |
+|---------------------|----------------------------|
+|  HTML               |  Trabajo en equipo         |
+|  CSS                |  Comunicación asertiva     |
+|  Boostrap           |  Orientación al detalle    |
+|  Javascript         |  Responsabilidad           |
 
 ---
 ### Estructura:
