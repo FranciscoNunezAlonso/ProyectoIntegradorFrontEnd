@@ -9,14 +9,13 @@ En este repositorio se encuentra el código proyecto integrador (parte frontend)
 El objetivo del presente proyecto es desarrollar un eCommerce para el negocio “Amor Peludo” implementando los conomientos y habilidades obtenidas en el Bootcamp de Desarrollador Java Fullsatck (CH 29), Generation México. 
 ___
 
-### Habilidades implementadas:
 
-| ***Técnologías***   | ***Soft skills***          |
-|---------------------|----------------------------|
-|  HTML               |  Trabajo en equipo         |
-|  CSS                |  Comunicación asertiva     |
-|  Boostrap           |  Orientación al detalle    |
-|  Javascript         |  Responsabilidad           |
+| **TECNOLOGÍAS**  |     **SOFT SKILLS**      |
+|------------------|--------------------------|
+|  HTML            |  Trabajo en equipo       |
+|  CSS             |  Comunicación asertiva   |
+|  Boostrap        |  Orientación al detalle  |
+|  Javascript      |  Responsabilidad         |
 
 ---
 ### Estructura:
