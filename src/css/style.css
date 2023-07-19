@@ -70,3 +70,33 @@ display: none;
 .image-container:hover .hidden-image {
 display: block;
 }
+/* Íconos */
+.fa-tiktok{
+    font-size: x-large;
+    color: #D16D79;
+}
+
+.fa-facebook{
+    font-size: x-large;
+    color: #D16D79;
+}
+.fa-instagram{
+    font-size: x-large;
+    color: #D16D79;
+}
+
+/* Footer style */
+.footer-bg{
+    background-color: #A9C3B8;
+}
+.btn-primary{
+    background-color: #D16D79;
+    border-color: #D16D79;
+    
+}
+.btn-primary:hover{
+    background-color: #EDEDEF;
+    border-color: #EDEDEF;
+    color: #D16D79;
+    
+}
