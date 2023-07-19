@@ -47,7 +47,9 @@ p{
 .contC{
     background-color: rgba(188, 188, 188, 0.20);
     padding: 20px;
-    border-radius: 10px;
+     border-radius: 30px;
+    margin-top: 3em;
+    
   }
   .card-title{
     font-weight:bold;
