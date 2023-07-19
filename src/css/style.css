@@ -1,0 +1,102 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-expand-lg{
+    background-color: #A9C3B8;
+}
+
+.bi{
+    color: #D16D79;
+}
+
+li{
+    margin-left: 25px;  
+}
+
+/* background del carrusel */
+.contbg{
+    margin-top: 3em;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+}
+
+/* estilo de los parrafos */
+p{
+    font-size: 20px;
+    line-height: 1.8;
+    color: #252F48;
+}
+
+
+/* resolución movil */
+@media (max-width:576px){
+    p{
+        font-size: 14px;
+    }
+    .carText{
+    margin-bottom: 1em;
+    }
+}
+
+/*resolución de tablet*/
+@media (max-width:992px){
+    p{
+        font-size: 16px;
+    }
+}
+.contC{
+    background-color: rgba(188, 188, 188, 0.20);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .card-title{
+    font-weight:bold;
+  }
+  .card-subtitle{
+    font-size:large;
+  }
+  .col{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    border-radius: 25px;
+  }
+  .hidden-image {
+display: none;
+}
+.image-container:hover .main-image {
+display: none;
+}
+.image-container:hover .hidden-image {
+display: block;
+}
+/* Íconos */
+.fa-tiktok{
+    font-size: x-large;
+    color: #D16D79;
+}
+
+.fa-facebook{
+    font-size: x-large;
+    color: #D16D79;
+}
+.fa-instagram{
+    font-size: x-large;
+    color: #D16D79;
+}
+
+/* Footer style */
+.footer-bg{
+    background-color: #A9C3B8;
+}
+.btn-primary{
+    background-color: #D16D79;
+    border-color: #D16D79;
+    
+}
+.btn-primary:hover{
+    background-color: #EDEDEF;
+    border-color: #EDEDEF;
+    color: #D16D79;
+    
+}
