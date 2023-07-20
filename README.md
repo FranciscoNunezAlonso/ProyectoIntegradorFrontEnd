@@ -4,7 +4,7 @@ status: en desarrollo
 
 -----
 
-En este repositorio se encuentra el código proyecto integrador (parte frontend) del equipo 1.
+En este repositorio se encuentra el código proyecto integrador (parte Frontend) del equipo 1.
 
 El objetivo del presente proyecto es desarrollar un eCommerce para el negocio “Amor Peludo” implementando los conomientos y habilidades obtenidas en el Bootcamp de Desarrollador Java Fullsatck (CH 29), Generation México. 
 
