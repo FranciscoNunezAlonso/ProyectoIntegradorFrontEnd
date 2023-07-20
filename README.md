@@ -1,6 +1,6 @@
 # Proyecto Integrador | Amor Peludo | Equipo 1
 
-Status: en desarrollo
+Status: En desarrollo
 
 -----
 
@@ -44,6 +44,6 @@ Esta estructura proporciona una navegación clara y coherente para los usuarios,
 - Jose Luis Soto Chávez (https://github.com/joseLuisppp90)
 - María Fernanda Quezada Vásquez (https://github.com/FerQV)
 
----
+--------------------------------------------------------------------------------
 
-## Generation México | CH 29 | 2023
+## Generation México | CH 29 | 2023 
