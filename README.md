@@ -2,7 +2,7 @@
 
 status: en desarrollo
 
-----
+-----
 
 En este repositorio se encuentra el código proyecto integrador (parte frontend) del equipo 1.
 
