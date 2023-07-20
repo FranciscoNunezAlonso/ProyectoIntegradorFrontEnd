@@ -1,6 +1,6 @@
 # Proyecto Integrador | Amor Peludo | Equipo 1
 
-status: en desarrollo
+Status: en desarrollo
 
 ----
 
