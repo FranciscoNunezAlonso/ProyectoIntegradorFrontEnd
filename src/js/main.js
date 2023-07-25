@@ -63,13 +63,11 @@ const validarNombre = (nombre) => {
  
 function sendEmail() {
     Email.send({
-        Host : "smtp.gmail.com",
-        Username : "tolumes.daniela@gamil.com",
-        Password : "",
-        To : 'tolumes.daniela@gamil.com',
+        SecureToken : 'f060d83d-8d76-422c-aced-00c81600f9ab',
+        To : 'domo.marin@gmail.com',
         From : document.getElementById("email").value,
-        Subject : "This is the subject",
-        Body : "And this is the body"
+        Subject : "Hola estimado",
+        Body : "Este es un mensaje de prueba"
     }).then(
       message => alert(message)
     );
@@ -116,11 +114,11 @@ btnEnviar.addEventListener("click", function (event) {
         <strong>El nombre ingresado no es válido.</strong><br/>`);
         alertValidaciones.style.display="block";
         nombre.style.border="solid 2px red";
-    } else {
+    } /* else {
         alertValidaciones.style.display = "none";
         nombre.style.border = "";
         nombre.value = "";
-    }//nombre
+    }//nombre */
 
     //apellido
     if (validarApellido(apellido.value)==false) {
@@ -137,11 +135,11 @@ btnEnviar.addEventListener("click", function (event) {
         <strong>El apellido ingresado no es válido.</strong><br/>`);
         alertValidaciones.style.display="block";
         apellido.style.border="solid 2px red";
-    } else {
+    } /* else {
         alertValidaciones.style.display = "none";
         apellido.style.border = "";
         apellido.value = "";
-    }//apellido
+    }//apellido */
 
      //email
      if (validarEmail(email.value)==false) {
@@ -156,11 +154,11 @@ btnEnviar.addEventListener("click", function (event) {
         <strong>El email ingresado no es válido.</strong><br/>`);
         alertValidaciones.style.display="block";
         email.style.border="solid 2px red";
-    } else {
+    } /* else {
         alertValidaciones.style.display = "none";
         email.style.border = "";
         email.value = "";
-    }//email
+    }//email */
 
     //telefono
     if (validarTelefono(telefono.value)==false) {
@@ -175,21 +173,21 @@ btnEnviar.addEventListener("click", function (event) {
         <strong>El telefono ingresado no es válido.</strong><br/>`);
         alertValidaciones.style.display="block";
         telefono.style.border="solid 2px red";
-    } else {
+    } /* else {
         alertValidaciones.style.display = "none";
         telefono.style.border = "";
         telefono.value = "";
     }//telefono
-    
+     */
     //mensaje
     if (validarMensaje(mensaje.value)==false) {
         alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
                  <strong>El mensaje ingresado no es válido.</strong><br/>`);
                  alertValidaciones.style.display="block";
                  mensaje.style.border="solid 2px red";
-    } else {
+    } /* else {
         alertValidaciones.style.display = "none";
         mensaje.value = "";
-    }//mensaje
+    }//mensaje */
     sendEmail()
 });
