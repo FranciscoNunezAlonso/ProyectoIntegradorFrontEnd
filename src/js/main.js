@@ -61,6 +61,19 @@ const validarNombre = (nombre) => {
   };
 
  
+function sendEmail() {
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "tolumes.daniela@gamil.com",
+        Password : "",
+        To : 'tolumes.daniela@gamil.com',
+        From : document.getElementById("email").value,
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+}
 //Evento btnAgregar
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
@@ -178,4 +191,5 @@ btnEnviar.addEventListener("click", function (event) {
         alertValidaciones.style.display = "none";
         mensaje.value = "";
     }//mensaje
+    sendEmail()
 });
