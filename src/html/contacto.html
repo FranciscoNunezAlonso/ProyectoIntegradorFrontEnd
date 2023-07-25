@@ -133,27 +133,28 @@
                              <p>55 4327 2378</p>
                         </div>
                     </div>
-                    <br>
-                    <button type="button">Haz tu pedido</button>
                     </div>
         <div class="containerOpinion col-md-6">
                     <h1>Compártenos tu opinión</h1>
                      <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label"></label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
                         <label for="exampleFormControlInput1" class="form-label"></label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido">
                         <label for="exampleFormControlInput1" class="form-label"></label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo Electrónico">
+                        <input type="text" class="form-control" id="email" placeholder="Correo Electrónico">
                         <label for="exampleFormControlInput1" class="form-label"></label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Número telefónico">
+                        <input type="text" class="form-control" id="telefono" placeholder="Número telefónico">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label"></label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Escribe aquí tu mensaje...</textarea>  
+                        <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe aquí tu mensaje..."></textarea>  
                     <br>    
-      <button type="button">Enviar</button>
-      <button type="button">Limpiar</button>
+      <button type="button" id="btnEnviar">Enviar</button>
+      <button type="button" id="btnClear">Limpiar</button>
+      <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+        <p id="alertValidacionesTexto"></p>
+      </div>
     </div>
   </div> <!--Termino-->
         </class>
@@ -228,6 +229,6 @@
       </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script defer src="../js/main.js"></script>
+    <script defer src="/js/main.js"></script>
   </body>
 </html>

@@ -104,6 +104,9 @@ btnEnviar.addEventListener("click", function (event) {
         alertValidaciones.style.display="block";
         nombre.style.border="solid 2px red";
     } else {
+        alertValidaciones.style.display = "none";
+        nombre.style.border = "";
+        nombre.value = "";
     }//nombre
 
     //apellido
@@ -122,6 +125,9 @@ btnEnviar.addEventListener("click", function (event) {
         alertValidaciones.style.display="block";
         apellido.style.border="solid 2px red";
     } else {
+        alertValidaciones.style.display = "none";
+        apellido.style.border = "";
+        apellido.value = "";
     }//apellido
 
      //email
@@ -138,6 +144,9 @@ btnEnviar.addEventListener("click", function (event) {
         alertValidaciones.style.display="block";
         email.style.border="solid 2px red";
     } else {
+        alertValidaciones.style.display = "none";
+        email.style.border = "";
+        email.value = "";
     }//email
 
     //telefono
@@ -154,6 +163,9 @@ btnEnviar.addEventListener("click", function (event) {
         alertValidaciones.style.display="block";
         telefono.style.border="solid 2px red";
     } else {
+        alertValidaciones.style.display = "none";
+        telefono.style.border = "";
+        telefono.value = "";
     }//telefono
     
     //mensaje
@@ -162,118 +174,8 @@ btnEnviar.addEventListener("click", function (event) {
                  <strong>El mensaje ingresado no es válido.</strong><br/>`);
                  alertValidaciones.style.display="block";
                  mensaje.style.border="solid 2px red";
-    }
-
+    } else {
+        alertValidaciones.style.display = "none";
+        mensaje.value = "";
+    }//mensaje
 });
-
-
-
-//btnAgregar
-
-/* function validarCantidad() { */
-    /* if (nombre.value.length == 0) {
-        return false;
-    }
-    if (apellido.value.length == 0) {
-        return false;
-    } */
-    /* if (mensaje.value.length == 0) {
-        return false;
-    } */
-    /* if (email.value.length == 0) {
-        return false;
-    } */
-    /* if (telefono.value.length == 0) {
-        return false;
-    } */
-    /* return true; */
-//}//ValidadCantidad
-
-/* const longitudMinima = 3;  const longitudMaxima = 15;  const caracteresPermitidos = /^[a-zA-Z\s]+$/;
-      if (nombre.length<longitudMinima) {
-          alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-          <strong>El nombre ingresado no es válido.</strong><br/>`);
-          alertValidaciones.style.display="block";
-          nombre.style.border="solid 2px red";
-          isValid=false;
-      }
-      if (nombre.length>longitudMaxima) {
-          isValid=false;
-      }
-      if (!caracteresPermitidos.test(nombre)) {
-          isValid=false;
-     } */
-
-    //apellido 
-   /*  if (apellido.value.length < longitudMinima) {
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin", `
-             <strong>El apellido ingresado no es válido.</strong><br/>`);
-        alertValidaciones.style.display = "block";
-        apellido.style.border = "solid 2px red";
-        isValid = false;
-    }
-    if (apellido.value.length > longitudMaxima) {
-        isValid = false;
-    }
-    if (!caracteresPermitidos.test(apellido)) {
-        isValid = false;
-    } */
-
-   
-    /*    const formatoValido = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-             if (!formatoValido.test(email)) {
-                 alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-                 <strong>El email ingresado no es válido.</strong><br/>`);
-                 alertValidaciones.style.display="block";
-                 email.style.border="solid 2px red";
-                 isValid=false;
-             }        */
-             /* const validarEmail = (email) => {
-                const expresionRegular = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                return expresionRegular.test(email);
-              };
-
-              console.log(validarEmail("usuario@example.com")); // true
-console.log(validarEmail("user123@example")); // false
-console.log(validarEmail("invalid_email.com")); // false
-console.log(validarEmail("test.email@subdomain.domain.co.uk")); // true
- */
-    //}
-
-    //telefono
-   /*  const formatoTelefono = /[0-9]{10}/;
-    if (!formatoTelefono.test(telefono)) {
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin", `
-              <strong>El telefono ingresado no es válido.</strong><br/>`);
-        alertValidaciones.style.display = "block";
-        telefono.style.border = "solid 2px red";
-        isValid = false;
-    } */
-
-    //mensaje
-    /* const formatoMensaje = /^[a-zA-Z/0-9]{2}$/;
-          if (!formatoMensaje.test(mensaje)) {
-              alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-              <strong>El mensaje ingresado no es válido.</strong><br/>`);
-              alertValidaciones.style.display="block";
-              mensaje.style.border="solid 2px red";
-              isValid=false;
-          }    */
-        
-
-// Validar correo electrónico
-//let regexEmail=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // validar un email, basarnos en https://emailregex.com/
-//console.log(email, regexEmail.test(email));
-
-//Teléfono
-//regex = /[0-9]{10}/;
-//telefono = "0000000000"
-//console.log(regex.test(telefono));
-
-//Nombre
-//let regex = /[A-Z]{15}/;
-//console.log(regex.test(nombre));
-
-//Apellido
-//let regex = /[A-Z]{15}/;
-//console.log(regex.test(apellido));
