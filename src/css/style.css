@@ -17,7 +17,15 @@ li {
 }
 
 /* ****** CARRUSEL ****** */
-
+.margin-icon1{
+    margin-top:1.5em;
+}
+.margin-icon2{
+    margin-top:0.5em;
+}
+.margin-icon3{
+    margin-top:0.5em;
+}
 /* background del carrusel */
 .contbg {
     margin-top: 3em;
@@ -47,6 +55,15 @@ p {
 
     .carText {
         margin-bottom: 1em;
+    }
+    .margin-icon1{
+        margin-top:0px;
+    }
+    .margin-icon2{
+        margin-top:0px;
+    }
+    .margin-icon3{
+        margin-top:0px;
     }
 }
 
@@ -140,4 +157,39 @@ p {
     border-color: #EDEDEF;
     color: #D16D79;
 
+}
+
+.containerContacto{
+    background-color: #EDEDEF;
+    width: 510px;
+    height: 776px;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 30px;
+    text-align: center;
+    
+}
+.containerOpinion{
+    background-color: #EDEDEF;
+    width: 910px;
+    height: 776px;
+    display: flex;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 30px;
+    flex-direction: column;  
+    text-align: center;
+}
+button{
+    background-color: #A9C3B8;
+    border-radius: 10px;
+    border-color:#252F48 ;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 50px;
+    color: #252F48;
+    box-shadow: 5px 5px 5px #252F48;
+    
+}
+svg{
+    display: flex;
 }
