@@ -1,104 +1,195 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
+    color: #252F48;
 }
-.navbar-expand-lg{
+
+/* ******* navBar *********** */
+.navbar-expand-lg {
     background-color: #A9C3B8;
 }
 
-.bi{
+.bi {
     color: #D16D79;
 }
 
-li{
-    margin-left: 25px;  
+li {
+    margin-left: 25px;
 }
 
+/* ****** CARRUSEL ****** */
+.margin-icon1{
+    margin-top:1.5em;
+}
+.margin-icon2{
+    margin-top:0.5em;
+}
+.margin-icon3{
+    margin-top:0.5em;
+}
 /* background del carrusel */
-.contbg{
+.contbg {
     margin-top: 3em;
     background-color: #f0f0f0;
     border-radius: 30px;
 }
 
+.titulosCarrusel{
+    font-weight: bold;
+    padding: 15px;
+}
+
 /* estilo de los parrafos */
-p{
+p {
     font-size: 20px;
     line-height: 1.8;
     color: #252F48;
+    text-align: justify;
 }
 
 
 /* resolución movil */
-@media (max-width:576px){
-    p{
+@media (max-width:576px) {
+    p {
         font-size: 14px;
     }
-    .carText{
-    margin-bottom: 1em;
+
+    .carText {
+        margin-bottom: 1em;
+    }
+    .margin-icon1{
+        margin-top:0px;
+    }
+    .margin-icon2{
+        margin-top:0px;
+    }
+    .margin-icon3{
+        margin-top:0px;
     }
 }
 
 /*resolución de tablet*/
-@media (max-width:992px){
-    p{
+@media (max-width:992px) {
+    p {
         font-size: 16px;
     }
 }
-.contC{
+
+/* ****** Cards integrantes *******  */
+
+.tituloIntegrantes{
+    font-weight: bold;
+    color: #252F48;
+    padding: 15px;
+}
+.contC {
     background-color: rgba(188, 188, 188, 0.20);
     padding: 20px;
-     border-radius: 30px;
+    border-radius: 30px;
     margin-top: 3em;
-    
-  }
-  .card-title{
-    font-weight:bold;
-  }
-  .card-subtitle{
-    font-size:large;
-  }
-  .col{
+
+}
+
+.card-title {
+    font-weight: bold;
+    color: #252F48
+}
+
+.card-subtitle {
+    font-size: large;
+    margin-top: 15px;
+    color: #9bc1b1;
+}
+
+.card-text {
+    text-align: justify;
+    padding: 10px;
+    color: #252F48
+}
+
+.col {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     padding: 20px;
     border-radius: 25px;
-  }
-  .hidden-image {
-display: none;
 }
+
+.hidden-image {
+    display: none;
+}
+
 .image-container:hover .main-image {
-display: none;
+    display: none;
 }
+
 .image-container:hover .hidden-image {
-display: block;
+    display: block;
 }
+
 /* Íconos */
-.fa-tiktok{
+.fa-tiktok {
     font-size: x-large;
     color: #D16D79;
 }
 
-.fa-facebook{
+.fa-facebook {
     font-size: x-large;
     color: #D16D79;
 }
-.fa-instagram{
+
+.fa-instagram {
     font-size: x-large;
     color: #D16D79;
 }
 
 /* Footer style */
-.footer-bg{
+.footer-bg {
     background-color: #A9C3B8;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #D16D79;
     border-color: #D16D79;
-    
+
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background-color: #EDEDEF;
     border-color: #EDEDEF;
     color: #D16D79;
+
+}
+
+.containerContacto{
+    background-color: #EDEDEF;
+    width: 510px;
+    height: 776px;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 30px;
+    text-align: center;
     
+}
+.containerOpinion{
+    background-color: #EDEDEF;
+    width: 910px;
+    height: 776px;
+    display: flex;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 30px;
+    flex-direction: column;  
+    text-align: center;
+}
+button{
+    background-color: #A9C3B8;
+    border-radius: 10px;
+    border-color:#252F48 ;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 50px;
+    color: #252F48;
+    box-shadow: 5px 5px 5px #252F48;
+    
+}
+svg{
+    display: flex;
 }
