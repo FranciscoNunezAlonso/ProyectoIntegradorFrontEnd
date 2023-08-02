@@ -64,7 +64,7 @@ const validarNombre = (nombre) => {
 function sendEmail() {
     Email.send({
         SecureToken : 'f060d83d-8d76-422c-aced-00c81600f9ab',
-        To : 'domo.marin@gmail.com',
+        To : document.getElementById("email").value,
         From : document.getElementById("email").value,
         Subject : "Hola estimado",
         Body : "Este es un mensaje de prueba"
@@ -170,7 +170,7 @@ btnEnviar.addEventListener("click", function (event) {
     }
     if (flagTelefono == false) {
         alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-        <strong>El telefono ingresado no es válido.</strong><br/>`);
+        <strong>El número ingresado no es válido.</strong><br/>`);
         alertValidaciones.style.display="block";
         telefono.style.border="solid 2px red";
     } /* else {
