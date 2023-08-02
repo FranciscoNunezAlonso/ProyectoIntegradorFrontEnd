@@ -1,10 +1,10 @@
 # Proyecto Integrador | Amor Peludo | Equipo 1
 
-status: en desarrollo
+Status: En desarrollo
 
-----
+-----
 
-En este repositorio se encuentra el código proyecto integrador (parte frontend) del equipo 1.
+En este repositorio se encuentra el código proyecto integrador (parte Frontend) del equipo 1.
 
 El objetivo del presente proyecto es desarrollar un eCommerce para el negocio “Amor Peludo” implementando los conomientos y habilidades obtenidas en el Bootcamp de Desarrollador Java Fullsatck (CH 29), Generation México. 
 
@@ -44,6 +44,6 @@ Esta estructura proporciona una navegación clara y coherente para los usuarios,
 - Jose Luis Soto Chávez (https://github.com/joseLuisppp90)
 - María Fernanda Quezada Vásquez (https://github.com/FerQV)
 
----
+--------------------------------------------------------------------------------
 
-## Generation México | CH 29 | 2023
+## Generation México | CH 29 | 2023 
