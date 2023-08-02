@@ -1,16 +1,18 @@
 // Función para agregar una nueva tarjeta al contenedor
 function addItem(item) {
   const itemHTML = `
-    <div class="card">
-      <img src="${item.img}" class="card-img-top" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
-      <div class="card-body">
+    <div class="card cardProds" style="width: 20rem;">
+    <img src="${item.img}" class="card-img-top" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+    <div class="card-body">
       <h5 class="card-title">${item.title}</h5>
       <h3 class="card-title">$ ${item.price}</h3>
-        <p class="card-text">${item.description}</p>
-        <a href="#" class="btn btn-primary  botonete">Comprar</a>
-        <a href="#" class="btn btn-primary  botonete2">Agregar</a>
-      </div>
+      <p class="cardProds-text position: left">${item.description}</p>
+      <a href="#" class="btn btn-primary btnProds" style="position: absolute; right: -75px; bottom: 50px;">Comprar</a>
+      <a href="#" class="btn btn-primary btnProds" style="position: absolute; right: -75px; bottom: 10px;">Agregar al carrito</a>
+  
     </div>
+  </div>
+
   `;
   
   // Seleccionar el contenedor donde se agregarán las tarjetas
@@ -166,7 +168,7 @@ addItem({
   "price": 105,
   "description": "Abraza los recuerdos. Personaliza una suave almohada con la fotografía de tu mascota impresa, para sentir su amor en cada abrazo. ",
   "category": "Fotografías",
-  "img": "/src/img/imgProductos/producto_10A.png",
+  "img": "/src/img/imgProductos/producto_10.png",
   "rating": {
       "rate": 4.8,
       "count": 90

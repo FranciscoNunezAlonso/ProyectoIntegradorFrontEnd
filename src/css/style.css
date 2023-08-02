@@ -45,24 +45,45 @@ li {
     color: #252F48;
     text-align: justify;
 }
-/*fondo de las cartas de productos*/
-.card-bg{
-    background-color: #A9C3B8
-}
-/*botones productos*/
-.botonete{
-    position: absolute;
-    left: 86%;
-    bottom: 20%;
-    font-size: 10px;
+/*cartas de productos*/
+
+.d-flex.justify-content-center {
+    justify-content: center;
 }
 
-.botonete2{
-    position: absolute;
-    bottom:10%;
-    left: 87%;
-    font-size: 10px;
+
+.row.row-cols-md-3 {
+margin-left: 0;
+margin-right: 0;
 }
+
+.cardProds{
+    background-color: #9bc1b1;
+    margin:60px;
+}
+.cardProds-text{
+    text-align: left;
+    margin-right: 45px;
+    padding: 10px;
+}
+
+.btnProds{
+    width: 160px ;
+    height: 35px ;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btnProds:hover{
+    background-color: #EDEDEF;
+    border-color: #EDEDEF;
+    color: #D16D79;
+}
+
+.card-title{
+    text-align: center;
+}
+
 
 /* resolución movil */
 @media (min-width:320px) and (max-width:576px){
