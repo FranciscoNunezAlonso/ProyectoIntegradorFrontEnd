@@ -7,7 +7,7 @@ let mensaje = document.getElementById("mensaje");
 // Botones
 let btnEnviar = document.getElementById("btnEnviar");
 let btnClear = document.getElementById("btnClear");
-
+let form = document.getElementById("form");
 //flags
 let isValid = true;
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
@@ -61,17 +61,6 @@ const validarNombre = (nombre) => {
   };
 
  
-function sendEmail() {
-    Email.send({
-        SecureToken : 'f060d83d-8d76-422c-aced-00c81600f9ab',
-        To : document.getElementById("email").value,
-        From : document.getElementById("email").value,
-        Subject : "Hola estimado",
-        Body : "Este es un mensaje de prueba"
-    }).then(
-      message => alert(message)
-    );
-}
 //Evento btnAgregar
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
@@ -177,17 +166,32 @@ btnEnviar.addEventListener("click", function (event) {
         alertValidaciones.style.display = "none";
         telefono.style.border = "";
         telefono.value = "";
-    }//telefono
+    
      */
     //mensaje
-    if (validarMensaje(mensaje.value)==false) {
+    if (validarMensaje(mensaje.value) == false || !(mensaje.value.length>7 && mensaje.value.length<=200)) {
+        flagMensaje = false;
         alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
                  <strong>El mensaje ingresado no es válido.</strong><br/>`);
                  alertValidaciones.style.display="block";
                  mensaje.style.border="solid 2px red";
-    } /* else {
-        alertValidaciones.style.display = "none";
-        mensaje.value = "";
-    }//mensaje */
-    sendEmail()
+    }  
+    else{
+        flagMensaje = true;
+    }
+    if (flagApellido  && flagEmail  && flagNombre && flagTelefono && flagMensaje){
+            const serviceID = 'service_mxgf3p8';
+            const templateID = 'template_r4ubmdr';
+             emailjs.sendForm(serviceID, templateID, form)
+             .then(() => {
+                alert("Mensaje Enviado!")
+             }, (err) => {
+               alert(JSON.stringify(err));
+             });
+         
+        /* alertValidaciones.style.display = "none";
+        mensaje.value = ""; */
+    }//mensaje
+    
 });
+

@@ -81,20 +81,20 @@
         <!-- FORMULARIO -->
         <div class="containerOpinion col-lg-6">
           <h1>Compártenos tu opinión</h1>
-          <form onsubmit="sendEmail(); reset(); return false;">
+          <form id="form">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label"></label>
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
               <label for="exampleFormControlInput1" class="form-label"></label>
-              <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+              <input type="text" class="form-control" id="apellido"  name="apellido" placeholder="Apellido">
               <label for="exampleFormControlInput1" class="form-label"></label>
-              <input type="text" class="form-control" id="email" placeholder="Correo Electrónico">
+              <input type="text" class="form-control" id="email" name="email" placeholder="Correo Electrónico">
               <label for="exampleFormControlInput1" class="form-label"></label>
-              <input type="text" class="form-control" id="telefono" placeholder="Número telefónico">
+              <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Número telefónico">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label"></label>
-              <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe aquí tu mensaje..."></textarea>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Escribe aquí tu mensaje..."></textarea>
               <br>
               <button type="button" id="btnEnviar">Enviar</button>
               <button type="button" id="btnClear">Limpiar</button>
@@ -113,6 +113,11 @@
   <div id="footerjs">
   
 </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('jpSalGiRXHo8PDHsB')
+</script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="/src/js/headerFooter.js"></script>
 
