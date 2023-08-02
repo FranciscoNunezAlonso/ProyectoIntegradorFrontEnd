@@ -26,7 +26,7 @@
   <!-- *****************  nav Bar ************************** -->
 
   <header id="headerjs">
-    
+
   </header>
 
   <!-- *******************Contáctanos y Comparte Opinión********************** -->
@@ -80,25 +80,28 @@
 
           <!-- FORMULARIO -->
           <h1>Compártenos tu opinión</h1>
-          <form onsubmit="sendEmail(); reset(); return false;">
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"></label>
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-              <label for="exampleFormControlInput1" class="form-label"></label>
-              <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-              <label for="exampleFormControlInput1" class="form-label"></label>
-              <input type="text" class="form-control" id="email" placeholder="Correo Electrónico">
-              <label for="exampleFormControlInput1" class="form-label"></label>
-              <input type="text" class="form-control" id="telefono" placeholder="Número telefónico">
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"></label>
-              <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe aquí tu mensaje..."></textarea>
-              <br>
-              <button type="button" id="btnEnviar">Enviar</button>
-              <button type="button" id="btnClear">Limpiar</button>
-              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-                <p id="alertValidacionesTexto"></p>
+          <form onsubmit="return false" id="form">
+            <div id="formulario">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="text" class="form-control" id="email" placeholder="Correo Electrónico" required>
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="text" class="form-control" id="telefono" placeholder="Número telefónico" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"></label>
+                <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe aquí tu mensaje..."
+                  required></textarea>
+                <br>
+                <button class="enviar" id="btnEnviar" type="button" value="Send">Enviar</button>
+                <button type="button" id="btnClear">Limpiar</button>
+                <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+                  <p id="alertValidacionesTexto"></p>
+                </div>
               </div>
             </div>
           </form>
@@ -110,8 +113,9 @@
   <!-- **************************************** -->
   <!-- ******************* Footer ********************* -->
   <div id="footerjs">
-  
-</div>
+
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="/src/js/headerFooter.js"></script>
 

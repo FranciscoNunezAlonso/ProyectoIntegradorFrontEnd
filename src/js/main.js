@@ -1,21 +1,20 @@
+/* SmtpJS.com - v3.0.0 */
+var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
 //Variables
-let nombre = document.getElementById("nombre");
-let apellido = document.getElementById("apellido");
-let telefono = document.getElementById("telefono");
-let email = document.getElementById("email");
-let mensaje = document.getElementById("mensaje");
+var nombre = document.getElementById("nombre");
+var apellido = document.getElementById("apellido");
+var telefono = document.getElementById("telefono");
+var email = document.getElementById("email");
+var mensaje = document.getElementById("mensaje");
 // Botones
-let btnEnviar = document.getElementById("btnEnviar");
-let btnClear = document.getElementById("btnClear");
+var btnEnviar = document.getElementById("btnEnviar");
+var btnClear = document.getElementById("btnClear");
 
 //flags
-let isValid = true;
-let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
-let alertValidaciones = document.getElementById("alertValidaciones");
-let flagNombre = true;
-let flagApellido = true;
-let flagEmail = true;
-let flagTelefono = true;
+var isValid = true;
+var alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+var alertValidaciones = document.getElementById("alertValidaciones");
+
 
 
 //Evento btnClear
@@ -59,135 +58,76 @@ const validarNombre = (nombre) => {
     const expresionRegular = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
     return expresionRegular.test(mensaje);
   };
+  const btnEmail = document.getElementById('btnEnviar');
 
- 
-function sendEmail() {
-    Email.send({
-        SecureToken : 'f060d83d-8d76-422c-aced-00c81600f9ab',
-        To : document.getElementById("email").value,
-        From : document.getElementById("email").value,
-        Subject : "Hola estimado",
-        Body : "Este es un mensaje de prueba"
-    }).then(
-      message => alert(message)
-    );
-}
-//Evento btnAgregar
-btnEnviar.addEventListener("click", function (event) {
-    event.preventDefault();
-    flagNombre = true;
-    flagApellido = true;
-    flagEmail = true;
-    flagTelefono = true;
-    flagMensaje = true;
-    alertValidacionesTexto.innerHTML = "";
-    alertValidaciones.style.display = "none";
-    nombre.style.border = "";
-    apellido.style.border = "";
-    telefono.style.border = "";
-    email.style.border = "";
-    mensaje.style.border = "";
-    nombre.value = nombre.value.trim();
-    /* console.log(validarNombre(nombre.value)); */
-    telefono.value = telefono.value.trim();
-    /* console.log(validarTelefono(telefono.value)); */
-    email.value = email.value.trim();
-    /* console.log(validarEmail(email.value)); */
-    apellido.value = apellido.value.trim();
-    /* console.log(validarApellido(apellido.value)); */
-    mensaje.value = mensaje.value.trim();
-    /* console.log(validarMensaje(mensaje.value)); */
+  btnEmail.addEventListener('click', (e) => {
+      e.preventDefault();
+      let flagNombre = true;
+      let flagApellido = true;
+      let flagEmail = true;
+      let flagTelefono = true;
+      let flagMensaje = true;
+  
+      alertValidacionesTexto.innerHTML = "";
+      alertValidaciones.style.display = "none";
+      nombre.style.border = "";
+      apellido.style.border = "";
+      telefono.style.border = "";
+      email.style.border = "";
+      mensaje.style.border = "";
+  
+      nombre.value = nombre.value.trim();
+      telefono.value = telefono.value.trim();
+      email.value = email.value.trim();
+      apellido.value = apellido.value.trim();
+      mensaje.value = mensaje.value.trim();
+  
+      // Validación del nombre
+      if (!validarNombre(nombre.value) || nombre.value.length < 3 || nombre.value.length > 15) {
+          flagNombre = false;
+          alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El nombre ingresado no es válido.</strong><br/>`);
+          nombre.style.border = "solid 2px red";
+      }
+  
+      // Validación del apellido
+      if (!validarApellido(apellido.value) || apellido.value.length < 3 || apellido.value.length > 15) {
+          flagApellido = false;
+          alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El apellido ingresado no es válido.</strong><br/>`);
+          apellido.style.border = "solid 2px red";
+      }
+  
+      // Validación del email
+      if (!validarEmail(email.value)) {
+          flagEmail = false;
+          alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El email ingresado no es válido.</strong><br/>`);
+          email.style.border = "solid 2px red";
+      }
+  
+      // Validación del teléfono
+      if (!validarTelefono(telefono.value)) {
+          flagTelefono = false;
+          alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El número ingresado no es válido.</strong><br/>`);
+          telefono.style.border = "solid 2px red";
+      }
+  
+      // Validación del mensaje
+      if (!validarMensaje(mensaje.value)) {
+          flagMensaje = false;
+          alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El mensaje ingresado no es válido.</strong><br/>`);
+          mensaje.style.border = "solid 2px red";
+      }
+  
+      if (flagNombre && flagApellido && flagEmail && flagTelefono && flagMensaje) {
+          Email.send({
+              SecureToken: 'a6e92da2-d71b-4ef2-96f7-0ca2d0a112e1',
+              To: "chuko.2728@gmail.com",
+              From: email.value,
+              Subject: "Hola estimado",
+              Body: "Este es un mensaje de prueba"
+          }).then(msg => alert("tu mensaje fue enviado"))
+          .catch(err => alert("Hubo un error al enviar el mensaje"));
+      } else {
+          alertValidaciones.style.display = "block";
+      }
+  });
 
-    //nombre
-    if (validarNombre(nombre.value)==false) {
-        flagNombre = false;
-    }
-    if (nombre.value.length<3) {
-        flagNombre = false;
-    }
-    if (nombre.value.length>15) {
-        flagNombre = false;
-    }
-
-    if (flagNombre == false) {
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-        <strong>El nombre ingresado no es válido.</strong><br/>`);
-        alertValidaciones.style.display="block";
-        nombre.style.border="solid 2px red";
-    } /* else {
-        alertValidaciones.style.display = "none";
-        nombre.style.border = "";
-        nombre.value = "";
-    }//nombre */
-
-    //apellido
-    if (validarApellido(apellido.value)==false) {
-        flagApellido = false;
-    }
-    if (apellido.value.length<3) {
-        flagApellido = false;
-    }
-    if (apellido.value.length>15) {
-        flagApellido = false;
-    }
-    if (flagApellido == false) {
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-        <strong>El apellido ingresado no es válido.</strong><br/>`);
-        alertValidaciones.style.display="block";
-        apellido.style.border="solid 2px red";
-    } /* else {
-        alertValidaciones.style.display = "none";
-        apellido.style.border = "";
-        apellido.value = "";
-    }//apellido */
-
-     //email
-     if (validarEmail(email.value)==false) {
-        flagEmail = false;
-        /* alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-                 <strong>El email ingresado no es válido.</strong><br/>`);
-                 alertValidaciones.style.display="block";
-                 email.style.border="solid 2px red"; */
-    }
-    if (flagEmail == false) {
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-        <strong>El email ingresado no es válido.</strong><br/>`);
-        alertValidaciones.style.display="block";
-        email.style.border="solid 2px red";
-    } /* else {
-        alertValidaciones.style.display = "none";
-        email.style.border = "";
-        email.value = "";
-    }//email */
-
-    //telefono
-    if (validarTelefono(telefono.value)==false) {
-        flagTelefono = false;
-        /* alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-                 <strong>El telefono ingresado no es válido.</strong><br/>`);
-                 alertValidaciones.style.display="block";
-                 telefono.style.border="solid 2px red"; */
-    }
-    if (flagTelefono == false) {
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-        <strong>El número ingresado no es válido.</strong><br/>`);
-        alertValidaciones.style.display="block";
-        telefono.style.border="solid 2px red";
-    } /* else {
-        alertValidaciones.style.display = "none";
-        telefono.style.border = "";
-        telefono.value = "";
-    }//telefono
-     */
-    //mensaje
-    if (validarMensaje(mensaje.value)==false) {
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin",`
-                 <strong>El mensaje ingresado no es válido.</strong><br/>`);
-                 alertValidaciones.style.display="block";
-                 mensaje.style.border="solid 2px red";
-    } /* else {
-        alertValidaciones.style.display = "none";
-        mensaje.value = "";
-    }//mensaje */
-    sendEmail()
-});
