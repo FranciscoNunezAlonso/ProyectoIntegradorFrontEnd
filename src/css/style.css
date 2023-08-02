@@ -12,9 +12,9 @@ body {
     color: #D16D79;
 }
 
-li {
+/* li {
     margin-left: 25px;
-}
+} */
 
 /* ****** CARRUSEL ****** */
 .margin-icon1{
@@ -45,12 +45,12 @@ li {
     color: #252F48;
     text-align: justify;
 }
+
 /*cartas de productos*/
 
 .d-flex.justify-content-center {
     justify-content: center;
 }
-
 
 .row.row-cols-md-3 {
 margin-left: 0;
@@ -170,6 +170,7 @@ margin-right: 0;
     color: #252F48
 }
 
+
 .col {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -210,6 +211,10 @@ margin-right: 0;
     background-color: #A9C3B8;
 }
 
+.pModal{
+    text-align: justify;
+}
+
 .btn-primary {
     background-color: #D16D79;
     border-color: #D16D79;
@@ -225,8 +230,8 @@ margin-right: 0;
 
 .containerContacto{
     background-color: #EDEDEF;
-    width: 510px;
-    height: 776px;
+    width: 380px;
+    height: 576px;
     padding: 30px;
     margin: 40px;
     border-radius: 30px;
@@ -235,8 +240,8 @@ margin-right: 0;
 }
 .containerOpinion{
     background-color: #EDEDEF;
-    width: 910px;
-    height: 776px;
+    width: 610px;
+    height: 576px;
     display: flex;
     padding: 30px;
     margin: 40px;
@@ -244,6 +249,8 @@ margin-right: 0;
     flex-direction: column;  
     text-align: center;
 }
+
+
 button{
     background-color: #A9C3B8;
     border-radius: 10px;
@@ -252,6 +259,7 @@ button{
     padding: 10px 50px;
     color: #252F48;
     box-shadow: 5px 5px 5px #252F48;
+    margin: 10px;
     
 }
 svg{

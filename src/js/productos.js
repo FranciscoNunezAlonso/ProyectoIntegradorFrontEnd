@@ -77,7 +77,7 @@ addItem({
   "price": 110.00,
   "description": "Conmemora el recuerdo de tu mascota con esta urna personalizada",        
   "category": "Conmemorativos",
-  "img": "/src/img/imgProductos/producto_3.png",
+  "img": "/src/img/imgProductos/producto_3.png", "imgOnMouseover": "/src/img/imgProductos/producto_3.png",
   "rating": {
       "rate": 4.4,
       "count": 80
@@ -90,7 +90,7 @@ addItem({
   "price": 130.00,
   "description": "Crea un tributo único para tu mascota. Personaliza con su imagen y/o nombre en un telar artesanal circular de 15 cm. Un recuerdo especial para siempre.",
   "category": "Bordado",
-  "img": "/src/img/imgProductos/producto_4.png",
+  "img": "/src/img/imgProductos/producto_4.png", "imgOnMouseover": "/src/img/imgProductos/producto_4.png",
   "rating": {
       "rate": 5.0,
       "count": 50
@@ -142,7 +142,7 @@ addItem({
   "price": 180.00,
   "description": "Inmortaliza la imagen de tu mascota en una hermosa figura de cerámica, creada con amor y cuidado. Un recuerdo para toda la vida.",
   "category": "Figuras",
-  "img": "/src/img/imgProductos/producto_8.png",
+  "img": "/src/img/imgProductos/producto_8.png", "imgOnMouseover": "/src/img/imgProductos/producto_8.png",
   "rating": {
       "rate": 4.7,
       "count": 170
@@ -168,7 +168,7 @@ addItem({
   "price": 105,
   "description": "Abraza los recuerdos. Personaliza una suave almohada con la fotografía de tu mascota impresa, para sentir su amor en cada abrazo. ",
   "category": "Fotografías",
-  "img": "/src/img/imgProductos/producto_10.png",
+  "img": "/src/img/imgProductos/producto_10.png", "imgOnMouseover": "/src/img/imgProductos/producto_10.png",
   "rating": {
       "rate": 4.8,
       "count": 90
@@ -181,7 +181,7 @@ addItem({
   "price": 110,
   "description": "Lleva a tu compañero siempre contigo. Un llavero con la fotografía de tu amada mascota y una placa grabada con su nombre, uniendo lo mejor de ambos mundos en un accesorio único.",
   "category": "Fotografías",
-  "img": "/src/img/imgProductos/producto_11.png",
+  "img": "/src/img/imgProductos/producto_11.png", "imgOnMouseover":"/src/img/imgProductos/producto_11.png",
   "rating": {
       "rate": 4.9,
       "count": 115

@@ -5,7 +5,7 @@ let footer = document.getElementById("footerjs");
 
 //Acción de insertar Header.
 navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid" id="divNavBar">
+    <div class="container" id="divNavBar">
       <!-- Logo -->
       <a class=" navbar navbar-brand" href="/index.html"><img src="/src/img/Imagotipo.png" alt="" width="100rem"></a>
       <button class="navbar navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -14,26 +14,27 @@ navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse nav-justified" id="navbarSupportedContent">
-        <ul class="navbar navbar-nav me-auto mb-2 mb-lg-0 ">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <!-- Hipervínculo Home -->
-          <li class="navbar nav-item">
-            <a class="navbar nav-link active " aria-current="page" href="/index.html"
-              style="color: #252F48; font-size: 24px;">Home</a>
+
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="/index.html"
+              style="color: #252F48; font-size: 20px;">Home</a>
           </li>
           <!-- Hipernvínculo Productos -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/src/html/productos.html"
-              style="color: #252F48; font-size: 24px;">Productos</a>
+              style="color: #252F48; font-size: 20px;">Productos</a>
           </li>
           <!-- Hipervínculo Nosotros -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/src/html/nosotros.html"
-              style="color: #252F48; font-size: 24px;">Nosotros</a>
+              style="color: #252F48; font-size: 20px;">Nosotros</a>
           </li>
           <!-- Hipervínculo Contacto -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/src/html/contacto.html"
-              style="color: #252F48; font-size: 24px;">Contacto</a>
+              style="color: #252F48; font-size: 20px;">Contacto</a>
           </li>
         </ul>
 
@@ -92,10 +93,10 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Aviso de Privacidad</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, delectus alias mollitia in
-            repellendus error suscipit exercitationem quos distinctio perspiciatis consequuntur et
-            architecto aut ut molestiae at aspernatur aliquid temporibus!
+        <div class="modal-body pModal">
+        En Amor Peludo, protegemos tu privacidad y datos personales. La información que recopilamos se utiliza para mejorar tu experiencia en nuestro sitio web y enviarte información relevante. No compartimos tus datos con terceros no afiliados. Puedes ejercer tus derechos de acceso, rectificación, cancelación u oposición.
+        <br><br>
+        Amor Peludo
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-primary"
@@ -112,10 +113,19 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <h1 class="modal-title fs-5" id="staticBackdropLabel">Términos & Condiciones</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
-    <div class="modal-body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, delectus alias mollitia in
-        repellendus error suscipit exercitationem quos distinctio perspiciatis consequuntur et
-        architecto aut ut molestiae at aspernatur aliquid temporibus!
+    <div class="modal-body  pModal">
+    Bienvenido/a a Amor Peludo, tu destino para productos personalizados para mascotas. Al acceder y utilizar nuestro sitio web, aceptas los siguientes términos y condiciones:
+    Productos Personalizados: Los productos ofrecidos en Amor Peludo son exclusivos y se fabrican según tus especificaciones. Por favor, asegúrate de proporcionar información precisa para evitar errores en la personalización.
+    Propiedad Intelectual: Todo el contenido del sitio web, incluidos los diseños, logotipos y fotografías, están protegidos por derechos de propiedad intelectual y no pueden ser utilizados sin nuestro consentimiento.
+    Privacidad y Seguridad: Respetamos tu privacidad y protegemos tus datos personales. Consulta nuestra política de privacidad para más información.
+    Precios y Pagos: Los precios están en la moneda especificada y pueden estar sujetos a cambios. Los pagos se realizan a través de métodos de pago seguros y encriptados.
+    Envíos y Entregas: Procesamos los pedidos con el mayor cuidado. Los tiempos de producción y envío pueden variar según el producto y la ubicación.
+    Devoluciones y Reclamos: Consulta nuestra política de devoluciones para obtener información sobre cómo manejar devoluciones y reclamos.
+    Uso Responsable: No toleramos el uso inapropiado o ilegal de nuestro sitio web. Los usuarios deben cumplir con todas las leyes y regulaciones aplicables.
+    Contacto: Estamos aquí para ayudarte. Si tienes preguntas, contáctanos a través de los canales proporcionados en nuestro sitio web.
+    Al utilizar nuestro sitio web y realizar una compra, aceptas cumplir con estos términos y condiciones. Por favor, revisa esta página periódicamente, ya que los términos pueden actualizarse ocasionalmente.
+    <br>  <br>
+    Gracias por elegir Amor Peludo, ¡esperamos que disfrutes de nuestros productos personalizados!
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-primary"
@@ -132,7 +142,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <h1 class="modal-title fs-5" id="staticBackdropLabel">Preguntas Frecuentes</h1>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
-<div class="modal-body">
+<div class="modal-body  pModal">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, delectus alias mollitia in
     repellendus error suscipit exercitationem quos distinctio perspiciatis consequuntur et
     architecto aut ut molestiae at aspernatur aliquid temporibus!
