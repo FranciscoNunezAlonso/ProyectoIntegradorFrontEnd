@@ -1,13 +1,13 @@
 //Este es el header y el footer.
-let navbar = document.getElementById("headerjs"); 
+let navbar = document.getElementById("headerjs");
 let footer = document.getElementById("footerjs");
 
 
 //Acción de insertar Header.
-navbar.insertAdjacentHTML ("afterBegin", `<nav class="navbar navbar-expand-lg">
+navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
     <div class="container-fluid" id="divNavBar">
       <!-- Logo -->
-      <a class=" navbar navbar-brand" href="#"><img src="/src/img/Imagotipo.png" alt="" width="100rem"></a>
+      <a class=" navbar navbar-brand" href="/index.html"><img src="/src/img/Imagotipo.png" alt="" width="100rem"></a>
       <button class="navbar navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation" style="color: #D16D79">
@@ -66,7 +66,7 @@ navbar.insertAdjacentHTML ("afterBegin", `<nav class="navbar navbar-expand-lg">
           </li>
           <!-- icono carrito -->
           <li class="navbar nav-item">
-            <a href="carrito.html" class="navbar nav-link active">
+            <a href="/src/html/carrito.html" class="navbar nav-link active">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-cart4 "
                 viewBox="0 0 16 16">
                 <path
@@ -81,68 +81,143 @@ navbar.insertAdjacentHTML ("afterBegin", `<nav class="navbar navbar-expand-lg">
   </nav>`); // Acción de insertar Header.
 
 //Acción insertar Footer.
-footer.insertAdjacentHTML ("afterEnd", `<div class="container d-flex justify-content-around">
-<img src="/src/img/Perrito.png" alt="perritoMirador" class="img-fluid">
+footer.insertAdjacentHTML("afterEnd", `
+
+<!-- Modales-->
+<div class="modal fade" id="avisoDePrivacidad" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Aviso de Privacidad</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, delectus alias mollitia in
+            repellendus error suscipit exercitationem quos distinctio perspiciatis consequuntur et
+            architecto aut ut molestiae at aspernatur aliquid temporibus!
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary"
+                data-bs-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="terminosYCondiciones" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Términos & Condiciones</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, delectus alias mollitia in
+        repellendus error suscipit exercitationem quos distinctio perspiciatis consequuntur et
+        architecto aut ut molestiae at aspernatur aliquid temporibus!
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary"
+            data-bs-dismiss="modal">Cerrar</button>
+    </div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="preguntasFrecuentes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+    <h1 class="modal-title fs-5" id="staticBackdropLabel">Preguntas Frecuentes</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, delectus alias mollitia in
+    repellendus error suscipit exercitationem quos distinctio perspiciatis consequuntur et
+    architecto aut ut molestiae at aspernatur aliquid temporibus!
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary"
+        data-bs-dismiss="modal">Cerrar</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Cuerpo del footer-->
+<div class="container d-flex justify-content-around">
+  <img src="/src/img/Perrito.png" alt="perritoMirador" class="img-fluid">
 </div>
 <div>
-<footer class="py-5 footer-bg">
-  <div class="container">
-    <div class="row">
-      <!-- Columna1 -->
-      <div class="col-md-3 col-md-3 mb-3">
-        <ul class="nav flex-column">
-          <li>
-            <h5>SERVICIO AL CLIENTE</h5>
-          </li>
-          <li class="nav-item mb-2"><a href="mailto:atencion@vd.com? Subject=Necesito%20ayuda%20por%20favor"
-              class="nav-link-underlined p-0 text-body-secondary">atencion@vd.com</a></li>
-          <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary">554 327 2378</a></li>
-          <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary">Lunes a viernes 9:00 am a 5:30
-              pm</a></li>
-        </ul>
-      </div>
-      <!-- Columna2 -->
-      <div class="col-md-3 col-md-3 mb-3">
-        <ul class="nav flex-column">
-          <li>
-            <h5>-</h5>
-          </li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link-underlined p-0 text-dark">Aviso de Privacidad</a>
-          </li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link-underlined p-0 text-dark">Términos & Condiciones</a>
-          </li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link-underlined p-0 text-body-secondary">Preguntas
-              Frecuentes</a></li>
-        </ul>
-      </div>
-      <!-- Columna3 -->
-      <div class="col-md-5 offset-md-1 mb-3">
-        <form>
-          <h5>SUSCRÍBETE A LA COMUNIDAD</h5>
-          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label for="newsletter1" class="visually-hidden">Ingresa tu correo electrónico</label>
-            <input id="newsletter1" type="text" class="form-control" placeholder="Correo electrónico">
-            <button class="btn btn-primary" type="button">Suscribirse</button>
-          </div>
-          <br>
-        </form>
-        <h5>REDES SOCIALES</h5>
-        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-          <br>
-          <!-- Íconos -->
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-body-emphasis" href="https://www.tiktok.com/" target="_blank"><i
-                  class="fab fa-tiktok"></i></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank"><i
-                  class="fab fa-instagram"></i></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><i
-                  class="fab fa-facebook"></i></a></li>
-          </ul>
-        </div>
-      </div>
+  <footer class="py-5 footer-bg">
+    <div class="container">
+      <div class="row">
+          <!-- Columna1 -->
+            <div class="col-md-3 col-md-3 mb-3">
+              <ul class="nav flex-column">
+                <li>
+                  <h5>SERVICIO AL CLIENTE</h5>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="mailto:atencion@vd.com? Subject=Necesito%20ayuda%20por%20favor" class="nav-link-underlined p-0 text-body-secondary">atencion@vd.com</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a class="nav-link p-0 text-body-secondary">554 327 2378</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a class="nav-link p-0 text-body-secondary">Lunes a viernes 9:00 am a 5:30 pm</a>
+                </li>
+              </ul>
+            </div>
+          <!-- Columna2 -->
+            <div class="col-md-3 col-md-3 mb-3">
+              <ul class="nav flex-column">
+                <li>
+                  <br>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link-underlined p-0 text-dark" data-bs-toggle="modal" data-bs-target="#avisoDePrivacidad">Aviso de Privacidad</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link-underlined p-0 text-dark" data-bs-toggle="modal" data-bs-target="#terminosYCondiciones">Términos & Condiciones</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link-underlined p-0 text-body-secondary" data-bs-toggle="modal" data-bs-target="#preguntasFrecuentes">Preguntas Frecuentes</a>
+                </li>
+              </ul>
+            </div>
+          <!-- Columna3 -->
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>SUSCRÍBETE A LA COMUNIDAD</h5>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Ingresa tu correo electrónico</label>
+                      <input id="newsletter1" type="text" class="form-control" placeholder="Correo electrónico">
+                        <button class="btn btn-primary" type="button">Suscribirse</button>
+                  </div>
+                    <br>
+                </form>
+                  <h5>REDES SOCIALES</h5>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <br>
+                      <!-- Íconos -->
+                        <ul class="list-unstyled d-flex">
+                          <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                          </li>
+                          <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                          </li>
+                          <li class="ms-3">
+                            <a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                          </li>
+                        </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p class="text-center">&copy; 2023 Team 1, Generation México | CH29.</p>
     </div>
-    <div class="flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p class="text-center">&copy; 2023 Team 1, Generation México | CH29.</p>
-    </div>
-</footer>
+  </footer>
 </div>`);//Acción insertar Footer.
