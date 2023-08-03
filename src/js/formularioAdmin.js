@@ -11,10 +11,10 @@ var btnEnviar = document.getElementById("btnEnviar");
 var btnClear = document.getElementById("btnClear");
 
 //flags
-var isValid = true;
+var isValid = false;
 let flagTitle = false;
-// let flagPrice = false;
-// let flagDescription = false;
+let flagPrice = false;
+let flagDescription = false;
 var alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 var alertValidaciones = document.getElementById("alertValidaciones");
 
@@ -34,36 +34,14 @@ btnClear.addEventListener("click", function (event) {
     description.value = "";
     // category.value = "";
 
-
-    // Guardar en objeto en el local storage
-    // localStorage.setItem("producto", producto);
-
-    //limpiar el storage
-    //localStorage.clear();
 });//btnClear
 
-// Validaciones con expresiones regulares -------------------
-
-// const validarTitle = (title) => {
-//     const expresionRegular = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
-//     return expresionRegular.test(title);
-// };
-
-// const validarPrice = (price) => {
-//     const expresionRegular = /^[0-9]{10}$/;
-//     return expresionRegular.test(price);
-// };
-
-// const validarDescription = (description) => {
-//     const expresionRegular = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
-//     return expresionRegular.test(description);
-// };
 
 
 // Evento btn Enviar ------------------------
 btnEnviar.addEventListener('click', (e) => {
     e.preventDefault();
-    
+
     // let flagCategory = true;
 
     alertValidacionesTexto.innerHTML = "";
@@ -79,87 +57,59 @@ btnEnviar.addEventListener('click', (e) => {
     description.value = description.value.trim();
     // category.value = category.value.trim();
 
-
-    // Validación del nombre (title)
-    // if (!validarTitle(title.value) || title.value.length < 3 || title.value.length > 15) {
-    //     flagTitle = false;
-    //     alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El nombre ingresado no es válido.</strong><br/>`);
-    //     title.style.border = "solid 2px red";
-    // }
-
-    // Validación del Precio
-    // if (!validarPrice(price.value) || price.value.length < 1 || price.value.length > 15) {
-    //     flagPrice = false;
-    //     alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El precio ingresado no es válido.</strong><br/>`);
-    //     price.style.border = "solid 2px red";
-    // }
-
-    // Validación del description
-    // if (!validarDescription(description.value)) {
-    //     flagDescription = false;
-    //     alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>La descripción ingresada no es válida.</strong><br/>`);
-    //     description.style.border = "solid 2px red";
-    // }
-
-    if (!title.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Cnombre </strong> no es válido</br>`);
+    if (!title.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) == true|| (title.value.length < 4 )) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
         // habilitar que se muestre el mensaje
         alertValidaciones.style.display = "block"
         // marcar el campo del error
         title.style.border = "solid 2px #B4016C";
-        isValid = false;
+        flagPrice = false;
     }else{
-        flagTitle=true;
+        flagTitle = true;
     }
 
-    // Validación de la categoría
-    // if (!validarCategory(category.value)) {
-    //     flagCategory = false;
-    //     alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El número ingresado no es válido.</strong><br/>`);
-    //     telefono.style.border = "solid 2px red";
-    // }
+    if (!price.value.match(/^[0-9]{1,4}$/) == true|| (price.value.length < 2 )) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> precio </strong> no es válido</br>`);
+        // habilitar que se muestre el mensaje
+        alertValidaciones.style.display = "block"
+        // marcar el campo del error
+        price.style.border = "solid 2px #B4016C";
+        flagPrice = false;
+    }else{
+        flagPrice = true;
+    }
 
-    //Objeto JSON para alamacenar los datos del resumen 
-    // let producto = `{
-    //     "title" : ${title},
-    //     "price" : ${price},
-    //     "description" : ${description}
-    //     }`;
+    if (description.value.length < 5) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> descripción </strong> no es válida</br>`);
+        // habilitar que se muestre el mensaje
+        alertValidaciones.style.display = "block"
+        // marcar el campo del error
+        description.style.border = "solid 2px #B4016C";
+        flagDescription = false;
+    }else{
+        flagDescription = true;
+    }
+
+    if (flagTitle == true && flagPrice == true && flagDescription == true) {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'El producto se ha publicado de manera exitosa',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        title.value = "";
+        price.value = "";
+        description.value = "";
+        
+    } else {
+
+    }
 
 
-        if (flagTitle == true) {
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Tu Mensaje ha sido enviado correctamente',
-                showConfirmButton: false,
-                timer: 1500
-            })
-            // txtNombre.value = "";
-            // txtApellido.value = "";
-            // txtEmail.value = "";
-            // txtMensaje.value = "";
-        } else {
-    
-        }
 
-});//btnEnviar
 
-// ************* EVENTO PARA VENTANA DEL NAVEGADOR *****************
-// // almacenar los datos en el localStorage y no se pierdan al recargar la pagina
-// window.addEventListener("load", function (e) {
-//     e.preventDefault();
+});//btn Enviar
 
-//     if (this.localStorage.getItem("producto") != null) {
-//         datos = JSON.parse(this.localStorage.getItem("producto"));
-//         datos.forEach((r) => {
-//             let row = `<tr>
-//                     <td>${r.id}</td>
-//                     <td>${r.price}</td>
-//                     <td>${r.description}</td>
-//                 </tr>`;
-//         }//foreach
-//         );
-//     }
-// })
+
 
