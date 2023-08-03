@@ -32,45 +32,57 @@
   <!-- *******************Contáctanos y Comparte Opinión********************** -->
 
   <main>
-        <!-- FORMULARIO -->
-        <div class="containerOpinion col-lg-6">
-          <h1>Publicar nuevo producto</h1>
-          <form onsubmit="return false" id="form">
-            <div id="formulario">
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"></label>
-                <input type="text" class="form-control" id="title" placeholder="Nombre" required>
-                <label for="exampleFormControlInput1" class="form-label"></label>
-                <input type="text" class="form-control" id="price" placeholder="Precio" required>
-                <br>   
-                <label for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="description" rows="3" placeholder="Descripción del producto"
-                  required></textarea>
-                  <br>
-                <select class="form-select" multiple aria-label="Multiple select example" id="category">
-                    <option selected>Selecciona la categoría </option>
-                    <option value="1">Figuras</option>
-                    <option value="2">Conmemorativos</option>
-                    <option value="3">Bordados</option>
-                    <option value="4">Cuadro</option>
-                    <option value="5">Fotografías</option>
-                    <option value="6">Otros</option>
-                  </select>
-              </div>
-              <div class="mb-3">
-                <br>
-                <button id="upload_widget" class="cloudinary-button">Upload files</button>
-                <br>
-                <button class="enviar" id="btnEnviar" type="button" value="Send">Enviar</button>
-                <button type="button" id="btnClear">Limpiar</button>
-                <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-                  <p id="alertValidacionesTexto"></p>
-                </div>
-              </div>
+    <!-- FORMULARIO -->
+    <div class="containerOpinionAdmi col-lg-6">
+      <h1>Publicar nuevo producto</h1>
+      <form onsubmit="return false" id="form">
+        <div id="formulario">
+          <div class="mb-3">
+            <!-- title -->
+            <label for="title" class="form-label"></label>
+            <input type="text" name="title" class="form-control" id="title" placeholder="Nombre" required>
+            <br>
+            <!-- price -->
+            <div class="input-group mb-3">
+              <span class="input-group-text">$</span>
+              <label for="price" class="form-label"></label>
+              <input type="num" name="price" class="form-control" id="price" placeholder="Precio" required>
             </div>
-          </form>
-        </div> 
-<!--Termino-->
+            <!-- descripción -->
+            <label for="descripcion" class="form-label"></label>
+            <textarea class="form-control" name="descripcion" id="description" rows="3"
+              placeholder="Descripción del producto" required></textarea>
+            <br>
+            <!-- categoría -->
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupSelect01">Categoría</label>
+              <select class="form-select" id="category">
+                <option selected>selecciona una categoría</option>
+                <option value="1">Figuras</option>
+                <option value="2">Conmemorativos</option>
+                <option value="3">Bordados</option>
+                <option value="4">Cuadro</option>
+                <option value="5">Fotografías</option>
+                <option value="6">Otros</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <!-- btn Subir imagen -->
+          <br>
+          <button id="upload_widget" class="cloudinary-button btnImg form-control">Upload files</button>
+           
+          <button class="enviar" id="btnEnviar" type="button" value="Send">Enviar</button>
+          <button type="button" id="btnClear">Limpiar</button>
+          <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+            <p id="alertValidacionesTexto"></p>
+          </div>
+        </div>
+    </div>
+    </form>
+    </div>
+    <!--Termino-->
     </div>
   </main>
   <!-- **************************************** -->

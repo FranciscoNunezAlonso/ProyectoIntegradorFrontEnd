@@ -262,9 +262,7 @@ button{
     font-family: 'Montserrat', sans-serif;
     color:#EDEDEF;
     padding: 10px 50px;
-    margin: 10px;
-
-    
+    margin: 10px;   
 }
 svg{
     display: flex;
@@ -273,4 +271,23 @@ svg{
 .pCards{
     text-align: left;
     padding-right: 3em;
+}
+
+/* FORMULARIO ADMI */
+
+.containerOpinionAdmi{
+    background-color: #EDEDEF;
+    align-items: center;
+    width: 610px;
+    height: 676px;
+    padding: 30px;
+    margin: 40px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.btnImg{
+    background-color: #A9C3B8;
+    border-color:#A9C3B8 ;
+    color: black;
 }
