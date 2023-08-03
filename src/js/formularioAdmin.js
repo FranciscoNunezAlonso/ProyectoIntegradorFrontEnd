@@ -34,6 +34,9 @@ btnClear.addEventListener("click", function (event) {
     description.value = "";
     // category.value = "";
 
+    //limpiar el storage
+    localStorage.clear();
+
 });//btnClear
 
 
@@ -55,27 +58,26 @@ btnEnviar.addEventListener('click', (e) => {
     title.value = title.value.trim();
     price.value = price.value.trim();
     description.value = description.value.trim();
-    // category.value = category.value.trim();
 
-    if (!title.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) == true|| (title.value.length < 4 )) {
+    if (!title.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) == true || (title.value.length < 4)) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
         // habilitar que se muestre el mensaje
         alertValidaciones.style.display = "block"
         // marcar el campo del error
         title.style.border = "solid 2px #B4016C";
         flagPrice = false;
-    }else{
+    } else {
         flagTitle = true;
     }
 
-    if (!price.value.match(/^[0-9]{1,4}$/) == true|| (price.value.length < 2 )) {
+    if (!price.value.match(/^[0-9]{1,4}$/) == true || (price.value.length < 2)) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> precio </strong> no es válido</br>`);
         // habilitar que se muestre el mensaje
         alertValidaciones.style.display = "block"
         // marcar el campo del error
         price.style.border = "solid 2px #B4016C";
         flagPrice = false;
-    }else{
+    } else {
         flagPrice = true;
     }
 
@@ -86,7 +88,7 @@ btnEnviar.addEventListener('click', (e) => {
         // marcar el campo del error
         description.style.border = "solid 2px #B4016C";
         flagDescription = false;
-    }else{
+    } else {
         flagDescription = true;
     }
 
@@ -101,7 +103,7 @@ btnEnviar.addEventListener('click', (e) => {
         title.value = "";
         price.value = "";
         description.value = "";
-        
+
     } else {
 
     }
