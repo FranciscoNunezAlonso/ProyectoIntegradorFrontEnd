@@ -60,9 +60,9 @@ const validarNombre = (nombre) => {
   };
   const btnEmail = document.getElementById('btnEnviar');
 
-  btnEmail.addEventListener('click', (e) => {
-      e.preventDefault();
-      let flagNombre = true;
+btnEmail.addEventListener('click', (e) => {
+    e.preventDefault();
+    let flagNombre = true;
       let flagApellido = true;
       let flagEmail = true;
       let flagTelefono = true;
