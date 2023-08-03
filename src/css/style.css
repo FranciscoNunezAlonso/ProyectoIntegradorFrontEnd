@@ -6,6 +6,7 @@ body {
 /* ******* navBar *********** */
 .navbar-expand-lg {
     background-color: #A9C3B8;
+    display: flex;
 }
 
 .bi {
@@ -59,7 +60,8 @@ margin-right: 0;
 
 .cardProds{
     background-color: #9bc1b1;
-    margin:60px;
+    margin: 60px;
+    display: flex;
 }
 .cardProds-text{
     text-align: left;
@@ -209,6 +211,7 @@ margin-right: 0;
 /* Footer style */
 .footer-bg {
     background-color: #A9C3B8;
+    display: flex;
 }
 
 .pModal{
@@ -228,6 +231,7 @@ margin-right: 0;
 
 }
 
+/* Contacto */
 .containerContacto{
     background-color: #EDEDEF;
     width: 380px;
@@ -252,14 +256,14 @@ margin-right: 0;
 
 
 button{
-    background-color: #A9C3B8;
+    background-color: #D16D79;
     border-radius: 10px;
-    border-color:#252F48 ;
+    border-color:#D16D79 ;
     font-family: 'Montserrat', sans-serif;
+    color:#EDEDEF;
     padding: 10px 50px;
-    color: #252F48;
-    box-shadow: 5px 5px 5px #252F48;
     margin: 10px;
+
     
 }
 svg{

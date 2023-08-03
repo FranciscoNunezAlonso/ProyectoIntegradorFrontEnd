@@ -75,9 +75,9 @@ addItem({
   "id": 3,
   "title": "Urna para pelitos de felicidad",
   "price": 110.00,
-  "description": "Conmemora el recuerdo de tu mascota con esta urna personalizada",        
+  "description": "Guarda los preciados pelitos de tu mascota en nuestra hermosa urna de madera personalizable. Cada urna está diseñada con amor para honrar a tu compañero peludo de manera especial.",        
   "category": "Conmemorativos",
-  "img": "/src/img/imgProductos/producto_3.png", "imgOnMouseover": "/src/img/imgProductos/producto_3.png",
+  "img": "/src/img/imgProductos/producto_3A.png", "imgOnMouseover": "/src/img/imgProductos/producto_3B.png",
   "rating": {
       "rate": 4.4,
       "count": 80
@@ -90,7 +90,7 @@ addItem({
   "price": 130.00,
   "description": "Crea un tributo único para tu mascota. Personaliza con su imagen y/o nombre en un telar artesanal circular de 15 cm. Un recuerdo especial para siempre.",
   "category": "Bordado",
-  "img": "/src/img/imgProductos/producto_4.png", "imgOnMouseover": "/src/img/imgProductos/producto_4.png",
+  "img": "/src/img/imgProductos/producto_4A.png", "imgOnMouseover": "/src/img/imgProductos/producto_4B.png",
   "rating": {
       "rate": 5.0,
       "count": 50
@@ -142,7 +142,7 @@ addItem({
   "price": 180.00,
   "description": "Inmortaliza la imagen de tu mascota en una hermosa figura de cerámica, creada con amor y cuidado. Un recuerdo para toda la vida.",
   "category": "Figuras",
-  "img": "/src/img/imgProductos/producto_8.png", "imgOnMouseover": "/src/img/imgProductos/producto_8.png",
+  "img": "/src/img/imgProductos/producto_8A.png", "imgOnMouseover": "/src/img/imgProductos/producto_8B.png",
   "rating": {
       "rate": 4.7,
       "count": 170
@@ -168,7 +168,7 @@ addItem({
   "price": 105,
   "description": "Abraza los recuerdos. Personaliza una suave almohada con la fotografía de tu mascota impresa, para sentir su amor en cada abrazo. ",
   "category": "Fotografías",
-  "img": "/src/img/imgProductos/producto_10.png", "imgOnMouseover": "/src/img/imgProductos/producto_10.png",
+  "img": "/src/img/imgProductos/producto_10A.png", "imgOnMouseover": "/src/img/imgProductos/producto_10B.png",
   "rating": {
       "rate": 4.8,
       "count": 90
@@ -179,9 +179,9 @@ addItem({
   "id": 11,
   "title": "Llavero con fotografía",
   "price": 110,
-  "description": "Lleva a tu compañero siempre contigo. Un llavero con la fotografía de tu amada mascota y una placa grabada con su nombre, uniendo lo mejor de ambos mundos en un accesorio único.",
+  "description": "Lleva a tu compañero siempre contigo. Un llavero con la fotografía de tu amada mascota y una placa grabada con su nombre, une lo mejor de dos mundos en un accesorio único.",
   "category": "Fotografías",
-  "img": "/src/img/imgProductos/producto_11.png", "imgOnMouseover":"/src/img/imgProductos/producto_11.png",
+  "img": "/src/img/imgProductos/producto_11A.png", "imgOnMouseover":"/src/img/imgProductos/producto_11B.png",
   "rating": {
       "rate": 4.9,
       "count": 115

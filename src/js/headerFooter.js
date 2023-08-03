@@ -94,7 +94,11 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body pModal">
-        En Amor Peludo, protegemos tu privacidad y datos personales. La información que recopilamos se utiliza para mejorar tu experiencia en nuestro sitio web y enviarte información relevante. No compartimos tus datos con terceros no afiliados. Puedes ejercer tus derechos de acceso, rectificación, cancelación u oposición.
+        En Amor Peludo, valoramos y respetamos tu privacidad. Toda la información personal que nos proporciones será utilizada exclusivamente para procesar tus pedidos y brindarte un servicio personalizado. Tus datos nunca serán compartidos con terceros sin tu consentimiento explícito. Puedes consultar nuestra política de privacidad completa en nuestro sitio web para obtener más detalles sobre cómo protegemos tus datos.
+        <br><br>
+        Queremos asegurarte que tu información estará segura con nosotros. Si tienes alguna pregunta o inquietud sobre nuestra política de privacidad, no dudes en contactarnos a través de los canales proporcionados en nuestro sitio web.
+        <br><br>
+        Gracias por confiar en Amor Peludo para personalizar productos especiales para tus adorables mascotas.
         <br><br>
         Amor Peludo
         </div>
@@ -115,16 +119,16 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
     </div>
     <div class="modal-body  pModal">
     Bienvenido/a a Amor Peludo, tu destino para productos personalizados para mascotas. Al acceder y utilizar nuestro sitio web, aceptas los siguientes términos y condiciones:
-    Productos Personalizados: Los productos ofrecidos en Amor Peludo son exclusivos y se fabrican según tus especificaciones. Por favor, asegúrate de proporcionar información precisa para evitar errores en la personalización.
-    Propiedad Intelectual: Todo el contenido del sitio web, incluidos los diseños, logotipos y fotografías, están protegidos por derechos de propiedad intelectual y no pueden ser utilizados sin nuestro consentimiento.
-    Privacidad y Seguridad: Respetamos tu privacidad y protegemos tus datos personales. Consulta nuestra política de privacidad para más información.
-    Precios y Pagos: Los precios están en la moneda especificada y pueden estar sujetos a cambios. Los pagos se realizan a través de métodos de pago seguros y encriptados.
-    Envíos y Entregas: Procesamos los pedidos con el mayor cuidado. Los tiempos de producción y envío pueden variar según el producto y la ubicación.
-    Devoluciones y Reclamos: Consulta nuestra política de devoluciones para obtener información sobre cómo manejar devoluciones y reclamos.
-    Uso Responsable: No toleramos el uso inapropiado o ilegal de nuestro sitio web. Los usuarios deben cumplir con todas las leyes y regulaciones aplicables.
-    Contacto: Estamos aquí para ayudarte. Si tienes preguntas, contáctanos a través de los canales proporcionados en nuestro sitio web.
-    Al utilizar nuestro sitio web y realizar una compra, aceptas cumplir con estos términos y condiciones. Por favor, revisa esta página periódicamente, ya que los términos pueden actualizarse ocasionalmente.
-    <br>  <br>
+    <br><br><h6>Productos Personalizados:</h6> Los productos ofrecidos en Amor Peludo son exclusivos y se fabrican según tus especificaciones. Por favor, asegúrate de proporcionar información precisa para evitar errores en la personalización.
+    <br><br><h6>Propiedad Intelectual:</h6> Todo el contenido del sitio web, incluidos los diseños, logotipos y fotografías, están protegidos por derechos de propiedad intelectual y no pueden ser utilizados sin nuestro consentimiento.
+    <br><br><h6>Privacidad y Seguridad:</h6> Respetamos tu privacidad y protegemos tus datos personales. Consulta nuestra política de privacidad para más información.
+    <br><br><h6>Precios y Pagos:</h6> Los precios están en la moneda especificada y pueden estar sujetos a cambios. Los pagos se realizan a través de métodos de pago seguros y encriptados.
+    <br><br><h6>Envíos y Entregas:</h6> Procesamos los pedidos con el mayor cuidado. Los tiempos de producción y envío pueden variar según el producto y la ubicación.
+    <br><br><h6>Devoluciones y Reclamos:</h6> Consulta nuestra política de devoluciones para obtener información sobre cómo manejar devoluciones y reclamos.
+    <br><br><h6>Uso Responsable:</h6> No toleramos el uso inapropiado o ilegal de nuestro sitio web. Los usuarios deben cumplir con todas las leyes y regulaciones aplicables.
+    <br><br><h6>Contacto:</h6> Estamos aquí para ayudarte. Si tienes preguntas, contáctanos a través de los canales proporcionados en nuestro sitio web.
+    <br><br>Al utilizar nuestro sitio web y realizar una compra, aceptas cumplir con estos términos y condiciones. Por favor, revisa esta página periódicamente, ya que los términos pueden actualizarse ocasionalmente.
+    <br><br>
     Gracias por elegir Amor Peludo, ¡esperamos que disfrutes de nuestros productos personalizados!
     </div>
     <div class="modal-footer">
@@ -143,9 +147,51 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body  pModal">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, delectus alias mollitia in
-    repellendus error suscipit exercitationem quos distinctio perspiciatis consequuntur et
-    architecto aut ut molestiae at aspernatur aliquid temporibus!
+<h6>1.-¿Qué tipo de recuerdos de mascotas ofrecen?</h6>
+Ofrecemos una amplia variedad de recuerdos personalizados para mascotas, que incluyen almohadas, estatuillas de vidrio soplado, collares con urna para pelitos o cenizas, figuras con textura felting, llaveros con fotografías, cuadros de arte texturizado y más. Cada producto se crea con amor y cuidado para honrar a tu compañero peludo.
+<br><br>
+<h6>2.-¿Cuál es el proceso de pedido y pago en la página?</h6>
+El proceso de pedido es sencillo. Navega por nuestro sitio web, selecciona el producto que deseas personalizar, carga la imagen de tu mascota y sigue las instrucciones para agregar detalles adicionales, como el nombre de tu mascota. Una vez que completes tu pedido, podrás realizar el pago de forma segura a través de diferentes métodos de pago.
+<br><br>
+<h6>3.-¿Puedo personalizar los recuerdos con el nombre de mi mascota?</h6>
+¡Por supuesto! Entendemos lo importante que es el nombre de tu mascota, y ofrecemos la opción de personalizar nuestros productos con su nombre para hacerlos aún más especiales.
+<br><br>
+<h6>4.-¿Cuánto tiempo tarda en llegar el pedido?</h6>
+Los tiempos de entrega varían según el producto y la ubicación. Generalmente, nuestros productos personalizados se envían en un plazo de 5 a 10 días hábiles después de realizar el pedido. Te proporcionaremos una estimación más precisa durante el proceso de compra.
+<br><br>
+<h6>5.-¿Ofrecen envío internacional?</h6>
+Sí, realizamos envíos internacionales para que personas de todo el mundo puedan disfrutar de nuestros productos personalizados para mascotas.
+<br><br>
+<h6>6.-¿Tienen una política de devoluciones?</h6>
+Sí, tenemos una política de devoluciones. Si no estás satisfecho/a con tu compra, puedes solicitar una devolución y reembolso dentro de los 30 días posteriores a la entrega del pedido. Consulta nuestra política de devoluciones completa en nuestro sitio web para más detalles.
+<br><br>
+<h6>7.-¿Qué métodos de pago aceptan?</h6>
+Aceptamos varios métodos de pago seguros, incluyendo tarjetas de crédito y débito, PayPal y otros métodos de pago en línea.
+<br><br>
+<h6>8.-¿Es seguro proporcionar mis datos de pago en la página?</h6>
+Sí, puedes estar seguro/a de que tus datos de pago están protegidos. Utilizamos tecnología de encriptación y cumplimos con los más altos estándares de seguridad para proteger tus datos personales y financieros.
+<br><br>
+<h6>9.-¿Tienen un servicio de atención al cliente para consultas y asistencia?</h6>
+Sí, contamos con un equipo de atención al cliente dedicado y amable que está listo para ayudarte con cualquier consulta o asistencia que necesites. Puedes ponerte en contacto con nosotros a través de los canales proporcionados en nuestro sitio web.
+<br><br>
+<h6>10.-¿Qué tipos de mascotas cubren en sus productos?</h6>
+Nuestros productos personalizados están disponibles para todas las mascotas, incluyendo perros, gatos, aves, conejos, hamsters, reptiles y más. ¡Cada mascota es bienvenida en nuestra tienda!
+<br><br>
+<h6>11.-¿Puedo ver muestras o ejemplos de los recuerdos antes de realizar el pedido?</h6>
+Sí, puedes ver muestras y ejemplos de nuestros recuerdos personalizados en nuestro sitio web y en nuestras redes sociales. Estamos encantados de mostrarte la calidad y belleza de nuestros productos.
+<br><br>
+<h6>12.-¿Cuál es su política de privacidad y cómo protegen mis datos personales?</h6>
+Respetamos tu privacidad y protegemos tus datos personales de acuerdo con nuestra política de privacidad. Puedes revisar la política completa en nuestro sitio web para conocer cómo recopilamos, utilizamos y protegemos tus datos.
+<br><br>
+<h6>13.-¿Cuáles son los materiales utilizados en los productos?</h6>
+Utilizamos materiales de alta calidad en todos nuestros productos, incluyendo telas suaves, vidrio soplado, cerámica y otros materiales duraderos que garantizan la belleza y durabilidad de nuestros recuerdos.
+<br><br>
+<h6>14.-¿Tienen testimonios o reseñas de clientes satisfechos?</h6>
+Sí, contamos con numerosos testimonios y reseñas de clientes satisfechos que han quedado encantados con nuestros productos personalizados. Puedes encontrar estas reseñas en nuestro sitio web y en nuestras redes sociales.
+<br><br>
+Estamos emocionados de compartir nuestra pasión por los recuerdos personalizados de mascotas contigo.
+<br>
+
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-primary"
