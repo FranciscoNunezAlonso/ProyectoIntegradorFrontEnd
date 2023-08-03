@@ -6,15 +6,16 @@ body {
 /* ******* navBar *********** */
 .navbar-expand-lg {
     background-color: #A9C3B8;
+    display: flex;
 }
 
 .bi {
     color: #D16D79;
 }
 
-li {
+/* li {
     margin-left: 25px;
-}
+} */
 
 /* ****** CARRUSEL ****** */
 .margin-icon1{
@@ -45,24 +46,46 @@ li {
     color: #252F48;
     text-align: justify;
 }
-/*fondo de las cartas de productos*/
-.card-bg{
-    background-color: #A9C3B8
-}
-/*botones productos*/
-.botonete{
-    position: absolute;
-    left: 86%;
-    bottom: 20%;
-    font-size: 10px;
+
+/*cartas de productos*/
+
+.d-flex.justify-content-center {
+    justify-content: center;
 }
 
-.botonete2{
-    position: absolute;
-    bottom:10%;
-    left: 87%;
-    font-size: 10px;
+.row.row-cols-md-3 {
+margin-left: 0;
+margin-right: 0;
 }
+
+.cardProds{
+    background-color: #9bc1b1;
+    margin: 60px;
+    display: flex;
+}
+.cardProds-text{
+    text-align: left;
+    margin-right: 45px;
+    padding: 10px;
+}
+
+.btnProds{
+    width: 160px ;
+    height: 35px ;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btnProds:hover{
+    background-color: #EDEDEF;
+    border-color: #EDEDEF;
+    color: #D16D79;
+}
+
+.card-title{
+    text-align: center;
+}
+
 
 /* resolución movil */
 @media (min-width:320px) and (max-width:576px){
@@ -149,6 +172,7 @@ li {
     color: #252F48
 }
 
+
 .col {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -187,6 +211,11 @@ li {
 /* Footer style */
 .footer-bg {
     background-color: #A9C3B8;
+    display: flex;
+}
+
+.pModal{
+    text-align: justify;
 }
 
 .btn-primary {
@@ -202,10 +231,11 @@ li {
 
 }
 
+/* Contacto */
 .containerContacto{
     background-color: #EDEDEF;
-    width: 510px;
-    height: 776px;
+    width: 380px;
+    height: 576px;
     padding: 30px;
     margin: 40px;
     border-radius: 30px;
@@ -214,8 +244,8 @@ li {
 }
 .containerOpinion{
     background-color: #EDEDEF;
-    width: 910px;
-    height: 776px;
+    width: 610px;
+    height: 576px;
     display: flex;
     padding: 30px;
     margin: 40px;
@@ -223,14 +253,17 @@ li {
     flex-direction: column;  
     text-align: center;
 }
+
+
 button{
-    background-color: #A9C3B8;
+    background-color: #D16D79;
     border-radius: 10px;
-    border-color:#252F48 ;
+    border-color:#D16D79 ;
     font-family: 'Montserrat', sans-serif;
+    color:#EDEDEF;
     padding: 10px 50px;
-    color: #252F48;
-    box-shadow: 5px 5px 5px #252F48;
+    margin: 10px;
+
     
 }
 svg{
