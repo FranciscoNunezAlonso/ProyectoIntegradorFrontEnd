@@ -1,22 +1,24 @@
 // ******** FORMULARIO PRODUCTOS ADMINISTRADOR
-var title = document.getElementById("title");
-var price = document.getElementById("price");
-var description = document.getElementById("description");
-var category = document.getElementById("category");
+let title = document.getElementById("title");
+let price = document.getElementById("price");
+let description = document.getElementById("description");
+let category = document.getElementById("category");
+
+let product_img = document.getElementById("product_img")
 
 
 // Botones
-var btnImg = document.getElementById("upload_widget");
-var btnEnviar = document.getElementById("btnEnviar");
-var btnClear = document.getElementById("btnClear");
+let btnImg = document.getElementById("upload_widget");
+let btnEnviar = document.getElementById("btnEnviar");
+let btnClear = document.getElementById("btnClear");
 
 //flags
-var isValid = false;
+let isValid = false;
 let flagTitle = false;
 let flagPrice = false;
 let flagDescription = false;
-var alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
-var alertValidaciones = document.getElementById("alertValidaciones");
+let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+let alertValidaciones = document.getElementById("alertValidaciones");
 
 
 // Evento btn Clear ----------------------------------
@@ -107,11 +109,25 @@ btnEnviar.addEventListener('click', (e) => {
     } else {
 
     }
-
-
-
-
 });//btn Enviar
+
+// Cloudinary ------------------------
+let widget = cloudinary.createUploadWidget({
+    cloudName: 'dwp2swcwi',
+    uploadPreset: 'Apoyoap'
+},
+    (error, result) => {
+        if (!error && result && result.event === "success") {
+            console.log('Done uploading..: ', result.info);
+            product_img.src = result.info.secure_url;
+        }
+
+    });
+
+// btn Img cloudinary
+btnImg.addEventListener("click", function () {
+    widget.open();
+}, false);
 
 
 
