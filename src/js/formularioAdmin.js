@@ -108,10 +108,4 @@ btnEnviar.addEventListener('click', (e) => {
 
     }
 
-
-
-
 });//btn Enviar
-
-
-
