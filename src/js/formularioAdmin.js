@@ -17,8 +17,15 @@ let isValid = false;
 let flagTitle = false;
 let flagPrice = false;
 let flagDescription = false;
+let flagProduct_img = false;
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let alertValidaciones = document.getElementById("alertValidaciones");
+
+// arreglo
+let arrayProductos = [];
+let elemento = {};
+let itemHTML = "";
+
 
 
 // Evento btn Clear ----------------------------------
@@ -35,6 +42,7 @@ btnClear.addEventListener("click", function (event) {
     price.value = "";
     description.value = "";
     // category.value = "";
+    product_img.src = "";
 
     //limpiar el storage
     localStorage.clear();
@@ -93,8 +101,32 @@ btnEnviar.addEventListener('click', (e) => {
     } else {
         flagDescription = true;
     }
+    
+    if (!product_img.src || !product_img.src.match(/[^\s]+(.*?).(jpg|jpeg|png|JPG|JPEG|PNG)$/) ) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `Por favor, seleccione una imagen</br>`);
+        // Habilitar que se muestre el mensaje
+        alertValidaciones.style.display = "block";
+        return; // Evitar que el formulario se envíe si no hay imagen seleccionada
+        flagProduct_img = false;
+    }else {
+        flagProduct_img = true;
+    }
+
 
     if (flagTitle == true && flagPrice == true && flagDescription == true) {
+
+        elemento = `{
+            "title": " ${title.value.trim()} ",
+            "price": " ${price.value.trim()}",
+            "description": " ${description.value.trim()}",
+            "'imagen": " ${product_img.src.trim()}",
+        }`;
+    
+        arrayProductos.push(elemento.trim());
+        // arrayProductos.push(JSON.stringify(elemento));
+        console.log(elemento);
+        localStorage.setItem('productos', arrayProductos);
+
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -102,10 +134,11 @@ btnEnviar.addEventListener('click', (e) => {
             showConfirmButton: false,
             timer: 1500
         })
+
         title.value = "";
         price.value = "";
         description.value = "";
-
+        product_img.src = "";
     } else {
 
     }
@@ -128,6 +161,4 @@ let widget = cloudinary.createUploadWidget({
 btnImg.addEventListener("click", function () {
     widget.open();
 }, false);
-
-
-
+//btn cloudinary

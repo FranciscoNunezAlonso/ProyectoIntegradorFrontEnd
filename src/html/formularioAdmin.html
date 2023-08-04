@@ -59,7 +59,7 @@
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Categoría</label>
               <select class="form-select" id="category">
-                <option selected>selecciona una categoría</option>
+                <option selected required>selecciona una categoría</option>
                 <option value="1">Figuras</option>
                 <option value="2">Conmemorativos</option>
                 <option value="3">Bordados</option>
@@ -70,11 +70,11 @@
             </div>
           </div>
         </div>
+        
         <!-- btn Subir imagen -->
         <br>
         <div>
-          <img id="product_img">
-
+          <img id="product_img" class="img-fluid">
           <button id="upload_widget" class="cloudinary-button btnImg form-control">Upload files</button>
         </div>
         <div class="mb-3">
@@ -88,6 +88,7 @@
     </div>
     </form>
     </div>
+    
     <!--Termino-->
     </div>
   </main>

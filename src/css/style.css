@@ -278,8 +278,8 @@ svg{
 .containerOpinionAdmi{
     background-color: #EDEDEF;
     align-items: center;
-    width: 610px;
-    height: 676px;
+    width: auto;
+    height: auto;
     padding: 30px;
     margin: 40px;
     border-radius: 30px;
