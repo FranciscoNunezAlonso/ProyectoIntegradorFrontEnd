@@ -119,7 +119,7 @@ btnEnviar.addEventListener('click', (e) => {
             "title": " ${title.value.trim()} ",
             "price": " ${price.value.trim()}",
             "description": " ${description.value.trim()}",
-            "'imagen": " ${product_img.src}"
+            "img": "${product_img.src}"
         }`;
     
         arrayProductos.push(JSON.parse(elemento));
@@ -155,20 +155,19 @@ btnEnviar.addEventListener('click', (e) => {
 });//btn Enviar
 
 // Cloudinary ------------------------
-let widget = cloudinary.createUploadWidget({
-    cloudName: 'dwp2swcwi',
-    uploadPreset: 'Apoyoap'
-},
-    (error, result) => {
+btnImg.addEventListener("click", function (event) {
+    event.preventDefault();
+    // Cloudinary ================================================
+    let myWidget = cloudinary.createUploadWidget({
+        cloudName: 'dwp2swcwi',
+        uploadPreset: 'Apoyoap',
+        multiple: false
+    }, (error, result) => {
         if (!error && result && result.event === "success") {
-            console.log('Done uploading..: ', result.info);
+            console.log('Done! Here is the image info: ', result.info);
             product_img.src = result.info.secure_url;
         }
-
     });
+    myWidget.open();
 
-// btn Img cloudinary
-btnImg.addEventListener("click", function () {
-    widget.open();
 }, false);
-//btn cloudinary

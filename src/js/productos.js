@@ -209,7 +209,7 @@ window.addEventListener("load", function (event) {
         "title": p.title,
         "price": p.price,
         "description": p.description,
-        "imagen": p.product_img
+        "img": p.img
       });
     }//foreach
     );
