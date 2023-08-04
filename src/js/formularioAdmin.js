@@ -119,13 +119,23 @@ btnEnviar.addEventListener('click', (e) => {
             "title": " ${title.value.trim()} ",
             "price": " ${price.value.trim()}",
             "description": " ${description.value.trim()}",
-            "'imagen": " ${product_img.src.trim()}",
+            "'imagen": " ${product_img.src}"
         }`;
     
-        arrayProductos.push(elemento.trim());
-        // arrayProductos.push(JSON.stringify(elemento));
-        console.log(elemento);
-        localStorage.setItem('productos', arrayProductos);
+        arrayProductos.push(JSON.parse(elemento));
+        this.localStorage.setItem("elemento", JSON.stringify(arrayProductos));
+
+        window.addEventListener("load", function (event) {
+            event.preventDefault();
+            if (this.localStorage.getItem("elemento") != null) {
+                JSON.parse(this.localStorage.getItem("elemento")).forEach((p) => {
+                    arrayProductos.push(p);
+                }//foreach
+                );
+        
+            }//if
+        
+        }); // window // load
 
         Swal.fire({
             position: 'center',
