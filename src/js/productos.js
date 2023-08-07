@@ -3,7 +3,7 @@
 // Función para agregar una nueva tarjeta al contenedor --------------------------------------------
 function addItem(item) {
   const itemHTML = `
-    <div class="card cardProds" style="width: 20rem;">
+    <div class="card cardProds" style="width: 18rem;">
     <img src="${item.img}" class="card-img-top" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
     <div class="card-body">
       <h5 class="card-title">${item.title}</h5>

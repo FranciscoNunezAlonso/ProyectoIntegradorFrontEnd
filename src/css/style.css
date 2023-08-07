@@ -58,19 +58,21 @@ margin-right: 0;
 .cardProds{
     background-color: #9bc1b1;
     margin: 60px;
-    display: flex;
+    display: auto;
+    margin-right: 130px;
+    margin-left: 70px;
 }
 .cardProds-text{
     text-align: left;
     margin-right: 45px;
-    padding: 10px;
 }
 
 .btnProds{
-    width: 160px ;
+    width: 150px ;
     height: 35px ;
-    font-size: 15px;
+    font-size: 15px;;
     font-family: 'Montserrat', sans-serif;
+    padding: 5px;
 }
 
 .btnProds:hover{
@@ -83,6 +85,11 @@ margin-right: 0;
     text-align: center;
 }
 
+.card-img-top{
+width: 90%;
+height: 90%;
+padding-left: 30px;
+}
 
 /* resolución movil */
 @media (min-width:320px) and (max-width:576px){
