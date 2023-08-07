@@ -54,6 +54,7 @@ addItem({
   "title": "Alcancía personalizada",
   "price": 150.00,
   "description": "Una alcancía adorable y personalizada, diseñada con la imagen de tu mascota, que te inspirará a ahorrar para mimarlo con más cariño.",
+  "category": "Figuras",
   "img": "/src/img/imgProductos/producto_1A.png", "imgOnMouseover": "/src/img/imgProductos/producto_1B.png",
   "rating": {
     "rate": 4.5,
@@ -65,7 +66,8 @@ addItem({
   "id": 2,
   "title": "Collar para recordar",
   "price": 100.00,
-  "description": "Conmemora a tu mascota con este collar de recuerdo, elije entre una urna para guardar pelito o un dije para almacenar las cenizas de tu compañero más fiel", "category": "Conmemorativos",
+  "description": "Conmemora a tu mascota con este collar de recuerdo, elije entre una urna para guardar pelito o un dije para almacenar las cenizas de tu compañero más fiel", 
+  "category": "Conmemorativos",
   "img": "/src/img/imgProductos/producto_2A.png", "imgOnMouseover": "/src/img/imgProductos/producto_2B.png",
   "rating": {
     "rate": 4.6,
@@ -91,7 +93,7 @@ addItem({
   "title": "Bordado personalizada",
   "price": 130.00,
   "description": "Crea un tributo único para tu mascota. Personaliza con su imagen y/o nombre en un telar artesanal circular de 15 cm. Un recuerdo especial para siempre.",
-  "category": "Bordado",
+  "category": "Bordados",
   "img": "/src/img/imgProductos/producto_4A.png", "imgOnMouseover": "/src/img/imgProductos/producto_4B.png",
   "rating": {
     "rate": 5.0,
@@ -156,7 +158,7 @@ addItem({
   "title": "Cuadro con textura felting",
   "price": 130.00,
   "description": "Un retrato único lleno de ternura. Cada detalle de tu mascota se captura con la técnica felting en un cuadro de arte texturizado.",
-  "category": "Cuadro",
+  "category": "Cuadros",
   "img": "/src/img/imgProductos/producto_9A.png", "imgOnMouseover": "/src/img/imgProductos/producto_9B.png",
   "rating": {
     "rate": 4.5,
