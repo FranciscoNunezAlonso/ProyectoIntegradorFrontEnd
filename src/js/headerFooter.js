@@ -1,9 +1,10 @@
-//Este es el header y el footer.
+// ******** Header y Footer ****************
+
 let navbar = document.getElementById("headerjs");
 let footer = document.getElementById("footerjs");
 
 
-//Acción de insertar Header.
+//Acción de insertar Header ---------------------------------------------------
 navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
     <div class="container" id="divNavBar">
       <!-- Logo -->
@@ -81,13 +82,12 @@ navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
     </div>
   </nav>`); // Acción de insertar Header.
 
-//Acción insertar Footer.
+//Acción insertar Footer ----------------------------------------------------------------------------
 footer.insertAdjacentHTML("afterEnd", `
-
-<!-- Modales-->
-<div class="modal fade" id="avisoDePrivacidad" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-lg">
+  <!-- Modales--> 
+  <div class="modal fade" id="avisoDePrivacidad" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
         <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Aviso de Privacidad</h1>
@@ -107,7 +107,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 data-bs-dismiss="modal">Cerrar</button>
         </div>
     </div>
-</div>
+  </div>
 </div>
 <div class="modal fade" id="terminosYCondiciones" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 aria-labelledby="staticBackdropLabel" aria-hidden="true">

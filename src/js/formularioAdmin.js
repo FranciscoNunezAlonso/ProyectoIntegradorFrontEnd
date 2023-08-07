@@ -1,4 +1,4 @@
-// ******** FORMULARIO PRODUCTOS ADMINISTRADOR
+// ******** FORMULARIO PRODUCTOS ADMINISTRADOR ****************
 let title = document.getElementById("title");
 let price = document.getElementById("price");
 let description = document.getElementById("description");
@@ -154,10 +154,9 @@ btnEnviar.addEventListener('click', (e) => {
     }
 });//btn Enviar
 
-// Cloudinary ------------------------
+// Cloudinary ------------------------------------------
 btnImg.addEventListener("click", function (event) {
     event.preventDefault();
-    // Cloudinary ================================================
     let myWidget = cloudinary.createUploadWidget({
         cloudName: 'dwp2swcwi',
         uploadPreset: 'Apoyoap',
@@ -170,4 +169,4 @@ btnImg.addEventListener("click", function (event) {
     });
     myWidget.open();
 
-}, false);
+}, false); // btn Imagen - cloudinary

@@ -13,9 +13,6 @@ body {
     color: #D16D79;
 }
 
-/* li {
-    margin-left: 25px;
-} */
 
 /* ****** CARRUSEL ****** */
 .margin-icon1{
@@ -192,6 +189,8 @@ margin-right: 0;
     display: block;
 }
 
+/* ****** FOOTER *******  */
+
 /* Íconos */
 .fa-tiktok {
     font-size: x-large;
@@ -231,7 +230,7 @@ margin-right: 0;
 
 }
 
-/* Contacto */
+/****** Página de Contacto *******/
 .containerContacto{
     background-color: #EDEDEF;
     width: 380px;
@@ -273,7 +272,7 @@ svg{
     padding-right: 3em;
 }
 
-/* FORMULARIO ADMI */
+/***** FORMULARIO ADMI ******/
 
 .containerOpinionAdmi{
     background-color: #EDEDEF;

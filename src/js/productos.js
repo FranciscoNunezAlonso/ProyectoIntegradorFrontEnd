@@ -1,4 +1,6 @@
-// Función para agregar una nueva tarjeta al contenedor
+// ******** AÑADIR PRODUCTOS ****************
+
+// Función para agregar una nueva tarjeta al contenedor --------------------------------------------
 function addItem(item) {
   const itemHTML = `
     <div class="card cardProds" style="width: 20rem;">
@@ -35,7 +37,7 @@ function changeImage(imageElement, newImageUrl) {
   }, 10000);
 }
 
-// Función para restablecer la imagen original
+// Función para restablecer la imagen original ---------------------------------------------
 function resetImage(imageElement) {
   // Verificar si hay una URL original almacenada en el atributo "data-original-src"
   if (imageElement.dataset.originalSrc) {
@@ -46,7 +48,7 @@ function resetImage(imageElement) {
   }
 }
 
-// Ejemplo de uso de la función addItem para agregar dos tarjetas
+// Productos en formato JSON ------------------------------
 addItem({
   "id": 1,
   "title": "Alcancía personalizada",
