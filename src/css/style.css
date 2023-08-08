@@ -13,6 +13,15 @@ body {
     color: #D16D79;
 }
 
+.nav-item:hover{
+    background-color: #b7d4c8;
+    border-color: #EDEDEF;
+}
+.navbar.nav-item:hover{
+    background-color: #A9C3B8;
+    border-color: #EDEDEF;
+}
+
 
 /* ****** CARRUSEL ****** */
 .margin-icon1{
@@ -68,9 +77,9 @@ margin-right: 0;
 }
 
 .btnProds{
-    width: 150px ;
-    height: 35px ;
-    font-size: 15px;;
+    width: 120px ;
+    height: 30px ;
+    font-size: 12px;;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
 }
@@ -184,6 +193,7 @@ padding-left: 30px;
     border-radius: 25px;
 }
 
+
 .hidden-image {
     display: none;
 }
@@ -195,6 +205,8 @@ padding-left: 30px;
 .image-container:hover .hidden-image {
     display: block;
 }
+
+
 
 /* ****** FOOTER *******  */
 
@@ -232,7 +244,7 @@ padding-left: 30px;
 
 .btn-primary:hover {
     background-color: #EDEDEF;
-    border-color: #EDEDEF;
+    border-color: #D16D79;
     color: #D16D79;
 
 }
@@ -270,6 +282,7 @@ button{
     padding: 10px 50px;
     margin: 10px;   
 }
+
 svg{
     display: flex;
 }
@@ -298,4 +311,10 @@ svg{
     color: black;
     border-radius: 10px;
     
+}
+
+.btnImg:hover{
+    background-color: #EDEDEF;
+    border-color: #EDEDEF;
+    color: #D16D79;
 }

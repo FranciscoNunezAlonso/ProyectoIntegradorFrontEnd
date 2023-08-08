@@ -216,7 +216,7 @@ Estamos emocionados de compartir nuestra pasión por los recuerdos personalizado
                   <h5>SERVICIO AL CLIENTE</h5>
                 </li>
                 <li class="nav-item mb-2">
-                  <a href="mailto:atencion@vd.com? Subject=Necesito%20ayuda%20por%20favor" class="nav-link-underlined p-0 text-body-secondary">atencion@vd.com</a>
+                  <a href="mailto:atencionap@​yahoo.com? Subject=Necesito%20ayuda%20por%20favor" class="nav-link-underlined p-0 text-body-secondary">atencionap@​yahoo.com</a>
                 </li>
                 <li class="nav-item mb-2">
                   <a class="nav-link p-0 text-body-secondary">554 327 2378</a>
