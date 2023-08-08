@@ -207,17 +207,16 @@ addItem({
 
 window.addEventListener("load", function (event) {
   event.preventDefault();
-  if (this.localStorage.getItem("elemento") != null) {
-    JSON.parse(this.localStorage.getItem("elemento")).forEach((p) => {
+  if (localStorage.getItem("elemento") != null) {
+    JSON.parse(localStorage.getItem("elemento")).forEach((p) => {
       addItem({
         "title": p.title,
         "price": p.price,
         "description": p.description,
-        "img": p.img
+        "img": p.img,
+        "imgOnMouseover": p.imgOnMouseover // Agregar esta línea para el atributo imgOnMouseover
       });
-    }//foreach
-    );
+    });
 
-  }//if resumen
-
-}); // window // load
+  }
+});
