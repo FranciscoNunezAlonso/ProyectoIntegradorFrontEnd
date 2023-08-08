@@ -54,12 +54,12 @@ const validarApellido = (apellido) => {
 };
 
 const validarTelefono = (telefono) => {
-    const expresionRegular = /^[0-9]{10}$/;
+    const expresionRegular = /^(?!([0-9])\1{9})\d{10}$/;
     return expresionRegular.test(telefono);
 };
 
 const validarMensaje = (mensaje) => {
-    const expresionRegular = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
+    const expresionRegular = /^.{20,200}$/;
     return expresionRegular.test(mensaje);
 };
 const btnEmail = document.getElementById('btnEnviar');
@@ -68,6 +68,7 @@ const btnEmail = document.getElementById('btnEnviar');
 // Evento bnt enviar email -------------------------------------------------------------
 btnEmail.addEventListener('click', (e) => {
     e.preventDefault();
+
     let flagNombre = true;
     let flagApellido = true;
     let flagEmail = true;
@@ -130,10 +131,16 @@ btnEmail.addEventListener('click', (e) => {
             From: email.value,
             Subject: "Hola estimado",
             Body: "Este es un mensaje de prueba"
-        }).then(msg => alert("tu mensaje fue enviado"))
-            .catch(err => alert("Hubo un error al enviar el mensaje"));
+        }).then(msg => {
+            alert("Tu mensaje fue enviado");
+            // Limpiar los campos del formulario
+            nombre.value = "";
+            apellido.value = "";
+            email.value = "";
+            telefono.value = "";
+            mensaje.value = "";
+        }).catch(err => alert("Hubo un error al enviar el mensaje"));
     } else {
         alertValidaciones.style.display = "block";
-    }
-});
+    }});
 
