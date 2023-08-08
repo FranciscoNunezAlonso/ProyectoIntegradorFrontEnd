@@ -3,18 +3,18 @@
 // Función para agregar una nueva tarjeta al contenedor --------------------------------------------
 function addItem(item) {
   const itemHTML = `
-    <div class="card cardProds" style="width: 18rem;">
-    <img src="${item.img}" class="card-img-top" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+  <div class="col">
+    <div class="card cardProds h-100">
+      <img src="${item.img}" class="card-img-top" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
     <div class="card-body">
       <h5 class="card-title">${item.title}</h5>
-      <h3 class="card-title">$ ${item.price}</h3>
-      <p class="cardProds-text position: left">${item.description}</p>
-      <a href="#" class="btn btn-primary btnProds" style="position: absolute; right: -75px; bottom: 50px;">Comprar</a>
-      <a href="#" class="btn btn-primary btnProds" style="position: absolute; right: -75px; bottom: 10px;">Agregar al carrito</a>
-  
-    </div>
+        <h3 class="card-title">$ ${item.price}</h3>
+          <p class="cardProds-text position: left">${item.description}</p>
+        <a href="#" class="btn btn-primary btnProds">Comprar</a>
+        <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+      </div>
+      </div>
   </div>
-
   `;
 
   // Seleccionar el contenedor donde se agregarán las tarjetas
@@ -66,7 +66,7 @@ addItem({
   "id": 2,
   "title": "Collar para recordar",
   "price": 100.00,
-  "description": "Conmemora a tu mascota con este collar de recuerdo, elije entre una urna para guardar pelito o un dije para almacenar las cenizas de tu compañero más fiel", 
+  "description": "Conmemora a tu mascota con este collar de recuerdo, elije entre una urna para guardar pelito o un dije para almacenar las cenizas de tu compañero más fiel",
   "category": "Conmemorativos",
   "img": "/src/img/imgProductos/producto_2A.png", "imgOnMouseover": "/src/img/imgProductos/producto_2B.png",
   "rating": {

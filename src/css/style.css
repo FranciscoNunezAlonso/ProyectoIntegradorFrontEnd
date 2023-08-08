@@ -70,6 +70,7 @@ margin-right: 0;
     display: auto;
     margin-right: 130px;
     margin-left: 70px;
+    width:19em;
 }
 .cardProds-text{
     text-align: left;
@@ -82,9 +83,27 @@ margin-right: 0;
     font-size: 12px;;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
+    position: absolute;
+    right: -75px;
+    bottom: 50px;
+}
+.btnProds1{
+    width: 120px ;
+    height: 30px ;
+    font-size: 12px;;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    position: absolute;
+    right: -75px;
+    bottom: 10px;
 }
 
 .btnProds:hover{
+    background-color: #EDEDEF;
+    border-color: #EDEDEF;
+    color: #D16D79;
+}
+.btnProds1:hover{
     background-color: #EDEDEF;
     border-color: #EDEDEF;
     color: #D16D79;
@@ -118,12 +137,16 @@ padding-left: 30px;
     .margin-icon3{
         margin-top:0px;
     }
-    .botonete{
-        left: 84%;
+    .cardProds{
+        right: 50px;
+        width: 14rem;
     }
-    .botonete2{
-        left: 85%;
+    .btnProds{
+    right: -45px;
     }
+    .btnProds1{
+        right: -45px;
+        }
 }
 
 /*resolución de tablet*/
@@ -131,26 +154,35 @@ padding-left: 30px;
     .pCarousel {
         font-size: 16px;
     }
-    .botonete{
-    left: 71%;
+    .cardProds{
+        right: 75px;
+        width: 17rem;
+        
     }
-    
-    .botonete2{
-        left: 72%;
+    .btnProds{
+        right: -55px;
     }
+    .btnProds1{
+        right: -55px;
+    }
+
 }
+
 /*resolución de laptop*/
 @media (min-width: 992px) and (max-width:1199px){
     .pCarousel {
         font-size: 16px;
     }
-    .botonete{
-    left: 80%;
+    .cardProds{
+        right: 70px;
+        width:16em;
     }
-    
-    .botonete2{
-        left: 81%;
-    }
+    .btnProds{
+        right: -53px;
+        }
+        .btnProds1{
+            right: -53px;
+            }
 }
 
 /* ****** Cards integrantes *******  */
@@ -230,10 +262,6 @@ padding-left: 30px;
 .footer-bg {
     background-color: #A9C3B8;
     display: flex;
-}
-
-.link_ch29{
-    text-decoration: none
 }
 
 .pModal{
