@@ -273,7 +273,7 @@ Estamos emocionados de compartir nuestra pasión por los recuerdos personalizado
                         </div>
                     </div>
                     <div class="flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                    <p class="text-center">&copy; 2023 Team 1, Generation México | CH29.</p>
+                    <p class="text-center">&copy; 2023 Team 1, Generation México | <a href="/src/html/formularioAdmin.html" class="link_ch29">CH29</a></p>
     </div>
   </footer>
 </div>`);//Acción insertar Footer.
