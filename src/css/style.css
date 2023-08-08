@@ -232,6 +232,10 @@ padding-left: 30px;
     display: flex;
 }
 
+.link_ch29{
+    text-decoration: none
+}
+
 .pModal{
     text-align: justify;
 }
