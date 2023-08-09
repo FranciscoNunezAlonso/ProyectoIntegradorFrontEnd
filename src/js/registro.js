@@ -106,7 +106,7 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (!contrasena.value.match( /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> contraseña </strong> no es válida</br>`);
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> contraseña </strong> debe contener al menos una letra mayúscula, una minúscula, un número y un mínimo de 8 caracteres.</br>`);
         alertValidaciones.style.display = "block";
         contrasena.style.border = "solid 2px #B4016C";
         flagContrasena = false;
@@ -122,67 +122,39 @@ btnEnviar.addEventListener('click', (e) => {
         }
     }
 
-
-    // if (!confirmarContrasena.value.match(contrasena.value)) {
-    //     alertValidacionesTexto.insertAdjacentHTML("beforeend", `Las <strong> contraseñas </strong> no coinciden</br>`);
-    //     alertValidaciones.style.display = "block";
-    //     confirmarContrasena.style.border = "solid 2px #B4016C";
-    //     flagConfirmarContrasena = false;
-    // } else {
-    //     flagConfirmarContrasena = true;
-    // }
-
-    if (flagemail && flagnombre && flagapellido && flagProduct_img) {
+    if (flagEmail && flagNombre && flagApellido && flagContrasena && flagConfirmarContrasena) {
         let elemento = {
             "email": email.value.trim(),
             "nombre": nombre.value.trim(),
             "apellido": apellido.value.trim(),
-            "img": product_img.src,
-            "imgOnMouseover": product_img.dataset.imgOnMouseover
+            "usuario": nombreUsuario.value.trim(),
+            "contrasena": contrasena.value.trim(),
+            "confirmarContrasena": confirmarContrasena.value.trim() 
         };
     
-        arrayProductos.push(elemento);
-        localStorage.setItem("elemento", JSON.stringify(arrayProductos));
-
+        arrayDatosUsuario.push(elemento);
+        localStorage.setItem("elemento", JSON.stringify(arrayDatosUsuario));
+        console.log("Prueba exitosa");
         Swal.fire({
             position: 'center',
             icon: 'success',
-            email: 'El producto se ha publicado de manera exitosa',
+            title: 'El usuario se ha registrado de manera exitosa',
             showConfirmButton: false,
             timer: 1500
         });
+        // Swal.fire({
+        //     position: 'center',
+        //     icon: 'success',
+        //     email: 'El usuario se ha registrado de manera exitosa',
+        //     showConfirmButton: false,
+        //     timer: 1500
+        // });
 
         email.value = "";
         nombre.value = "";
         apellido.value = "";
-        product_img.src = "";
-        product_img.removeAttribute("data-imgOnMouseover");
+        nombreUsuario.value = "";
+        contrasena.value="";
+        confirmarContrasena.value="";
     }
 });
-
-// Cloudinary ------------------------------------------
-let uploadedImages = [];
-
-// Evento btn Img (Cloudinary) ----------------------------------
-btnImg.addEventListener("click", function (event) {
-    event.preventDefault();
-    
-    let myWidget = cloudinary.createUploadWidget({
-        cloudName: 'dwp2swcwi',
-        uploadPreset: 'Apoyoap',
-        multiple: true
-    }, (error, result) => {
-        if (!error && result && result.event === "success") {
-            uploadedImages.push(result.info.secure_url);
-
-            if (uploadedImages.length >= 2) {
-                product_img.src = uploadedImages[0];
-                product_img.dataset.imgOnMouseover = uploadedImages[1];
-
-                uploadedImages = [];
-                flagProduct_img = true; // Mark the flag as true
-            }
-        }
-    });
-    myWidget.open();
-}, false);
