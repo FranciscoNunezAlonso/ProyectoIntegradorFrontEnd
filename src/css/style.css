@@ -8,7 +8,10 @@ body {
     background-color: #A9C3B8;
     display: flex;
 }
-
+a{
+    color: #252F48;
+    text-decoration: none;
+}
 .bi {
     color: #D16D79;
 }
@@ -21,7 +24,19 @@ body {
     background-color: #A9C3B8;
     border-color: #EDEDEF;
 }
-
+.navbar-margin-l {
+margin-left: 2rem;
+}
+.navbar-icon{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+/* ****** INDEX ***** */
+.alert-index{
+    background-color: #D16D79;
+    border-color: #ee384d;
+    color: #EDEDEF;
+}
 
 /* ****** CARRUSEL ****** */
 .margin-icon1{
@@ -54,27 +69,22 @@ body {
 }
 
 /*cartas de productos*/
-
-.d-flex.justify-content-center {
-    justify-content: center;
+.cardProdsFlex{
+    display: flex;
 }
-
-.row.row-cols-md-3 {
-margin-left: 0;
-margin-right: 0;
-}
-
-.cardProds{
+.cardProds {
     background-color: #9bc1b1;
-    margin: 60px;
-    display: auto;
-    margin-right: 130px;
-    margin-left: 70px;
-    width:19em;
+    flex: 50%;
+    flex-direction: column;
 }
-.cardProds-text{
-    text-align: left;
-    margin-right: 45px;
+.cardProds .cardProdsContent{
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: #9bc1b1;
+}
+
+.cardFooterBg{
+    background-color: #9bc1b1;
 }
 
 .btnProds{
@@ -84,7 +94,7 @@ margin-right: 0;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
     position: absolute;
-    right: -75px;
+    right: -30px;
     bottom: 50px;
 }
 .btnProds1{
@@ -94,7 +104,7 @@ margin-right: 0;
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
     position: absolute;
-    right: -75px;
+    right: -30px;
     bottom: 10px;
 }
 
@@ -116,7 +126,11 @@ margin-right: 0;
 .card-img-top{
 width: 90%;
 height: 90%;
-padding-left: 30px;
+margin: 1rem;
+}
+.cardTextProds {
+    text-align: justify;
+    padding: 10px;
 }
 
 /* resolución movil */
@@ -137,16 +151,16 @@ padding-left: 30px;
     .margin-icon3{
         margin-top:0px;
     }
-    .cardProds{
-        right: 50px;
-        width: 14rem;
-    }
     .btnProds{
-    right: -45px;
-    }
-    .btnProds1{
-        right: -45px;
+        right: -20px;
         }
+    .btnProds1{
+        right: -20px;
+        }
+    .btn-form-admi{
+        padding-left: 1px;
+        padding-right:1px; 
+    }
 }
 
 /*resolución de tablet*/
@@ -154,18 +168,12 @@ padding-left: 30px;
     .pCarousel {
         font-size: 16px;
     }
-    .cardProds{
-        right: 75px;
-        width: 17rem;
-        
-    }
     .btnProds{
-        right: -55px;
+        right: -30px;
     }
     .btnProds1{
-        right: -55px;
+        right: -30px;
     }
-
 }
 
 /*resolución de laptop*/
@@ -173,16 +181,19 @@ padding-left: 30px;
     .pCarousel {
         font-size: 16px;
     }
-    .cardProds{
-        right: 70px;
-        width:16em;
-    }
     .btnProds{
-        right: -53px;
+        right: -30px;
+    }
+    .btnProds1{
+        right: -30px;
+    }
+    .navbar-margin-l {
+        margin-left: 0%;
         }
-        .btnProds1{
-            right: -53px;
-            }
+    .navbar-icon{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 }
 
 /* ****** Cards integrantes *******  */
@@ -237,7 +248,16 @@ padding-left: 30px;
 .image-container:hover .hidden-image {
     display: block;
 }
-
+.icon-nosotros-git{
+    width: 4rem;
+    margin-right: 2rem;
+}
+.icon-nosotros-linked{
+    width: 4rem;
+}
+.card-nostros-bg{
+    background-color: #ffff;
+}
 
 
 /* ****** FOOTER *******  */
@@ -335,24 +355,24 @@ svg{
 .containerOpinionAdmi{
     background-color: #EDEDEF;
     align-items: center;
-    width: auto;
-    height: auto;
     padding: 30px;
     margin: 40px;
     border-radius: 30px;
     text-align: center;
 }
 
-.btnImg{
-    background-color: #A9C3B8;
-    border-color:#A9C3B8 ;
-    color: black;
-    border-radius: 10px;
-    
-}
 
 .btnImg:hover{
     background-color: #EDEDEF;
     border-color: #EDEDEF;
     color: #D16D79;
+}
+.btn-form-admi{
+    background-color:#A9C3B8;
+    border-radius: 10px;
+    padding-left: 6.5rem;
+    padding-right: 6.5rem;
+    border-color: #A9C3B8;
+    border-radius: 10px;
+    color: #EDEDEF;
 }

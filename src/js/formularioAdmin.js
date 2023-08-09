@@ -66,7 +66,7 @@ btnEnviar.addEventListener('click', (e) => {
         flagTitle = true;
     }
 
-    if (!price.value.match(/^[0-9]{1,4}$/) || (price.value.length < 2)) {
+    if (!price.value.match(/^[0-9]{1,3}$|^[0-9]{1,3}.[0-9]{1,3}$/) || (price.value.length < 2)) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> precio </strong> no es válido</br>`);
         alertValidaciones.style.display = "block";
         price.style.border = "solid 2px #B4016C";

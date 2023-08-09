@@ -35,13 +35,58 @@
       <img src="/src/img/Baner_rosa.png" alt="imagen baner" style="width: 100%;" class="img-fluid.">
     </div>
 
-    <div class="container">
-      <br>
-      <button>Lo más vendido</button>
+    <div class="container d-flex justify-content-center">
+      <div class="col-lg-8">
+      <div class="alert alert-index mt-4 text-center" role="alert">
+        Lo más vendido
+      </div>
+    </div>
     </div>
     <!-- contenido  -->
     <div class="container">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 d-flex justify-content-center" id="list-items">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 d-flex justify-content-center">
+        <div class="col cardProdsFlex">
+          <div class="card cardProds h-80 w-100">
+            <img src="${item.img}" class="card-img-top imgCard" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+          <div class="card-body cardProdsContent">
+            <h6 class="card-title">${item.title}</h6>
+              <h5 class="card-title">$ ${item.price}</h5>
+                <p class="cardTextProds">${item.description}</p>
+          </div>
+          <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
+          <a href="#" class="btn btn-primary btnProds">Comprar</a>
+          <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+        </div>
+          </div>
+        </div>
+        <div class="col cardProdsFlex">
+          <div class="card cardProds h-80 w-100">
+            <img src="${item.img}" class="card-img-top imgCard" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+          <div class="card-body cardProdsContent">
+            <h6 class="card-title">${item.title}</h6>
+              <h5 class="card-title">$ ${item.price}</h5>
+                <p class="cardTextProds">${item.description}</p>
+          </div>
+          <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
+          <a href="#" class="btn btn-primary btnProds">Comprar</a>
+          <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+        </div>
+          </div>
+        </div>
+        <div class="col cardProdsFlex">
+          <div class="card cardProds h-80 w-100">
+            <img src="${item.img}" class="card-img-top imgCard" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+          <div class="card-body cardProdsContent">
+            <h6 class="card-title">${item.title}</h6>
+              <h5 class="card-title">$ ${item.price}</h5>
+                <p class="cardTextProds">${item.description}</p>
+          </div>
+          <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
+          <a href="#" class="btn btn-primary btnProds">Comprar</a>
+          <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+        </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>

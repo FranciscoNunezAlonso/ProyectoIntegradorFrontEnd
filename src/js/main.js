@@ -54,7 +54,7 @@ const validarApellido = (apellido) => {
 };
 
 const validarTelefono = (telefono) => {
-    const expresionRegular = /^(?!([0-9])\1{9})\d{10}$/;
+    const expresionRegular = /^(?!.*(\d)\1{4,})\d{10}$/;
     return expresionRegular.test(telefono);
 };
 
@@ -132,7 +132,13 @@ btnEmail.addEventListener('click', (e) => {
             Subject: "Hola estimado",
             Body: "Este es un mensaje de prueba"
         }).then(msg => {
-            alert("Tu mensaje fue enviado");
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Tu solicitud ha sido enviada exitosamente',
+                showConfirmButton: false,
+                timer: 1500
+            });
             // Limpiar los campos del formulario
             nombre.value = "";
             apellido.value = "";

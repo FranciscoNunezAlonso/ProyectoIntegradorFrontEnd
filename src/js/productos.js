@@ -3,17 +3,19 @@
 // Función para agregar una nueva tarjeta al contenedor --------------------------------------------
 function addItem(item) {
   const itemHTML = `
-  <div class="col">
-    <div class="card cardProds h-100">
-      <img src="${item.img}" class="card-img-top" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
-    <div class="card-body">
-      <h5 class="card-title">${item.title}</h5>
-        <h3 class="card-title">$ ${item.price}</h3>
-          <p class="cardProds-text position: left">${item.description}</p>
-        <a href="#" class="btn btn-primary btnProds">Comprar</a>
-        <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
-      </div>
-      </div>
+  <div class="col cardProdsFlex">
+    <div class="card cardProds h-80 w-100">
+      <img src="${item.img}" class="card-img-top imgCard" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+    <div class="card-body cardProdsContent">
+      <h6 class="card-title">${item.title}</h6>
+        <h5 class="card-title">$ ${item.price}</h5>
+          <p class="cardTextProds">${item.description}</p>
+    </div>
+    <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
+    <a href="#" class="btn btn-primary btnProds">Comprar</a>
+    <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+  </div>
+    </div>
   </div>
   `;
 
