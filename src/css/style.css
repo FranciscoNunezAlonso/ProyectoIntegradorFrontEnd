@@ -304,6 +304,12 @@ padding-left: 30px;
     text-align: center;
 }
 
+.containerRegistro{
+    background-color: #EDEDEF;
+    border-radius: 30px;
+    text-align: center;
+}
+
 
 button{
     background-color: #D16D79;
