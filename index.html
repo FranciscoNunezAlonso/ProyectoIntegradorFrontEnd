@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
-    <!-- Link Bootstrap -->
+  <!-- Link Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <!-- Link iconos -->
@@ -15,6 +15,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- link arhivo css -->
   <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="./src/css/estrellas.css">
   <!-- Link de fuente-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,66 +30,190 @@
   <header id="headerjs"></header>
 
   <main>
+    <!-- *****************  Carrusel ************************** -->
+    <br>
+    <div class="container">
+      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1545529468-42764ef8c85f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1746&q=80"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
+              class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1521247560470-d2cbfe2f7b47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+              class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- *****************  Card / productos ************************** -->
+    <div class="container d-flex justify-content-center">
+      <div class="col-lg-8">
+        <div class="alert alert-index mt-4 text-center" role="alert">
+          Lo más vendido
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 d-flex justify-content-center">
+        <div class="col cardProdsFlex">
+          <div class="card cardProds h-80 w-100">
+            <img src="${item.img}" class="card-img-top imgCard" alt="image"
+              onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+            <div class="card-body cardProdsContent">
+              <h6 class="card-title">${item.title}</h6>
+              <h5 class="card-title">$ ${item.price}</h5>
+              <p class="cardTextProds">${item.description}</p>
+            </div>
+            <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
+              <a href="#" class="btn btn-primary btnProds">Comprar</a>
+              <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+            </div>
+          </div>
+        </div>
+        <div class="col cardProdsFlex">
+          <div class="card cardProds h-80 w-100">
+            <img src="${item.img}" class="card-img-top imgCard" alt="image"
+              onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+            <div class="card-body cardProdsContent">
+              <h6 class="card-title">${item.title}</h6>
+              <h5 class="card-title">$ ${item.price}</h5>
+              <p class="cardTextProds">${item.description}</p>
+            </div>
+            <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
+              <a href="#" class="btn btn-primary btnProds">Comprar</a>
+              <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+            </div>
+          </div>
+        </div>
+        <div class="col cardProdsFlex">
+          <div class="card cardProds h-80 w-100">
+            <img src="${item.img}" class="card-img-top imgCard" alt="image"
+              onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+            <div class="card-body cardProdsContent">
+              <h6 class="card-title">${item.title}</h6>
+              <h5 class="card-title">$ ${item.price}</h5>
+              <p class="cardTextProds">${item.description}</p>
+            </div>
+            <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
+              <a href="#" class="btn btn-primary btnProds">Comprar</a>
+              <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- *****************  Baner ************************** -->
     <div class="container">
       <img src="/src/img/Baner_rosa.png" alt="imagen baner" style="width: 100%;" class="img-fluid.">
     </div>
 
-    <div class="container d-flex justify-content-center">
-      <div class="col-lg-8">
-      <div class="alert alert-index mt-4 text-center" role="alert">
-        Lo más vendido
-      </div>
-    </div>
-    </div>
-    <!-- contenido  -->
+    <!-- *****************  ENVIOS ************************** -->
     <div class="container">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 d-flex justify-content-center">
-        <div class="col cardProdsFlex">
-          <div class="card cardProds h-80 w-100">
-            <img src="${item.img}" class="card-img-top imgCard" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
-          <div class="card-body cardProdsContent">
-            <h6 class="card-title">${item.title}</h6>
-              <h5 class="card-title">$ ${item.price}</h5>
-                <p class="cardTextProds">${item.description}</p>
+      <br>
+      <div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col">
+            Entregas a toda la república mexiacana
           </div>
-          <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
-          <a href="#" class="btn btn-primary btnProds">Comprar</a>
-          <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
-        </div>
+          <div class="col">
+            Aceptamos todas las tarjetas
           </div>
-        </div>
-        <div class="col cardProdsFlex">
-          <div class="card cardProds h-80 w-100">
-            <img src="${item.img}" class="card-img-top imgCard" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
-          <div class="card-body cardProdsContent">
-            <h6 class="card-title">${item.title}</h6>
-              <h5 class="card-title">$ ${item.price}</h5>
-                <p class="cardTextProds">${item.description}</p>
-          </div>
-          <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
-          <a href="#" class="btn btn-primary btnProds">Comprar</a>
-          <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
-        </div>
-          </div>
-        </div>
-        <div class="col cardProdsFlex">
-          <div class="card cardProds h-80 w-100">
-            <img src="${item.img}" class="card-img-top imgCard" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
-          <div class="card-body cardProdsContent">
-            <h6 class="card-title">${item.title}</h6>
-              <h5 class="card-title">$ ${item.price}</h5>
-                <p class="cardTextProds">${item.description}</p>
-          </div>
-          <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
-          <a href="#" class="btn btn-primary btnProds">Comprar</a>
-          <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
-        </div>
+          <div class="col">
+            Pagos seguros
           </div>
         </div>
       </div>
     </div>
+
+    <!-- *****************  Reviews ************************** -->
+
+    <div class="container text-center">
+      <div class="container d-flex justify-content-center">
+        <div class="col-lg-8">
+          <div class="alert alert-index mt-4 text-center" role="alert">
+            Opniones
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+                <ul class="list-group list-group-horizontal">
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+        
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+            <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+            <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+          </ul>
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+      </div>
+    </div>
+
+    <!-- *****************  Donacion ************************** -->
+    <div class="container">
+      <br><br>
+      <div class="container text-left">
+        <div class="row ">
+          <div class="col-8">
+            <h2>¿Sabías qué?</h2>
+            <br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat officia culpa repellat voluptates! Velit fuga nisi odio nostrum repudiandae vel, hic explicabo consequuntur, ratione earum similique nobis quis quia quam.</p>
+          </div>
+          <div class="col-4">
+            <img
+              src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nJTIwYWRvcHRpb258ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&w=800&q=60"
+              alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
   </main>
   <br>
   <br>
@@ -106,7 +231,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-  
+
 </body>
 
 </html>
