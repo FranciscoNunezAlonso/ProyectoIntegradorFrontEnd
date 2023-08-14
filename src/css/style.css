@@ -376,3 +376,9 @@ svg{
     border-radius: 10px;
     color: #EDEDEF;
 }
+
+/* Registro */
+
+.linkCuenta{
+    text-decoration:underline;
+}
