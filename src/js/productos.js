@@ -3,18 +3,20 @@
 // Función para agregar una nueva tarjeta al contenedor --------------------------------------------
 function addItem(item) {
   const itemHTML = `
-    <div class="card cardProds" style="width: 18rem;">
-    <img src="${item.img}" class="card-img-top" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
-    <div class="card-body">
-      <h5 class="card-title">${item.title}</h5>
-      <h3 class="card-title">$ ${item.price}</h3>
-      <p class="cardProds-text position: left">${item.description}</p>
-      <a href="#" class="btn btn-primary btnProds" style="position: absolute; right: -75px; bottom: 50px;">Comprar</a>
-      <a href="#" class="btn btn-primary btnProds" style="position: absolute; right: -75px; bottom: 10px;">Agregar al carrito</a>
-  
+  <div class="col cardProdsFlex">
+    <div class="card cardProds h-80 w-100">
+      <img src="${item.img}" class="card-img-top imgCard" alt="image" onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+    <div class="card-body cardProdsContent">
+      <h6 class="card-title">${item.title}</h6>
+        <h5 class="card-title">$ ${item.price}</h5>
+          <p class="cardTextProds">${item.description}</p>
+    </div>
+    <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
+    <a href="#" class="btn btn-primary btnProds">Comprar</a>
+    <a href="#" class="btn btn-primary btnProds1">Agregar al carrito</a>
+  </div>
     </div>
   </div>
-
   `;
 
   // Seleccionar el contenedor donde se agregarán las tarjetas
@@ -66,7 +68,7 @@ addItem({
   "id": 2,
   "title": "Collar para recordar",
   "price": 100.00,
-  "description": "Conmemora a tu mascota con este collar de recuerdo, elije entre una urna para guardar pelito o un dije para almacenar las cenizas de tu compañero más fiel", 
+  "description": "Conmemora a tu mascota con este collar de recuerdo, elije entre una urna para guardar pelito o un dije para almacenar las cenizas de tu compañero más fiel",
   "category": "Conmemorativos",
   "img": "/src/img/imgProductos/producto_2A.png", "imgOnMouseover": "/src/img/imgProductos/producto_2B.png",
   "rating": {
@@ -207,17 +209,16 @@ addItem({
 
 window.addEventListener("load", function (event) {
   event.preventDefault();
-  if (this.localStorage.getItem("elemento") != null) {
-    JSON.parse(this.localStorage.getItem("elemento")).forEach((p) => {
+  if (localStorage.getItem("elemento") != null) {
+    JSON.parse(localStorage.getItem("elemento")).forEach((p) => {
       addItem({
         "title": p.title,
         "price": p.price,
         "description": p.description,
-        "img": p.img
+        "img": p.img,
+        "imgOnMouseover": p.imgOnMouseover // Agregar esta línea para el atributo imgOnMouseover
       });
-    }//foreach
-    );
+    });
 
-  }//if resumen
-
-}); // window // load
+  }
+});

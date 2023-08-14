@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacto</title>
-   <!-- Link Bootstrap -->
+  <title>Formulario Admi</title>
+  <!-- Link Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <!-- Link iconos -->
@@ -33,7 +33,8 @@
   <main>
 
     <!-- FORMULARIO -->
-    <div class="containerOpinionAdmi col-lg-6">
+    <div class="container  d-flex justify-content-center">
+    <div class="containerOpinionAdmi col-lg-8">
       <h1>Publicar nuevo producto</h1>
       <form onsubmit="return false" id="form">
         <div id="formulario">
@@ -53,7 +54,8 @@
             <textarea class="form-control" name="descripcion" id="description" rows="3"
               placeholder="Descripción del producto" required></textarea>
             <br>
-            <!-- categoría -->
+
+            <!-- categoría
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Categoría</label>
               <select class="form-select" id="category">
@@ -67,27 +69,28 @@
               </select>
             </div>
           </div>
-        </div>
-        
-        <!-- btn Subir imagen -->
-        <br>
-        <div>
-          <img id="product_img" class="img-fluid">
-          <button id="upload_widget" class="btn btnImg btn-primary  form-control">Sube la imagen</button>
-        </div>
-        <div class="mb-3">
-          <button class="enviar" id="btnEnviar" type="button" value="Send">Enviar</button>
-          <button type="button" id="btnClear">Limpiar</button>
-          
-          <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-            <p id="alertValidacionesTexto"></p>
+        </div> -->
+
+            <!-- btn Subir imagen -->
+            <br>
+            <div>
+              <img id="product_img" class="img-fluid">
+              <button id="upload_widget" class="btn-form-admi">Agrega 2 imágenes</button>
+            </div>
+            <div class="mb-3">
+              <button class="enviar" id="btnEnviar" type="button" value="Send">Enviar</button>
+              <button type="button" id="btnClear">Limpiar</button>
+
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+                <p id="alertValidacionesTexto"></p>
+              </div>
+            </div>
           </div>
-        </div>
-    </div>
-    </form>
+      </form>
     </div>
     </div>
 
+  </div>
   </main>
 
   <!-- ******************* Footer ********************* -->

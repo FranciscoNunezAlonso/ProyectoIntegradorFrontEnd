@@ -18,22 +18,22 @@ navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <!-- Hipervínculo Home -->
 
-          <li class="nav-item">
-            <a class="nav-link active " aria-current="page" href="/index.html"
+          <li class="nav-item navbar-margin-l rounded">
+            <a class="nav-link active" aria-current="page" href="/index.html"
               style="color: #252F48; font-size: 20px;">Home</a>
           </li>
           <!-- Hipernvínculo Productos -->
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/src/html/productos.html"
+          <li class="nav-item navbar-margin-l rounded">
+            <a class="nav-link active " aria-current="page" href="/src/html/productos.html"
               style="color: #252F48; font-size: 20px;">Productos</a>
           </li>
           <!-- Hipervínculo Nosotros -->
-          <li class="nav-item">
+          <li class="nav-item navbar-margin-l rounded">
             <a class="nav-link active" aria-current="page" href="/src/html/nosotros.html"
               style="color: #252F48; font-size: 20px;">Nosotros</a>
           </li>
           <!-- Hipervínculo Contacto -->
-          <li class="nav-item">
+          <li class="nav-item navbar-margin-l rounded">
             <a class="nav-link active" aria-current="page" href="/src/html/contacto.html"
               style="color: #252F48; font-size: 20px;">Contacto</a>
           </li>
@@ -43,11 +43,11 @@ navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
 
           <!-- Barra Buscadora  -->
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"
               style="color: #252F48;">
           </form>
           <!-- icono lupa -->
-          <li class="navbar nav-item">
+          <li class="navbar nav-item navbar-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-search"
               viewBox="0 0 16 16">
               <path
@@ -56,8 +56,8 @@ navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
           </li>
 
           <!-- icono usuario -->
-          <li class="navbar nav-item">
-            <a href="registro.html" class="navbar nav-link active">
+          <li class="navbar nav-item navbar-icon">
+          <a href="/src/html/registro.html" class="navbar nav-link active">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-person-circle"
                 viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -67,7 +67,7 @@ navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
             </a>
           </li>
           <!-- icono carrito -->
-          <li class="navbar nav-item">
+          <li class="navbar nav-item navbar-icon">
             <a href="/src/html/carrito.html" class="navbar nav-link active">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-cart4 "
                 viewBox="0 0 16 16">
@@ -273,7 +273,7 @@ Estamos emocionados de compartir nuestra pasión por los recuerdos personalizado
                         </div>
                     </div>
                     <div class="flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                    <p class="text-center">&copy; 2023 Team 1, Generation México | CH29.</p>
+                    <p class="text-center">&copy; 2023 Team 1, Generation México | <a href="/src/html/formularioAdmin.html" class="link_ch29">CH29</a></p>
     </div>
   </footer>
 </div>`);//Acción insertar Footer.
