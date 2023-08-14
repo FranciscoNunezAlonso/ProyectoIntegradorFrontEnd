@@ -57,7 +57,7 @@ navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
 
           <!-- icono usuario -->
           <li class="navbar nav-item navbar-icon">
-            <a href="registro.html" class="navbar nav-link active">
+          <a href="/src/html/registro.html" class="navbar nav-link active">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-person-circle"
                 viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
