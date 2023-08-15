@@ -148,7 +148,7 @@ btnEmail.addEventListener('click', (e) => {
     // Validación del teléfono
     if (!validarTelefono(telefono.value)) {
         flagTelefono = false;
-        alertValidacionesTextoTelefono.insertAdjacentHTML("beforeend", `El <strong> Telefono </strong> no es válido</br>`);
+        alertValidacionesTextoTelefono.insertAdjacentHTML("beforeend", `El <strong> Teléfono </strong> no es válido</br>`);
         alertValidacionesTelefono.style.display = "block";
         telefono.style.border = "solid 2px #B4016C";
     } else {
@@ -158,7 +158,7 @@ btnEmail.addEventListener('click', (e) => {
     // Validación del mensaje
     if (!validarMensaje(mensaje.value)) {
         flagMensaje = false;
-        alertValidacionesTextoMensaje.insertAdjacentHTML("beforeend", `El <strong> Mensaje </strong> no es válido</br>`);
+        alertValidacionesTextoMensaje.insertAdjacentHTML("beforeend", `El <strong> Mensaje </strong> no es válido, mínimo  debe contener 20 caracteres</br>`);
         alertValidacionesMensaje.style.display = "block";
         mensaje.style.border = "solid 2px #B4016C";
     } else {
