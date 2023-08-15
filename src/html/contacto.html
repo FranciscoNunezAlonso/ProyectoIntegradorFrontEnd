@@ -36,7 +36,7 @@
     <div class="container-fluid">
       <class class="row justify-content-center">
 
-        <div class="containerContacto col-lg-6" >
+        <div class="containerContacto col-lg-6">
           <h1>Contáctanos</h1>
           <div class="row">
             <div class="col-sm-2 col-md-2 margin-icon1 d-flex justify-content-center">
@@ -87,27 +87,44 @@
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"></label>
                 <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
+                  id="alertValidacionesNombre">
+                  <p id="alertValidacionesTextoNombre"></p>
+                </div>
                 <label for="exampleFormControlInput1" class="form-label"></label>
                 <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+                <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
+                  id="alertValidacionesApellido">
+                  <p id="alertValidacionesTextoApellido"></p>
+                </div>
                 <label for="exampleFormControlInput1" class="form-label"></label>
                 <input type="text" class="form-control" id="email" placeholder="Correo Electrónico" required>
+                <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
+                  id="alertValidacionesEmail">
+                  <p id="alertValidacionesTextoEmail"></p>
+                </div>
                 <label for="exampleFormControlInput1" class="form-label"></label>
                 <input type="text" class="form-control" id="telefono" placeholder="Número telefónico" required>
+                <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
+                  id="alertValidacionesTelefono">
+                  <p id="alertValidacionesTextoTelefono"></p>
+                </div>
               </div>
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label"></label>
                 <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe aquí tu mensaje..."
                   required></textarea>
+                <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
+                  id="alertValidacionesMensaje">
+                  <p id="alertValidacionesTextoMensaje"></p>
+                </div>
                 <br>
                 <button class="btn btn-primary" class="enviar" id="btnEnviar" type="button" value="Send">Enviar</button>
                 <button type="button" class="btn btn-primary" id="btnClear">Limpiar</button>
-                <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-                  <p id="alertValidacionesTexto"></p>
-                </div>
               </div>
             </div>
           </form>
-        </div> 
+        </div>
 
       </class>
     </div>
@@ -117,9 +134,9 @@
   <!-- ******************* Footer ********************* -->
   <div id="footerjs"></div>
 
-   <!-- ******************* SCRIPT's ********************* -->
+  <!-- ******************* SCRIPT's ********************* -->
 
-   <!-- script alerts -->
+  <!-- script alerts -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 
   <!-- Script SMTP mandar correo -->

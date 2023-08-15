@@ -14,21 +14,43 @@ var btnEnviar = document.getElementById("btnEnviar");
 var btnClear = document.getElementById("btnClear");
 
 //flags
+let flagNombre = false;
+let flagApellido = false;
+let flagEmail = false;
+let flagTelefono = false;
+let flagMensaje = false;
 var isValid = true;
-var alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
-var alertValidaciones = document.getElementById("alertValidaciones");
+
+//alertas
+let alertValidacionesTextoNombre = document.getElementById("alertValidacionesTextoNombre");
+let alertValidacionesNombre = document.getElementById("alertValidacionesNombre");
+let alertValidacionesTextoApellido = document.getElementById("alertValidacionesTextoApellido");
+let alertValidacionesApellido = document.getElementById("alertValidacionesApellido");
+let alertValidacionesTextoEmail = document.getElementById("alertValidacionesTextoEmail");
+let alertValidacionesEmail = document.getElementById("alertValidacionesEmail");
+let alertValidacionesTextoTelefono = document.getElementById("alertValidacionesTextoTelefono");
+let alertValidacionesTelefono = document.getElementById("alertValidacionesTelefono");
+let alertValidacionesTextoMensaje = document.getElementById("alertValidacionesTextoMensaje");
+let alertValidacionesMensaje = document.getElementById("alertValidacionesMensaje");
 
 
 
 //Evento btnClear ----------------------------------------------------------------
 btnClear.addEventListener("click", function (event) {
     event.preventDefault();
-    alertValidaciones.style.display = "none";
+    
+    alertValidacionesNombre.style.display = "none";
+    alertValidacionesApellido.style.display = "none";
+    alertValidacionesEmail.style.display = "none";
+    alertValidacionesTelefono.style.display = "none";
+    alertValidacionesMensaje.style.display = "none";
+
     nombre.style.border = "";
     apellido.style.border = "";
     email.style.border = "";
     telefono.style.border = "";
     mensaje.style.border = "";
+
     nombre.value = "";
     apellido.value = "";
     email.value = "";
@@ -75,8 +97,12 @@ btnEmail.addEventListener('click', (e) => {
     let flagTelefono = true;
     let flagMensaje = true;
 
-    alertValidacionesTexto.innerHTML = "";
-    alertValidaciones.style.display = "none";
+    alertValidacionesNombre.style.display = "none";
+    alertValidacionesApellido.style.display = "none";
+    alertValidacionesEmail.style.display = "none";
+    alertValidacionesTelefono.style.display = "none";
+    alertValidacionesMensaje.style.display = "none";
+
     nombre.style.border = "";
     apellido.style.border = "";
     telefono.style.border = "";
@@ -92,36 +118,51 @@ btnEmail.addEventListener('click', (e) => {
     // Validación del nombre
     if (!validarNombre(nombre.value) || nombre.value.length < 3 || nombre.value.length > 15) {
         flagNombre = false;
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El nombre ingresado no es válido.</strong><br/>`);
-        nombre.style.border = "solid 2px red";
+        alertValidacionesTextoNombre.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
+        alertValidacionesNombre.style.display = "block";
+        nombre.style.border = "solid 2px #B4016C";
+    } else{
+        flagNombre = true;
     }
 
     // Validación del apellido
     if (!validarApellido(apellido.value) || apellido.value.length < 3 || apellido.value.length > 15) {
         flagApellido = false;
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El apellido ingresado no es válido.</strong><br/>`);
-        apellido.style.border = "solid 2px red";
+        alertValidacionesTextoApellido.insertAdjacentHTML("beforeend", `El <strong> apellido </strong> no es válido</br>`);
+        alertValidacionesApellido.style.display = "block";
+        apellido.style.border = "solid 2px #B4016C";
+    } else{
+        flagApellido = true;
     }
 
     // Validación del email
     if (!validarEmail(email.value)) {
         flagEmail = false;
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El email ingresado no es válido.</strong><br/>`);
-        email.style.border = "solid 2px red";
+        alertValidacionesTextoEmail.insertAdjacentHTML("beforeend", `El <strong> correo electrónico </strong> no es válido</br>`);
+        alertValidacionesEmail.style.display = "block";
+        email.style.border = "solid 2px #B4016C";
+    } else{
+        flagEmail = true;
     }
 
     // Validación del teléfono
     if (!validarTelefono(telefono.value)) {
         flagTelefono = false;
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El número ingresado no es válido.</strong><br/>`);
-        telefono.style.border = "solid 2px red";
+        alertValidacionesTextoTelefono.insertAdjacentHTML("beforeend", `El <strong> Telefono </strong> no es válido</br>`);
+        alertValidacionesTelefono.style.display = "block";
+        telefono.style.border = "solid 2px #B4016C";
+    } else{
+        flagTelefono = true;
     }
 
     // Validación del mensaje
     if (!validarMensaje(mensaje.value)) {
         flagMensaje = false;
-        alertValidacionesTexto.insertAdjacentHTML("afterbegin", `<strong>El mensaje ingresado no es válido.</strong><br/>`);
-        mensaje.style.border = "solid 2px red";
+        alertValidacionesTextoMensaje.insertAdjacentHTML("beforeend", `El <strong> Mensaje </strong> no es válido</br>`);
+        alertValidacionesMensaje.style.display = "block";
+        mensaje.style.border = "solid 2px #B4016C";
+    } else{
+        flagMensaje = true;
     }
 
     if (flagNombre && flagApellido && flagEmail && flagTelefono && flagMensaje) {
@@ -135,7 +176,7 @@ btnEmail.addEventListener('click', (e) => {
             Swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Tu solicitud ha sido enviada exitosamente',
+                title: 'Tu Mensaje se ha sido enviada exitosamente',
                 showConfirmButton: false,
                 timer: 1500
             });
@@ -147,6 +188,5 @@ btnEmail.addEventListener('click', (e) => {
             mensaje.value = "";
         }).catch(err => alert("Hubo un error al enviar el mensaje"));
     } else {
-        alertValidaciones.style.display = "block";
     }});
 
