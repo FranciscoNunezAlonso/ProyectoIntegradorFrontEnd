@@ -18,8 +18,20 @@ let flagApellido = false;
 let flagNombreUsuario = false;
 let flagContrasena = false;
 let flagConfirmarContrasena = false;
-let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
-let alertValidaciones = document.getElementById("alertValidaciones");
+
+// Alertas
+let alertValidacionesTextoEmail = document.getElementById("alertValidacionesTextoEmail");
+let alertValidacionesEmail = document.getElementById("alertValidacionesEmail");
+let alertValidacionesTextoNombre = document.getElementById("alertValidacionesTextoNombre");
+let alertValidacionesNombre = document.getElementById("alertValidacionesNombre");
+let alertValidacionesTextoApellido = document.getElementById("alertValidacionesTextoApellido");
+let alertValidacionesApellido = document.getElementById("alertValidacionesApellido");
+let alertValidacionesTextoUsuario = document.getElementById("alertValidacionesTextoUsuario");
+let alertValidacionesUsuario = document.getElementById("alertValidacionesUsuario");
+let alertValidacionesTextoContraseña = document.getElementById("alertValidacionesTextoContraseña");
+let alertValidacionesContraseña = document.getElementById("alertValidacionesContraseña");
+let alertValidacionesTextoConfContra = document.getElementById("alertValidacionesTextoConfContra");
+let alertValidacionesConfContra = document.getElementById("alertValidacionesConfContra");
 
 // Arreglo
 let arrayDatosUsuario = [];
@@ -27,7 +39,13 @@ let arrayDatosUsuario = [];
 // Evento btn Clear ----------------------------------
 btnClear.addEventListener("click", function (event) {
     event.preventDefault();
-    alertValidaciones.style.display = "none";
+
+    alertValidacionesEmail.style.display = "none";
+    alertValidacionesNombre.style.display = "none";
+    alertValidacionesApellido.style.display = "none";
+    alertValidacionesUsuario.style.display = "none";
+    alertValidacionesContraseña.style.display = "none";
+    alertValidacionesConfContra.style.display = "none";
 
     email.style.border = "";
     nombre.style.border = "";
@@ -42,18 +60,29 @@ btnClear.addEventListener("click", function (event) {
     nombreUsuario.value = "";
     contrasena.value = "";
     confirmarContrasena.value = "";
- 
 
     // Limpiar el storage
     localStorage.clear();
 });
 
+
 // Evento btn Enviar ------------------------
 btnEnviar.addEventListener('click', (e) => {
     e.preventDefault();
 
-    alertValidacionesTexto.innerHTML = "";
-    alertValidaciones.style.display = "none";
+    alertValidacionesTextoEmail.innerHTML = "";
+    alertValidacionesTextoNombre.innerHTML = "";
+    alertValidacionesTextoApellido.innerHTML = "";
+    alertValidacionesTextoUsuario.innerHTML = "";
+    alertValidacionesTextoContraseña.innerHTML = "";
+    alertValidacionesTextoConfContra.innerHTML = "";
+
+    alertValidacionesEmail.style.display = "none";
+    alertValidacionesNombre.style.display = "none";
+    alertValidacionesApellido.style.display = "none";
+    alertValidacionesUsuario.style.display = "none";
+    alertValidacionesContraseña.style.display = "none";
+    alertValidacionesConfContra.style.display = "none";
 
     email.style.border = "";
     nombre.style.border = "";
@@ -70,8 +99,8 @@ btnEnviar.addEventListener('click', (e) => {
     confirmarContrasena.value = confirmarContrasena.value.trim();
 
     if (!email.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3}$/)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> correo electrónico </strong> no es válido</br>`);
-        alertValidaciones.style.display = "block";
+        alertValidacionesTextoEmail.insertAdjacentHTML("beforeend", `El <strong> correo electrónico </strong> no es válido</br>`);
+        alertValidacionesEmail.style.display = "block";
         email.style.border = "solid 2px #B4016C";
         flagEmail = false;
     } else {
@@ -79,8 +108,8 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (!nombre.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) || (nombre.value.length < 3)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
-        alertValidaciones.style.display = "block";
+        alertValidacionesTextoNombre.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
+        alertValidacionesNombre.style.display = "block";
         nombre.style.border = "solid 2px #B4016C";
         flagNombre = false;
     } else {
@@ -88,8 +117,8 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (!apellido.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) || (apellido.value.length < 4)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> apellido </strong> no es válido</br>`);
-        alertValidaciones.style.display = "block";
+        alertValidacionesTextoApellido.insertAdjacentHTML("beforeend", `El <strong> apellido </strong> no es válido</br>`);
+        alertValidacionesApellido.style.display = "block";
         apellido.style.border = "solid 2px #B4016C";
         flagApellido = false;
     } else {
@@ -97,8 +126,8 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (!nombreUsuario.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) || (nombreUsuario.value.length < 4)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> nombre de usuario </strong> no es válido</br>`);
-        alertValidaciones.style.display = "block";
+        alertValidacionesTextoUsuario.insertAdjacentHTML("beforeend", `El <strong> nombre de usuario </strong> no es válido</br>`);
+        alertValidacionesUsuario.style.display = "block";
         nombreUsuario.style.border = "solid 2px #B4016C";
         flagNombreUsuario = false;
     } else {
@@ -106,15 +135,16 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (!contrasena.value.match( /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> contraseña </strong> debe contener al menos una letra mayúscula, una minúscula, un número y un mínimo de 8 caracteres.</br>`);
-        alertValidaciones.style.display = "block";
+        alertValidacionesTextoContraseña.insertAdjacentHTML("beforeend", `La <strong> contraseña </strong> debe contener al menos una letra mayúscula, una minúscula, un número y un mínimo de 8 caracteres.</br>`);
+        alertValidacionesContraseña.style.display = "block";
         contrasena.style.border = "solid 2px #B4016C";
+        confirmarContrasena.style.border = "solid 2px #B4016C";
         flagContrasena = false;
     } else {
         flagContrasena = true;
         if (!confirmarContrasena.value.match(contrasena.value)) {
-            alertValidacionesTexto.insertAdjacentHTML("beforeend", `Las <strong> contraseñas </strong> no coinciden</br>`);
-            alertValidaciones.style.display = "block";
+            alertValidacionesTextoConfContra.insertAdjacentHTML("beforeend", `Las <strong> contraseñas </strong> no coinciden</br>`);
+            alertValidacionesConfContra.style.display = "block";
             confirmarContrasena.style.border = "solid 2px #B4016C";
             flagConfirmarContrasena = false;
         } else {
@@ -142,13 +172,6 @@ btnEnviar.addEventListener('click', (e) => {
             showConfirmButton: false,
             timer: 1500
         });
-        // Swal.fire({
-        //     position: 'center',
-        //     icon: 'success',
-        //     email: 'El usuario se ha registrado de manera exitosa',
-        //     showConfirmButton: false,
-        //     timer: 1500
-        // });
 
         email.value = "";
         nombre.value = "";
