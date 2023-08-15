@@ -16,8 +16,16 @@ let flagTitle = false;
 let flagPrice = false;
 let flagDescription = false;
 let flagProduct_img = false;
-let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
-let alertValidaciones = document.getElementById("alertValidaciones");
+
+//Alertas
+let alertValidacionesTextoNombre = document.getElementById("alertValidacionesTextoNombre");
+let alertValidacionesNombre = document.getElementById("alertValidacionesNombre");
+let alertValidacionesTextoPrice = document.getElementById("alertValidacionesTextoPrice");
+let alertValidacionesPrice = document.getElementById("alertValidacionesPrice");
+let alertValidacionesTextoDescripcion = document.getElementById("alertValidacionesTextoDescripcion");
+let alertValidacionesDescripcion = document.getElementById("alertValidacionesDescripcion");
+let alertValidacionesTextoImg = document.getElementById("alertValidacionesTextoImg");
+let alertValidacionesImg = document.getElementById("alertValidacionesImg");
 
 // Arreglo
 let arrayProductos = [];
@@ -25,7 +33,11 @@ let arrayProductos = [];
 // Evento btn Clear ----------------------------------
 btnClear.addEventListener("click", function (event) {
     event.preventDefault();
-    alertValidaciones.style.display = "none";
+    
+    alertValidacionesNombre.style.display = "none";
+    alertValidacionesPrice.style.display = "none";
+    alertValidacionesDescripcion.style.display = "none";
+    alertValidacionesImg.style.display = "none";
 
     title.style.border = "";
     price.style.border = "";
@@ -46,8 +58,14 @@ btnClear.addEventListener("click", function (event) {
 btnEnviar.addEventListener('click', (e) => {
     e.preventDefault();
 
-    alertValidacionesTexto.innerHTML = "";
-    alertValidaciones.style.display = "none";
+    alertValidacionesTextoNombre.innerHTML = "";
+    alertValidacionesNombre.style.display = "none";
+    alertValidacionesTextoPrice.innerHTML = "";
+    alertValidacionesPrice.style.display = "none";
+    alertValidacionesTextoDescripcion.innerHTML = "";
+    alertValidacionesDescripcion.style.display = "none";
+    alertValidacionesTextoDescripcion.innerHTML = "";
+    alertValidacionesImg.style.display = "none";
 
     title.style.border = "";
     price.style.border = "";
@@ -58,8 +76,8 @@ btnEnviar.addEventListener('click', (e) => {
     description.value = description.value.trim();
 
     if (!title.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) || (title.value.length < 4)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
-        alertValidaciones.style.display = "block";
+        alertValidacionesTextoNombre.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
+        alertValidacionesNombre.style.display = "block";
         title.style.border = "solid 2px #B4016C";
         flagTitle = false;
     } else {
@@ -67,8 +85,8 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (!price.value.match(/^[0-9]{1,3}$|^[0-9]{1,3}.[0-9]{1,3}$/) || (price.value.length < 2)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> precio </strong> no es válido</br>`);
-        alertValidaciones.style.display = "block";
+        alertValidacionesTextoPrice.insertAdjacentHTML("beforeend", `El <strong> precio </strong> no es válido</br>`);
+        alertValidacionesPrice.style.display = "block";
         price.style.border = "solid 2px #B4016C";
         flagPrice = false;
     } else {
@@ -76,8 +94,8 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (description.value.length < 5) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> descripción </strong> no es válida</br>`);
-        alertValidaciones.style.display = "block";
+        alertValidacionesTextoDescripcion.insertAdjacentHTML("beforeend", `La <strong> descripción </strong> no es válida</br>`);
+        alertValidacionesDescripcion.style.display = "block";
         description.style.border = "solid 2px #B4016C";
         flagDescription = false;
     } else {
@@ -85,8 +103,11 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (!flagProduct_img) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `Por favor, seleccione una imagen</br>`);
-        alertValidaciones.style.display = "block";
+        flagProduct_img = false;
+        alertValidacionesTextoImg.insertAdjacentHTML("beforeend", `Por favor, seleccione dos imágenes</br>`);
+        alertValidacionesImg.style.display = "block";
+    } else{
+        flagProduct_img = true;
     }
 
     if (flagTitle && flagPrice && flagDescription && flagProduct_img) {
@@ -137,7 +158,7 @@ btnImg.addEventListener("click", function (event) {
                 product_img.dataset.imgOnMouseover = uploadedImages[1];
 
                 uploadedImages = [];
-                flagProduct_img = true; // Mark the flag as true
+                flagProduct_img = true; 
             }
         }
     });

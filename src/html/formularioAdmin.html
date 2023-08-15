@@ -34,28 +34,40 @@
 
     <!-- FORMULARIO -->
     <div class="container  d-flex justify-content-center">
-    <div class="containerOpinionAdmi col-lg-8">
-      <h1>Publicar nuevo producto</h1>
-      <form onsubmit="return false" id="form">
-        <div id="formulario">
-          <div class="mb-3">
-            <!-- title -->
-            <label for="title" class="form-label"></label>
-            <input type="text" name="title" class="form-control" id="title" placeholder="Nombre" required>
-            <br>
-            <!-- price -->
-            <div class="input-group mb-3">
-              <span class="input-group-text">$</span>
-              <label for="price" class="form-label"></label>
-              <input type="num" name="price" class="form-control" id="price" placeholder="Precio" required>
-            </div>
-            <!-- descripción -->
-            <label for="descripcion" class="form-label"></label>
-            <textarea class="form-control" name="descripcion" id="description" rows="3"
-              placeholder="Descripción del producto" required></textarea>
-            <br>
+      <div class="containerOpinionAdmi col-lg-8">
+        <h1>Publicar nuevo producto</h1>
+        <form onsubmit="return false" id="form">
+          <div id="formulario">
+            <div class="mb-3">
+              <!-- title -->
+              <label for="title" class="form-label"></label>
+              <input type="text" name="title" class="form-control" id="title" placeholder="Nombre" required>
+              <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
+                id="alertValidacionesNombre">
+                <p id="alertValidacionesTextoNombre"></p>
+              </div>
+              <br>
+              <!-- price -->
+              <div class="input-group mb-3">
+                <span class="input-group-text">$</span>
+                <label for="price" class="form-label"></label>
+                <input type="num" name="price" class="form-control" id="price" placeholder="Precio" required>
+              </div>
+              <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
+                id="alertValidacionesPrice">
+                <p id="alertValidacionesTextoPrice"></p>
+              </div>
+              <!-- descripción -->
+              <label for="descripcion" class="form-label"></label>
+              <textarea class="form-control" name="descripcion" id="description" rows="3"
+                placeholder="Descripción del producto" required></textarea>
+              <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
+                id="alertValidacionesDescripcion">
+                <p id="alertValidacionesTextoDescripcion"></p>
+              </div>
+              <br>
 
-            <!-- categoría
+              <!-- categoría
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupSelect01">Categoría</label>
               <select class="form-select" id="category">
@@ -71,26 +83,25 @@
           </div>
         </div> -->
 
-            <!-- btn Subir imagen -->
-            <br>
-            <div>
-              <img id="product_img" class="img-fluid">
-              <button id="upload_widget" class="btn-form-admi">Agrega 2 imágenes</button>
-            </div>
-            <div class="mb-3">
-              <button class="enviar" id="btnEnviar" type="button" value="Send">Enviar</button>
-              <button type="button" id="btnClear">Limpiar</button>
-
-              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
-                <p id="alertValidacionesTexto"></p>
+              <!-- btn Subir imagen -->
+              <br>
+              <div>
+                <img id="product_img" class="img-fluid">
+                <button id="upload_widget" class="btn-form-admi">Agrega 2 imágenes</button>
+              </div>
+              <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidacionesImg">
+                <p id="alertValidacionesTextoImg"></p>
+              </div>
+              <div class="mb-3">
+                <button class="enviar" id="btnEnviar" type="button" value="Send">Enviar</button>
+                <button type="button" id="btnClear">Limpiar</button>
               </div>
             </div>
-          </div>
-      </form>
-    </div>
+        </form>
+      </div>
     </div>
 
-  </div>
+    </div>
   </main>
 
   <!-- ******************* Footer ********************* -->
