@@ -28,43 +28,78 @@
 
   <!-- *****************  nav Bar ************************** -->
   <header id="headerjs"></header>
- 
+
   <main>
+
     <!-- *****************  Carrusel ************************** -->
-    <br>
-    <div class="container">
-      <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://images.unsplash.com/photo-1545529468-42764ef8c85f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1746&q=80"
-              class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80"
-              class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://images.unsplash.com/photo-1521247560470-d2cbfe2f7b47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-              class="d-block w-100" alt="...">
+    <div class="container py-2 text-center contbg">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <a class="h1" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+          </a>
+        </div>
+        <div class="col">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row align-items-center">
+                  <div class="col py-2 carText">
+                    <h2 class="titulosCarrusel">Eterniza el amor por tus compañero peludo con recuerdos únicos en Amor
+                      Peludo</h2>
+
+                  </div>
+                  <div class="col-md">
+                    <img class="d-block img-fluid img_car imgCarrusel" src="/src/img/carousel_Index/golden.jpg"
+                      alt="perro golden" style="height: 300px; width: auto;">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row align-items-center">
+                  <div class="col py-2 carText">
+                    <h2 class="titulosCarrusel">Amor Peludo , donde el amor por tus mascotas se convierte en recuerdos
+                      imborrables</h2>
+                  </div>
+                  <div class="col-md">
+                    <img class="d-block img-fluid img_car imgCarrusel" src="/src/img/carousel_Index/perrito.jpg"
+                      alt="perro" style="height: 300px; width: auto;">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row align-items-center">
+                  <div class="col py-2 carText">
+                    <h2 class="titulosCarrusel">Transforma el amor por tu compañero peludo en recuerdos que perdurarán
+                      toda la vida</h2>
+                  </div>
+                  <div class="col-md">
+                    <img class="d-block img-fluid img_car imgCarrusel" src="/src/img/carousel_Index/gato.jpg" alt="gato"
+                      style="height: 300px; width: auto;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="col-auto">
+          <a class="h1" href="#carouselExampleControls" role="button" data-bs-slide="next">
+          </a>
+        </div>
       </div>
     </div>
-
+    
     <!-- *****************  Card / productos ************************** -->
     <div class="container d-flex justify-content-center">
       <div class="col-lg-8">
+        <br>
         <div class="alert alert-index mt-4 text-center" role="alert">
           Lo más vendido
         </div>
@@ -74,12 +109,13 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 d-flex justify-content-center">
         <div class="col cardProdsFlex">
           <div class="card cardProds h-80 w-100">
-            <img src="${item.img}" class="card-img-top imgCard" alt="image"
-              onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+            <img src="/src/img/imgProductos/producto_4A.png" class="card-img-top imgCard" alt="image"
+              onmouseover="changeImage(this, '/src/img/imgProductos/producto_4B.png')" onmouseout="resetImage(this)">
             <div class="card-body cardProdsContent">
-              <h6 class="card-title">${item.title}</h6>
-              <h5 class="card-title">$ ${item.price}</h5>
-              <p class="cardTextProds">${item.description}</p>
+              <h6 class="card-title">Bordado personalizado</h6>
+              <h5 class="card-title">$ 130.00</h5>
+              <p class="cardTextProds">Crea un tributo único para tu mascota. Personaliza con su imagen y/o nombre en un
+                telar artesanal circular de 15 cm. Un recuerdo especial para siempre.</p>
             </div>
             <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
               <a href="#" class="btn btn-primary btnProds">Comprar</a>
@@ -89,12 +125,13 @@
         </div>
         <div class="col cardProdsFlex">
           <div class="card cardProds h-80 w-100">
-            <img src="${item.img}" class="card-img-top imgCard" alt="image"
-              onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+            <img src="/src/img/imgProductos/producto_7A.png" class="card-img-top imgCard" alt="image"
+              onmouseover="changeImage(this, '/src/img/imgProductos/producto_7B.png')" onmouseout="resetImage(this)">
             <div class="card-body cardProdsContent">
-              <h6 class="card-title">${item.title}</h6>
-              <h5 class="card-title">$ ${item.price}</h5>
-              <p class="cardTextProds">${item.description}</p>
+              <h6 class="card-title">Llavero para recordar</h6>
+              <h5 class="card-title">$ 100.00</h5>
+              <p class="cardTextProds">Lleva a tu amado compañero siempre contigo. Un llavero diseñado para guardar un
+                pequeño recuerdo de sus cenizas o pelo, manteniendo su memoria viva en cada paso.</p>
             </div>
             <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
               <a href="#" class="btn btn-primary btnProds">Comprar</a>
@@ -104,12 +141,14 @@
         </div>
         <div class="col cardProdsFlex">
           <div class="card cardProds h-80 w-100">
-            <img src="${item.img}" class="card-img-top imgCard" alt="image"
-              onmouseover="changeImage(this, '${item.imgOnMouseover}')" onmouseout="resetImage(this)">
+            <img src="/src/img/imgProductos/producto_3A.png" class="card-img-top imgCard" alt="image"
+              onmouseover="changeImage(this, '/src/img/imgProductos/producto_3B.png')" onmouseout="resetImage(this)">
             <div class="card-body cardProdsContent">
-              <h6 class="card-title">${item.title}</h6>
-              <h5 class="card-title">$ ${item.price}</h5>
-              <p class="cardTextProds">${item.description}</p>
+              <h6 class="card-title">Urna para pelitos de felicidad</h6>
+              <h5 class="card-title">$ 110.00</h5>
+              <p class="cardTextProds">Guarda los preciados pelitos de tu mascota en nuestra hermosa urna de madera
+                personalizable. Cada urna está diseñada con amor para honrar a tu compañero peludo de manera especial.
+              </p>
             </div>
             <div class="card-footer mt-4 mb-4 border-0 cardFooterBg">
               <a href="#" class="btn btn-primary btnProds">Comprar</a>
@@ -126,93 +165,24 @@
     </div>
 
     <!-- *****************  ENVIOS ************************** -->
-    <!-- Rosa -->
     <div class="container">
-      <br>
-      <div class="container text-center">
-        <div class="row align-items-center">
-          <div class="col">
-            <img src="./src/img/icons/camion-2.png" alt="">
-            Entregas a toda la república mexiacana
-          </div>
-          <div class="col">
-            <img src="./src/img/icons/metodo-de-pago-2.png" alt="">
-            Aceptamos todas las tarjetas
-          </div>
-          <div class="col">
-            <img src="./src/img/icons/seguro-de-vida.png" alt="">
-            Pagos seguros
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- verde -->
-    <div class="container">
-      <br>
-      <div class="container text-center">
-        <div class="row align-items-center">
-          <div class="col">
-            <img src="./src/img/icons/camion-3.png" alt="">
-            Entregas a toda la república mexiacana
-          </div>
-          <div class="col">
-            <img src="./src/img/icons/metodo-de-pago.png" alt="">
-            Aceptamos todas las tarjetas
-          </div>
-          <div class="col">
-            <img src="./src/img/icons/seguro-de-vida-2.png" alt="">
-            Pagos seguros
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- *****************  Reviews ************************** -->
-
-    <div class="container text-center">
-      <div class="container d-flex justify-content-center">
-        <div class="col-lg-8">
-          <div class="alert alert-index mt-4 text-center" role="alert">
-            Opniones
-          </div>
-        </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-                <div class="align-items-center">
-                  <ul class="list-group list-group-horizontal ">
-                    <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
-                    <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
-                    <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
-                    <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
-                    <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
-                  </ul>
-                </div>
+      <div class="container">
+        <br><br>
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col">
+              <img src="./src/img/icons/camion-3.png" alt="">
+              <p> Entregas a toda la república mexiacana</p>
+            </div>
+            <div class="col">
+              <img src="./src/img/icons/metodo-de-pago.png" alt="">
+              <p>Diversos métodos de pago</p>
+            </div>
+            <div class="col">
+              <img src="./src/img/icons/seguro-de-vida-2.png" alt="">
+              <p>Transaccione seguras</p>
             </div>
           </div>
-        </div>
-        <div class="col">
-          One of three columns
-    
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
         </div>
       </div>
     </div>
@@ -220,23 +190,132 @@
     <!-- *****************  Donacion ************************** -->
     <div class="container">
       <br><br>
-      <div class="container text-left">
+      <div class="container ">
         <div class="row ">
-          <div class="col-8">
-            <h2>¿Sabías qué?</h2>
+          <div class="col-md-7 text-left">
+            <h3 class="textApoyo">¿Sabías que el 10% de las utilidades de Amor Peludo se destinan a donaciones para refugios, brindando apoyo a perros sin hogar?</h3>
             <br>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat officia culpa repellat voluptates! Velit fuga nisi odio nostrum repudiandae vel, hic explicabo consequuntur, ratione earum similique nobis quis quia quam.</p>
+            <p class="textApoyo">Con cada compra en Amor Peludo, estás contribuyendo a transformar la vida de peludos que merecen la oportunidad de ser amados y cuidados. Tu apoyo se une al nuestro para tejer una red sólida de amor y apoyo, permitiendo que más mascotas sin hogar encuentren la seguridad y el cariño que merecen. Juntos, creamos un impacto positivo en la vida de estos seres especiales y en el mundo que compartimos con ellos.</p>
           </div>
-          <div class="col-4">
-            <img
+          <div class="col-5 text-center" >
+            <img src="/src/img/Imagotipo.png" alt="Amor Peludo" class="imgDonaciones " style="width: 70%;">
+            <!-- <img
               src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nJTIwYWRvcHRpb258ZW58MHx8MHx8fDI%3D&auto=format&fit=crop&w=800&q=60"
-              alt="" class="img-fluid">
+              alt="" class="img-fluid"> -->
           </div>
         </div>
       </div>
     </div>
 
-
+  <!-- *****************  Reviews ************************** -->
+  <div class="container text-center justify-content-cente">
+    <br>
+    <div class="container d-flex justify-content-center">
+      <div class="col-lg-8">
+        <div class="alert alert-index mt-4 text-center" role="alert">
+          Opniones
+        </div>
+        <br>
+      </div>
+    </div>
+    <div class="row align-items-center ">
+      <div class="col">
+        <!-- Card Review -->
+        <div class="card" style="width: 18rem; height: 13rem;">
+          <div class="card-body">
+            <p class="card-text">Capturaron perfectamente la esencia de mi perro y ahora tengo recuerdos tangibles para toda la vida. ¡Gracias!</p>
+              <div class="align-items-center">
+                <ul class="list-group list-group-horizontal ">
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width: 18rem; height: 13rem;">
+          <div class="card-body">
+            <p class="card-text">Estoy impresionado por la calidad y el diseño</p>
+              <div class="align-items-center">
+                <ul class="list-group list-group-horizontal ">
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem;height: 13rem;">
+          <div class="card-body">
+            <p class="card-text"> Estoy agradecido por poder llevar a mi perro conmigo de esta manera</p>
+              <div class="align-items-center">
+                <ul class="list-group list-group-horizontal ">
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width: 18rem; height: 13rem;">
+          <div class="card-body">
+            <p class="card-text">Es una forma hermosa de mantener su memoria viva.</p>
+              <div class="align-items-center">
+                <ul class="list-group list-group-horizontal ">
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+  
+      </div>
+      <div class="col">
+        <div class="card" style="width: 18rem; height: 13rem;">
+          <div class="card-body">
+            <p class="card-text">Nunca pensé que podría tener algo tan especial en honor a mi gatito</p>
+              <div class="align-items-center">
+                <ul class="list-group list-group-horizontal ">
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <br> 
+        <div class="card" style="width: 18rem; height: 13rem;">
+          <div class="card-body">
+            <p class="card-text">La atención al detalle en los productos de 'Amor Peludo' es increíble.</p>
+              <div class="align-items-center">
+                <ul class="list-group list-group-horizontal ">
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                  <li class="list-group-item"><i class="bi bi-star-fill"></i></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   </main>
   <br>
@@ -244,7 +323,6 @@
   <br>
   <!-- ******************* Footer ********************* -->
   <div id="footerjs"></div>
-
 
   <!-- ******************* SCRIPT's ********************* -->
   <!-- script archivos javascript -->
