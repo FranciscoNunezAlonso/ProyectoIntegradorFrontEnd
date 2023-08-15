@@ -38,7 +38,7 @@ let alertValidacionesMensaje = document.getElementById("alertValidacionesMensaje
 //Evento btnClear ----------------------------------------------------------------
 btnClear.addEventListener("click", function (event) {
     event.preventDefault();
-    
+
     alertValidacionesNombre.style.display = "none";
     alertValidacionesApellido.style.display = "none";
     alertValidacionesEmail.style.display = "none";
@@ -121,7 +121,7 @@ btnEmail.addEventListener('click', (e) => {
         alertValidacionesTextoNombre.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
         alertValidacionesNombre.style.display = "block";
         nombre.style.border = "solid 2px #B4016C";
-    } else{
+    } else {
         flagNombre = true;
     }
 
@@ -131,7 +131,7 @@ btnEmail.addEventListener('click', (e) => {
         alertValidacionesTextoApellido.insertAdjacentHTML("beforeend", `El <strong> apellido </strong> no es válido</br>`);
         alertValidacionesApellido.style.display = "block";
         apellido.style.border = "solid 2px #B4016C";
-    } else{
+    } else {
         flagApellido = true;
     }
 
@@ -141,7 +141,7 @@ btnEmail.addEventListener('click', (e) => {
         alertValidacionesTextoEmail.insertAdjacentHTML("beforeend", `El <strong> correo electrónico </strong> no es válido</br>`);
         alertValidacionesEmail.style.display = "block";
         email.style.border = "solid 2px #B4016C";
-    } else{
+    } else {
         flagEmail = true;
     }
 
@@ -151,7 +151,7 @@ btnEmail.addEventListener('click', (e) => {
         alertValidacionesTextoTelefono.insertAdjacentHTML("beforeend", `El <strong> Telefono </strong> no es válido</br>`);
         alertValidacionesTelefono.style.display = "block";
         telefono.style.border = "solid 2px #B4016C";
-    } else{
+    } else {
         flagTelefono = true;
     }
 
@@ -161,7 +161,7 @@ btnEmail.addEventListener('click', (e) => {
         alertValidacionesTextoMensaje.insertAdjacentHTML("beforeend", `El <strong> Mensaje </strong> no es válido</br>`);
         alertValidacionesMensaje.style.display = "block";
         mensaje.style.border = "solid 2px #B4016C";
-    } else{
+    } else {
         flagMensaje = true;
     }
 
@@ -188,5 +188,6 @@ btnEmail.addEventListener('click', (e) => {
             mensaje.value = "";
         }).catch(err => alert("Hubo un error al enviar el mensaje"));
     } else {
-    }});
+    }
+});
 

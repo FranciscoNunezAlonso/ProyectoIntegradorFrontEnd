@@ -1,4 +1,4 @@
-// ******** FORMULARIO PRODUCTOS ADMINISTRADOR ****************
+// ******** FORMULARIO REGISTRAR USUARIO ****************
 let email = document.getElementById("email");
 let nombre = document.getElementById("nombre");
 let apellido = document.getElementById("apellido");
@@ -134,7 +134,7 @@ btnEnviar.addEventListener('click', (e) => {
         flagNombreUsuario = true;
     }
 
-    if (!contrasena.value.match( /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)) {
+    if (!contrasena.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)) {
         alertValidacionesTextoContraseña.insertAdjacentHTML("beforeend", `La <strong> contraseña </strong> debe contener al menos una letra mayúscula, una minúscula, un número y un mínimo de 8 caracteres.</br>`);
         alertValidacionesContraseña.style.display = "block";
         contrasena.style.border = "solid 2px #B4016C";
@@ -159,9 +159,9 @@ btnEnviar.addEventListener('click', (e) => {
             "apellido": apellido.value.trim(),
             "usuario": nombreUsuario.value.trim(),
             "contrasena": contrasena.value.trim(),
-            "confirmarContrasena": confirmarContrasena.value.trim() 
+            "confirmarContrasena": confirmarContrasena.value.trim()
         };
-    
+
         arrayDatosUsuario.push(usuarios);
         localStorage.setItem("usuarios", JSON.stringify(arrayDatosUsuario));
         console.log("Prueba exitosa");
@@ -177,12 +177,12 @@ btnEnviar.addEventListener('click', (e) => {
         nombre.value = "";
         apellido.value = "";
         nombreUsuario.value = "";
-        contrasena.value="";
-        confirmarContrasena.value="";
-        
-        setTimeout(()=>{
-            window.location.href ='./usuario.html'
-        },800)
+        contrasena.value = "";
+        confirmarContrasena.value = "";
+
+        setTimeout(() => {
+            window.location.href = './usuario.html'
+        }, 800)
     }
-    
+
 });

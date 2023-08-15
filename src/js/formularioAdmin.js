@@ -33,7 +33,7 @@ let arrayProductos = [];
 // Evento btn Clear ----------------------------------
 btnClear.addEventListener("click", function (event) {
     event.preventDefault();
-    
+
     alertValidacionesNombre.style.display = "none";
     alertValidacionesPrice.style.display = "none";
     alertValidacionesDescripcion.style.display = "none";
@@ -106,7 +106,7 @@ btnEnviar.addEventListener('click', (e) => {
         flagProduct_img = false;
         alertValidacionesTextoImg.insertAdjacentHTML("beforeend", `Por favor, seleccione dos imágenes</br>`);
         alertValidacionesImg.style.display = "block";
-    } else{
+    } else {
         flagProduct_img = true;
     }
 
@@ -118,7 +118,7 @@ btnEnviar.addEventListener('click', (e) => {
             "img": product_img.src,
             "imgOnMouseover": product_img.dataset.imgOnMouseover
         };
-    
+
         arrayProductos.push(elemento);
         localStorage.setItem("elemento", JSON.stringify(arrayProductos));
 
@@ -144,7 +144,7 @@ let uploadedImages = [];
 // Evento btn Img (Cloudinary) ----------------------------------
 btnImg.addEventListener("click", function (event) {
     event.preventDefault();
-    
+
     let myWidget = cloudinary.createUploadWidget({
         cloudName: 'dwp2swcwi',
         uploadPreset: 'Apoyoap',
@@ -158,7 +158,7 @@ btnImg.addEventListener("click", function (event) {
                 product_img.dataset.imgOnMouseover = uploadedImages[1];
 
                 uploadedImages = [];
-                flagProduct_img = true; 
+                flagProduct_img = true;
             }
         }
     });

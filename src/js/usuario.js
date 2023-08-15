@@ -1,4 +1,5 @@
-// +++++++++++++++++++++++++++++++++++++++ DEFINIR VARIABLES INGRESO USUARIO ++++++++++++++++++++++++++++++++++++++++++
+// ******** FORMULARIO INICIAR SESIÓN ****************
+// +++++++++++++++++++++++++++++++++++++++ DEFINIR VARIABLES ++++++++++++++++++++++++++++++++++++++++++
 let email = document.getElementById("email");
 let contrasena = document.getElementById("contrasena");
 var currentMail;
@@ -36,7 +37,7 @@ btnEnviar.addEventListener('click', (e) => {
     console.log(currentMail);
     console.log(currentPass);
 
-    if (currentMail==email.value && currentPass==contrasena.value) {
+    if (currentMail == email.value && currentPass == contrasena.value) {
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -46,10 +47,10 @@ btnEnviar.addEventListener('click', (e) => {
         });
         email.value = "";
         contrasena.value = "";
-        
-        setTimeout(()=>{
-            window.location.href ='../../index.html'
-        },800)
+
+        setTimeout(() => {
+            window.location.href = '../../index.html'
+        }, 800)
     } else {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `<strong>Correo</strong> o <strong>contraseña</strong> no es válido</br>`);
         alertValidaciones.style.display = "block";
@@ -59,12 +60,11 @@ btnEnviar.addEventListener('click', (e) => {
 });
 
 //+++++++++++++++++++++++++ TRAER DATOS DE USUARIO DE LOCALSTORAGE +++++++++++++++++++++++++
-
-  window.addEventListener("load", function (event) {
+window.addEventListener("load", function (event) {
     event.preventDefault();
     if (localStorage.getItem("usuarios") != null) {
         var usuarios = JSON.parse(localStorage.getItem("usuarios"));
-        
+
         usuarios.forEach(usuarios => {
             currentMail = usuarios.email;
             currentPass = usuarios.contrasena;
