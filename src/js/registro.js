@@ -143,7 +143,7 @@ btnEnviar.addEventListener('click', (e) => {
     } else {
         flagContrasena = true;
         if (!confirmarContrasena.value.match(contrasena.value)) {
-            alertValidacionesTextoConfContra.insertAdjacentHTML("beforeend", `Las <strong> contraseñas </strong> no coinciden</br>`);
+            alertValidacionesTextoConfContra.insertAdjacentHTML("beforeend", `<strong>Correo</strong> o <strong>contraseña</strong> no es válido</br>`);
             alertValidacionesConfContra.style.display = "block";
             confirmarContrasena.style.border = "solid 2px #B4016C";
             flagConfirmarContrasena = false;

@@ -18,7 +18,6 @@ btnClear.addEventListener("click", function (event) {
 
     email.value = "";
     contrasena.value = "";
- 
 });
 
 // +++++++++++++++++++++++ EVENTO BUTTON ENVIAR +++++++++++++++++++++++
@@ -52,10 +51,10 @@ btnEnviar.addEventListener('click', (e) => {
             window.location.href ='../../index.html'
         },800)
     } else {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `Correo o contraseña no es válido</br>`);
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `<strong>Correo</strong> o <strong>contraseña</strong> no es válido</br>`);
         alertValidaciones.style.display = "block";
-        email.style.border = "solid 2px red"
-        contrasena.style.border = "solid 2px red"
+        email.style.border = "solid 2px #B4016C";
+        contrasena.style.border = "solid 2px #B4016C";
     }
 });
 

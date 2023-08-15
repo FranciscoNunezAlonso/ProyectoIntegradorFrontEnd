@@ -47,6 +47,10 @@
                                 <label for="exampleFormControlInput1" class="form-label"></label>
                                 <input type="password" class="form-control" id="contrasena" placeholder="Contraseña"
                                     required>
+                                    <div class="alert alert-danger fade show  alertModificado" style="display:none;"
+                                    role="alert" id="alertValidaciones">
+                                    <p id="alertValidacionesTexto"></p>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <br>
@@ -55,10 +59,7 @@
                                 <button type="button" class="btn btn-primary" id="btnClear">Limpiar</button>
                                 <br>
                                 <a href="/src/html/registro.html" class="linkCuenta">Quiero registrarme</a>
-                                <div class="alert alert-danger fade show" style="display:none;" role="alert"
-                                    id="alertValidaciones">
-                                    <p id="alertValidacionesTexto"></p>
-                                </div>
+
                             </div>
                         </div>
                     </form>
@@ -84,7 +85,7 @@
 
     <!-- script archivos javascript -->
     <script src="/src/js/headerFooter.js"></script>
-    
+
     <script src="/src/js/usuario.js"></script>
 
     <!-- scrip bootstrap y javascript -->
