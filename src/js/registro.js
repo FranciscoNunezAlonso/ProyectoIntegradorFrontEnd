@@ -123,7 +123,7 @@ btnEnviar.addEventListener('click', (e) => {
     }
 
     if (flagEmail && flagNombre && flagApellido && flagContrasena && flagConfirmarContrasena) {
-        let elemento = {
+        let usuarios = {
             "email": email.value.trim(),
             "nombre": nombre.value.trim(),
             "apellido": apellido.value.trim(),
@@ -132,8 +132,8 @@ btnEnviar.addEventListener('click', (e) => {
             "confirmarContrasena": confirmarContrasena.value.trim() 
         };
     
-        arrayDatosUsuario.push(elemento);
-        localStorage.setItem("elemento", JSON.stringify(arrayDatosUsuario));
+        arrayDatosUsuario.push(usuarios);
+        localStorage.setItem("usuarios", JSON.stringify(arrayDatosUsuario));
         console.log("Prueba exitosa");
         Swal.fire({
             position: 'center',
@@ -156,5 +156,10 @@ btnEnviar.addEventListener('click', (e) => {
         nombreUsuario.value = "";
         contrasena.value="";
         confirmarContrasena.value="";
+        
+        setTimeout(()=>{
+            window.location.href ='./usuario.html'
+        },800)
     }
+    
 });

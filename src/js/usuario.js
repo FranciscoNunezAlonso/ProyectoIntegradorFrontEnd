@@ -47,6 +47,10 @@ btnEnviar.addEventListener('click', (e) => {
         });
         email.value = "";
         contrasena.value = "";
+        
+        setTimeout(()=>{
+            window.location.href ='../../index.html'
+        },800)
     } else {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `Correo o contraseña no es válido</br>`);
         alertValidaciones.style.display = "block";
@@ -59,12 +63,12 @@ btnEnviar.addEventListener('click', (e) => {
 
   window.addEventListener("load", function (event) {
     event.preventDefault();
-    if (localStorage.getItem("elemento") != null) {
-        var elementos = JSON.parse(localStorage.getItem("elemento"));
+    if (localStorage.getItem("usuarios") != null) {
+        var usuarios = JSON.parse(localStorage.getItem("usuarios"));
         
-        elementos.forEach(elemento => {
-            currentMail = elemento.email;
-            currentPass = elemento.contrasena;
+        usuarios.forEach(usuarios => {
+            currentMail = usuarios.email;
+            currentPass = usuarios.contrasena;
         });
     }
 });
