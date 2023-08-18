@@ -64,22 +64,22 @@ VALUES ('Case con pulsera', 150.00,
 
 -- **************************************** USUARIO ****************************************
 
-INSERT INTO usuario (id, email, nombre, apellido, contraseña, confirmarContraseña) 
+INSERT INTO usuario (email, nombre, apellido, contraseña, confirmarContraseña) 
 VALUES ('tolumes.daniela@gmail.com', 'Daniela', 'Heredia', 'Pa$$w0rd', 'Pa$$w0rd');
 
-INSERT INTO usuario (id, email, nombre, apellido, contraseña, confirmarContraseña) 
+INSERT INTO usuario (email, nombre, apellido, contraseña, confirmarContraseña) 
 VALUES ('anacristina.cortezjardon@gmail.com', 'Ana', 'Cortez', 'Pa$$w0rd1', 'Pa$$w0rd1');
 
-INSERT INTO usuario (id, email, nombre, apellido, contraseña, confirmarContraseña) 
+INSERT INTO usuario (email, nombre, apellido, contraseña, confirmarContraseña) 
 VALUES ('chuko.2728@gmail.com', 'Angel', 'Rivera', 'Pa$$w0rd2', 'Pa$$w0rd2');
 
-INSERT INTO usuario (id, email, nombre, apellido, contraseña, confirmarContraseña) 
+INSERT INTO usuario (email, nombre, apellido, contraseña, confirmarContraseña) 
 VALUES ('francisco.nunez.alonso@outlook.com.mx', 'Francisco', 'Núñez', 'Pa$$w0rd3', 'Pa$$w0rd3');
 
-INSERT INTO usuario (id, email, nombre, apellido, contraseña, confirmarContraseña) 
+INSERT INTO usuario (email, nombre, apellido, contraseña, confirmarContraseña) 
 VALUES ('sotochavezjoseluis3@gmail.com', 'Luis', 'Soto', 'Pa$$w0rd4', 'Pa$$w0rd4');
 
-INSERT INTO usuario (id, email, nombre, apellido, contraseña, confirmarContraseña)
+INSERT INTO usuario (email, nombre, apellido, contraseña, confirmarContraseña)
 VALUES ('dominique.marinvic@gmail.com', 'Dominique', 'Marin', 'Pa$$w0rd5', 'Pa$$w0rd5');
 
 
@@ -99,3 +99,6 @@ VALUES (4, 12, (STR_TO_DATE("2023-08-10", "%Y-%m-%d")), 150.00);
 
 INSERT INTO ordendecompra (usuario_id, productos_id, fecha, total) 
 VALUES (5, 8, (STR_TO_DATE("2023-08-17", "%Y-%m-%d")), 180.00);
+
+INSERT INTO ordendecompra (usuario_id, productos_id, fecha, total) 
+VALUES (6, 1, (STR_TO_DATE("2023-08-12", "%Y-%m-%d")), 150.00);
