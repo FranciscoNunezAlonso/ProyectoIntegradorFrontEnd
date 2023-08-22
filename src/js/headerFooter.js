@@ -137,7 +137,7 @@ Estamos emocionados de compartir nuestra pasión por los recuerdos personalizado
                   <h5>SERVICIO AL CLIENTE</h5>
                 </li>
                 <li class="nav-item mb-2">
-                  <a href="mailto:atencionap@​yahoo.com? Subject=Necesito%20ayuda%20por%20favor" class="nav-link-underlined p-0 text-body-secondary">atencionap@​yahoo.com</a>
+                  <a href="mailto:atencionap@yahoo.com? Subject=Necesito%20ayuda%20por%20favor" class="nav-link-underlined p-0 text-body-secondary">atencionap@yahoo.com</a>
                 </li>
                 <li class="nav-item mb-2">
                   <a class="nav-link p-0 text-body-secondary">554 327 2378</a>
@@ -206,9 +206,9 @@ window.addEventListener("load", function (event) {
   let modalUsuario = "";
 
   if (localStorage.getItem("usuarios_registro") != null) {
-    imgUsuario = ` <img src="./src/img/icons/huella-2.png" alt="icono" class="nabImg">`
+    imgUsuario = ` <img src="/src/img/icons/huella-2.png" alt="icono" class="nabImg">`
     modalUsuario = `<li><a class="dropdown-item" href="/src/html/perfil.html"><button id="registrate">Perfil</button></a></li>
-    <li><a class="dropdown-item" href="/index.html"><button id="inicia-sesion">Cerrar Sesión</button></a></li>`
+    <li><a class="dropdown-item" href="/index.html"><button id="cerrar-sesion">Cerrar Sesión</button></a></li>`
 
   } else {
     imgUsuario = ` <img src="/src/img/icons/usuario-de-perfil-2.png" alt="icono" class="nabImg"> `
@@ -285,5 +285,33 @@ ${imgUsuario}
       </div>
     </div>
   </nav>`); // Acción de insertar Header.
+  let cerrar_sesion = document.getElementById('cerrar-sesion');
+
+cerrar_sesion.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  function logout() {
+    localStorage.removeItem('usuarios_registro');
+    console.log("Logged out");
+   
+  }
+  logout();
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Sesion cerrada correctamente',
+    showConfirmButton: false,
+    timer: 1500
+});
+
+
+  setTimeout(() => {
+    window.location.href = '../../index.html';
+  }, 800);
+});
 
 }); 
+
+
+
+
