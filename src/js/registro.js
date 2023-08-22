@@ -2,7 +2,6 @@
 let email = document.getElementById("email");
 let nombre = document.getElementById("nombre");
 let apellido = document.getElementById("apellido");
-let nombreUsuario = document.getElementById("nombreUsuario");
 let contrasena = document.getElementById("contrasena");
 let confirmarContrasena = document.getElementById("confirmarContrasena");
 
@@ -15,7 +14,6 @@ let btnClear = document.getElementById("btnClear");
 let flagEmail = false;
 let flagNombre = false;
 let flagApellido = false;
-let flagNombreUsuario = false;
 let flagContrasena = false;
 let flagConfirmarContrasena = false;
 
@@ -26,8 +24,6 @@ let alertValidacionesTextoNombre = document.getElementById("alertValidacionesTex
 let alertValidacionesNombre = document.getElementById("alertValidacionesNombre");
 let alertValidacionesTextoApellido = document.getElementById("alertValidacionesTextoApellido");
 let alertValidacionesApellido = document.getElementById("alertValidacionesApellido");
-let alertValidacionesTextoUsuario = document.getElementById("alertValidacionesTextoUsuario");
-let alertValidacionesUsuario = document.getElementById("alertValidacionesUsuario");
 let alertValidacionesTextoContraseña = document.getElementById("alertValidacionesTextoContraseña");
 let alertValidacionesContraseña = document.getElementById("alertValidacionesContraseña");
 let alertValidacionesTextoConfContra = document.getElementById("alertValidacionesTextoConfContra");
@@ -43,21 +39,18 @@ btnClear.addEventListener("click", function (event) {
     alertValidacionesEmail.style.display = "none";
     alertValidacionesNombre.style.display = "none";
     alertValidacionesApellido.style.display = "none";
-    alertValidacionesUsuario.style.display = "none";
     alertValidacionesContraseña.style.display = "none";
     alertValidacionesConfContra.style.display = "none";
 
     email.style.border = "";
     nombre.style.border = "";
     apellido.style.border = "";
-    nombreUsuario.style.border = "";
     contrasena.style.border = "";
     confirmarContrasena.style.border = "";
 
     email.value = "";
     nombre.value = "";
     apellido.value = "";
-    nombreUsuario.value = "";
     contrasena.value = "";
     confirmarContrasena.value = "";
 
@@ -73,28 +66,24 @@ btnEnviar.addEventListener('click', (e) => {
     alertValidacionesTextoEmail.innerHTML = "";
     alertValidacionesTextoNombre.innerHTML = "";
     alertValidacionesTextoApellido.innerHTML = "";
-    alertValidacionesTextoUsuario.innerHTML = "";
     alertValidacionesTextoContraseña.innerHTML = "";
     alertValidacionesTextoConfContra.innerHTML = "";
 
     alertValidacionesEmail.style.display = "none";
     alertValidacionesNombre.style.display = "none";
     alertValidacionesApellido.style.display = "none";
-    alertValidacionesUsuario.style.display = "none";
     alertValidacionesContraseña.style.display = "none";
     alertValidacionesConfContra.style.display = "none";
 
     email.style.border = "";
     nombre.style.border = "";
     apellido.style.border = "";
-    nombreUsuario.style.border = "";
     contrasena.style.border = "";
     confirmarContrasena.style.border = "";
 
     email.value = email.value.trim();
     nombre.value = nombre.value.trim();
     apellido.value = apellido.value.trim();
-    nombreUsuario.value = nombreUsuario.value.trim();
     contrasena.value = contrasena.value.trim();
     confirmarContrasena.value = confirmarContrasena.value.trim();
 
@@ -125,15 +114,6 @@ btnEnviar.addEventListener('click', (e) => {
         flagApellido = true;
     }
 
-    if (!nombreUsuario.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) || (nombreUsuario.value.length < 4)) {
-        alertValidacionesTextoUsuario.insertAdjacentHTML("beforeend", `El <strong> nombre de usuario </strong> no es válido</br>`);
-        alertValidacionesUsuario.style.display = "block";
-        nombreUsuario.style.border = "solid 2px #B4016C";
-        flagNombreUsuario = false;
-    } else {
-        flagNombreUsuario = true;
-    }
-
     if (!contrasena.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)) {
         alertValidacionesTextoContraseña.insertAdjacentHTML("beforeend", `La <strong> contraseña </strong> debe contener al menos una letra mayúscula, una minúscula, un número y un mínimo de 8 caracteres.</br>`);
         alertValidacionesContraseña.style.display = "block";
@@ -143,7 +123,7 @@ btnEnviar.addEventListener('click', (e) => {
     } else {
         flagContrasena = true;
         if (!confirmarContrasena.value.match(contrasena.value)) {
-            alertValidacionesTextoConfContra.insertAdjacentHTML("beforeend", `<strong>Correo</strong> o <strong>contraseña</strong> no es válido</br>`);
+            alertValidacionesTextoConfContra.insertAdjacentHTML("beforeend", `Las <strong>contraseñas </strong>deben de coincidir</br>`);
             alertValidacionesConfContra.style.display = "block";
             confirmarContrasena.style.border = "solid 2px #B4016C";
             flagConfirmarContrasena = false;
@@ -157,7 +137,6 @@ btnEnviar.addEventListener('click', (e) => {
             "email": email.value.trim(),
             "nombre": nombre.value.trim(),
             "apellido": apellido.value.trim(),
-            "usuario": nombreUsuario.value.trim(),
             "contrasena": contrasena.value.trim(),
             "confirmarContrasena": confirmarContrasena.value.trim()
         };
@@ -176,7 +155,6 @@ btnEnviar.addEventListener('click', (e) => {
         email.value = "";
         nombre.value = "";
         apellido.value = "";
-        nombreUsuario.value = "";
         contrasena.value = "";
         confirmarContrasena.value = "";
 
