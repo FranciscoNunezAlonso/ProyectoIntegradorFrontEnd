@@ -9,6 +9,8 @@ var currentPass;
 let btnEnviar = document.getElementById("btnEnviar");
 let btnClear = document.getElementById("btnClear");
 
+let arrayUsuarioRegistro = [];
+
 // ++++++++++++++++++++++++ EVENTO BUTTON CLEAR ++++++++++++++++++++++++
 btnClear.addEventListener("click", function (event) {
     event.preventDefault();
@@ -38,6 +40,14 @@ btnEnviar.addEventListener('click', (e) => {
     console.log(currentPass);
 
     if (currentMail == email.value && currentPass == contrasena.value) {
+        let usuarios_registro = {
+            "email": email.value.trim(),   
+            "contrasena": contrasena.value.trim(),
+        };
+
+        arrayUsuarioRegistro.push(usuarios_registro);
+        localStorage.setItem("usuarios_registro", JSON.stringify(arrayUsuarioRegistro));
+        console.log("Prueba exitosa");
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -45,6 +55,7 @@ btnEnviar.addEventListener('click', (e) => {
             showConfirmButton: false,
             timer: 1500
         });
+
         email.value = "";
         contrasena.value = "";
 

@@ -32,6 +32,11 @@ margin-left: 2rem;
     margin-right: 1em;
 }
 
+.nabImg{
+    width: 40px;
+    height: 40px;
+}
+
 /* ****** INDEX ***** */
 .alert-index {
     background-color: #D16D79;

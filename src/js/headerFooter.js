@@ -3,85 +3,6 @@
 let navbar = document.getElementById("headerjs");
 let footer = document.getElementById("footerjs");
 
-
-//Acción de insertar Header ---------------------------------------------------
-navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
-    <div class="container" id="divNavBar">
-      <!-- Logo -->
-      <a class=" navbar navbar-brand" href="/index.html"><img src="/src/img/Imagotipo.png" alt="" width="100rem"></a>
-      <button class="navbar navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation" style="color: #D16D79">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse nav-justified" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- Hipervínculo Home -->
-
-          <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active" aria-current="page" href="/index.html"
-              style="color: #252F48; font-size: 20px;">Home</a>
-          </li>
-          <!-- Hipernvínculo Productos -->
-          <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active " aria-current="page" href="/src/html/productos.html"
-              style="color: #252F48; font-size: 20px;">Productos</a>
-          </li>
-          <!-- Hipervínculo Nosotros -->
-          <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active" aria-current="page" href="/src/html/nosotros.html"
-              style="color: #252F48; font-size: 20px;">Nosotros</a>
-          </li>
-          <!-- Hipervínculo Contacto -->
-          <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active" aria-current="page" href="/src/html/contacto.html"
-              style="color: #252F48; font-size: 20px;">Contacto</a>
-          </li>
-        </ul>
-
-        <ul class="navbar navbar-nav navbar-expand-lg  justify-content-end">
-
-          <!-- Barra Buscadora  -->
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"
-              style="color: #252F48;">
-          </form>
-          <!-- icono lupa -->
-          <li class="navbar nav-item navbar-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-search"
-              viewBox="0 0 16 16">
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-            </svg>
-          </li>
-
-          <!-- icono usuario -->
-          <li class="navbar nav-item navbar-icon">
-          <a href="/src/html/usuario.html" class="navbar nav-link active">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-person-circle"
-                viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                <path fill-rule="evenodd"
-                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-              </svg>
-            </a>
-          </li>
-          <!-- icono carrito -->
-          <li class="navbar nav-item navbar-icon">
-            <a href="/src/html/carrito.html" class="navbar nav-link active">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-cart4 "
-                viewBox="0 0 16 16">
-                <path
-                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </nav>`); // Acción de insertar Header.
-
 //Acción insertar Footer ----------------------------------------------------------------------------
 footer.insertAdjacentHTML("afterEnd", `
   <!-- Modales--> 
@@ -277,3 +198,87 @@ Estamos emocionados de compartir nuestra pasión por los recuerdos personalizado
     </div>
   </footer>
 </div>`);//Acción insertar Footer.
+
+window.addEventListener("load", function (event) {
+  event.preventDefault();
+
+  let imgUsuario = "";
+
+  if (localStorage.getItem("usuarios_registro") != null) {
+    imgUsuario = ` <img src="./src/img/icons/huella-2.png" alt="icono" class="nabImg">`
+  } else {
+    imgUsuario = ` <img src="/src/img/icons/usuario-de-perfil-2.png" alt="icono" class="nabImg"> `
+  }
+
+  let iconoPerfil = `<li class="nav-item dropdown dropstart">
+<a class="nav-link " role="button" data-bs-toggle="dropdown" aria-expanded="false">
+${imgUsuario}
+</a>
+<ul class="dropdown-menu dropdown-menu-start">
+  <li><a class="dropdown-item" href="/src/html/registro.html"><button id="registrate">Regístrate</button></a></li>
+  <li><a class="dropdown-item" href="/src/html/usuario.html"><button id="inicia-sesion">Inicia Sesión</button></a></li>
+</ul> </li>`;
+
+  //Acción de insertar Header ---------------------------------------------------
+  navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
+    <div class="container" id="divNavBar">
+      <!-- Logo -->
+      <a class=" navbar navbar-brand" href="/index.html"><img src="/src/img/Imagotipo.png" alt="" width="100rem"></a>
+      <button class="navbar navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation" style="color: #D16D79">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-justified" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Hipervínculo Home -->
+
+          <li class="nav-item navbar-margin-l rounded">
+            <a class="nav-link active" aria-current="page" href="/index.html"
+              style="color: #252F48; font-size: 20px;">Home</a>
+          </li>
+          <!-- Hipernvínculo Productos -->
+          <li class="nav-item navbar-margin-l rounded">
+            <a class="nav-link active " aria-current="page" href="/src/html/productos.html"
+              style="color: #252F48; font-size: 20px;">Productos</a>
+          </li>
+          <!-- Hipervínculo Nosotros -->
+          <li class="nav-item navbar-margin-l rounded">
+            <a class="nav-link active" aria-current="page" href="/src/html/nosotros.html"
+              style="color: #252F48; font-size: 20px;">Nosotros</a>
+          </li>
+          <!-- Hipervínculo Contacto -->
+          <li class="nav-item navbar-margin-l rounded">
+            <a class="nav-link active" aria-current="page" href="/src/html/contacto.html"
+              style="color: #252F48; font-size: 20px;">Contacto</a>
+          </li>
+        </ul>
+
+        <ul class="navbar navbar-nav navbar-expand-lg  justify-content-end">
+
+          <!-- icono usuario -->
+          <li class="navbar nav-item navbar-icon">
+
+          <a href="/src/html/usuario.html" class="navbar nav-link active">
+        
+            </a>
+          </li>
+          
+          ${iconoPerfil}
+          <!-- icono carrito -->
+          <li class="navbar nav-item navbar-icon">
+            <a href="/src/html/carrito.html" class="navbar nav-link active">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-cart4 "
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>`); // Acción de insertar Header.
+
+}); 
