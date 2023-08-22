@@ -122,7 +122,7 @@ btnEnviar.addEventListener('click', (e) => {
         flagContrasena = false;
     } else {
         flagContrasena = true;
-        if (!confirmarContrasena.value == contrasena.value) {
+        if (confirmarContrasena.value !== contrasena.value) {
             alertValidacionesTextoConfContra.insertAdjacentHTML("beforeend", `Las <strong>contraseñas </strong>deben de coincidir</br>`);
             alertValidacionesConfContra.style.display = "block";
             confirmarContrasena.style.border = "solid 2px #B4016C";

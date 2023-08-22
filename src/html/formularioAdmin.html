@@ -41,7 +41,7 @@
             <div class="mb-3">
               <!-- title -->
               <label for="title" class="form-label"></label>
-              <input type="text" name="title" class="form-control" id="title" placeholder="Nombre" required>
+              <input type="text" name="title" class="form-control" id="title" placeholder="Nombre (no se permiten números)" required>
               <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
                 id="alertValidacionesNombre">
                 <p id="alertValidacionesTextoNombre"></p>
@@ -60,7 +60,7 @@
               <!-- descripción -->
               <label for="descripcion" class="form-label"></label>
               <textarea class="form-control" name="descripcion" id="description" rows="3"
-                placeholder="Descripción del producto" required></textarea>
+                placeholder="Descripción del producto (escribe al menos 20 caracteres y máximo 180)" required></textarea>
               <div class="alert alert-danger fade show alertModificado" style="display:none;" role="alert"
                 id="alertValidacionesDescripcion">
                 <p id="alertValidacionesTextoDescripcion"></p>

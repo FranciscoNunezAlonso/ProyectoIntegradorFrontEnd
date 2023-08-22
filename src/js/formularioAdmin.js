@@ -64,7 +64,7 @@ btnEnviar.addEventListener('click', (e) => {
     alertValidacionesPrice.style.display = "none";
     alertValidacionesTextoDescripcion.innerHTML = "";
     alertValidacionesDescripcion.style.display = "none";
-    alertValidacionesTextoDescripcion.innerHTML = "";
+    alertValidacionesTextoImg.innerHTML = "";
     alertValidacionesImg.style.display = "none";
 
     title.style.border = "";
@@ -93,7 +93,17 @@ btnEnviar.addEventListener('click', (e) => {
         flagPrice = true;
     }
 
-    if (description.value.length < 5) {
+/*     if (description.value.length < 5) {
+        alertValidacionesTextoDescripcion.insertAdjacentHTML("beforeend", `La <strong> descripción </strong> no es válida</br>`);
+        alertValidacionesDescripcion.style.display = "block";
+        description.style.border = "solid 2px #B4016C";
+        flagDescription = false;
+    } else {
+        flagDescription = true;
+    } */
+
+
+    if (!description.value.match(/^(?=(.*[a-zA-Z]){1})(?!.*\d{11}).{20,}$/) || (description.value.length < 20)) {
         alertValidacionesTextoDescripcion.insertAdjacentHTML("beforeend", `La <strong> descripción </strong> no es válida</br>`);
         alertValidacionesDescripcion.style.display = "block";
         description.style.border = "solid 2px #B4016C";
@@ -101,10 +111,12 @@ btnEnviar.addEventListener('click', (e) => {
     } else {
         flagDescription = true;
     }
+    
+
 
     if (!flagProduct_img) {
         flagProduct_img = false;
-        alertValidacionesTextoImg.insertAdjacentHTML("beforeend", `Por favor, seleccione dos imágenes</br>`);
+        alertValidacionesTextoImg.insertAdjacentHTML("beforeend", `Por favor selecciona <strong>2</strong> imágenes</br>`);
         alertValidacionesImg.style.display = "block";
     } else {
         flagProduct_img = true;
