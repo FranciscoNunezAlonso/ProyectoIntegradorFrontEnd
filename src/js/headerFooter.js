@@ -203,11 +203,17 @@ window.addEventListener("load", function (event) {
   event.preventDefault();
 
   let imgUsuario = "";
+  let modalUsuario = "";
 
   if (localStorage.getItem("usuarios_registro") != null) {
     imgUsuario = ` <img src="./src/img/icons/huella-2.png" alt="icono" class="nabImg">`
+    modalUsuario = `<li><a class="dropdown-item" href="/src/html/perfil.html"><button id="registrate">Perfil</button></a></li>
+    <li><a class="dropdown-item" href="/index.html"><button id="inicia-sesion">Cerrar Sesión</button></a></li>`
+
   } else {
     imgUsuario = ` <img src="/src/img/icons/usuario-de-perfil-2.png" alt="icono" class="nabImg"> `
+    modalUsuario = `<li><a class="dropdown-item" href="/src/html/registro.html"><button id="registrate">Regístrate</button></a></li>
+    <li><a class="dropdown-item" href="/src/html/usuario.html"><button id="inicia-sesion">Inicia Sesión</button></a></li>`
   }
 
   let iconoPerfil = `<li class="nav-item dropdown dropstart">
@@ -215,8 +221,7 @@ window.addEventListener("load", function (event) {
 ${imgUsuario}
 </a>
 <ul class="dropdown-menu dropdown-menu-start">
-  <li><a class="dropdown-item" href="/src/html/registro.html"><button id="registrate">Regístrate</button></a></li>
-  <li><a class="dropdown-item" href="/src/html/usuario.html"><button id="inicia-sesion">Inicia Sesión</button></a></li>
+  ${modalUsuario}
 </ul> </li>`;
 
   //Acción de insertar Header ---------------------------------------------------
