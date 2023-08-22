@@ -114,7 +114,7 @@ btnEnviar.addEventListener('click', (e) => {
         flagApellido = true;
     }
 
-    if (!contrasena.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)) {
+    if (!contrasena.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-@_$!%*?&])[A-Za-z\d-@_$!%*?&]{8,15}$/)) {
         alertValidacionesTextoContraseña.insertAdjacentHTML("beforeend", `La <strong> contraseña </strong> debe contener al menos una letra mayúscula, una minúscula, un número y un mínimo de 8 caracteres.</br>`);
         alertValidacionesContraseña.style.display = "block";
         contrasena.style.border = "solid 2px #B4016C";
@@ -122,7 +122,7 @@ btnEnviar.addEventListener('click', (e) => {
         flagContrasena = false;
     } else {
         flagContrasena = true;
-        if (!confirmarContrasena.value.match(contrasena.value)) {
+        if (!confirmarContrasena.value == contrasena.value) {
             alertValidacionesTextoConfContra.insertAdjacentHTML("beforeend", `Las <strong>contraseñas </strong>deben de coincidir</br>`);
             alertValidacionesConfContra.style.display = "block";
             confirmarContrasena.style.border = "solid 2px #B4016C";
