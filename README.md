@@ -36,13 +36,11 @@ Esta estructura proporciona una navegación clara y coherente para los usuarios,
 ---
 ### Integrantes:
 
-- Ana Cristina Cortez Jardón (https://github.com/AnaCristinaCortezJardon) 
-- Angel Enrique Rivera Cardenas (https://github.com/ballang27) 
+- Ana Cristina Cortez Jardón (https://github.com/AnaCristinaCortezJardon)  
 - Daniela Heredia Tolumes (https://github.com/DanHT22)
 - Dominique Marin Vicente (https://github.com/DominiqueMv)
 - Francisco Núñez Alonso (https://github.com/FranciscoNunezAlonso)
 - Jose Luis Soto Chávez (https://github.com/joseLuisppp90)
-- María Fernanda Quezada Vásquez (https://github.com/FerQV)
 
 --------------------------------------------------------------------------------
 
