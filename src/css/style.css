@@ -251,18 +251,6 @@ margin: 1rem;
     border-radius: 25px;
 }
 
-
-.hidden-image {
-    display: none;
-}
-
-.image-container:hover .main-image {
-    display: none;
-}
-
-.image-container:hover .hidden-image {
-    display: block;
-}
 .icon-nosotros-git{
     width: 4rem;
     margin-right: 2rem;
