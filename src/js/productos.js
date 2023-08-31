@@ -174,7 +174,7 @@ addItem({
   "price": 105,
   "description": "Abraza los recuerdos. Personaliza una suave almohada con la fotografía de tu mascota impresa, para sentir su amor en cada abrazo. ",
   "category": "Fotografías",
-  "img": "/src/img/imgProductos/producto_10A.png", "imgOnMouseover": "../img/imgProductos/producto_10B.png", "imgontouchstart": "../img/imgProductos/producto_10B.png",
+  "img": "../src/img/imgProductos/producto_10A.png", "imgOnMouseover": "../img/imgProductos/producto_10B.png", "imgontouchstart": "../img/imgProductos/producto_10B.png",
   "rating": {
     "rate": 4.8,
     "count": 90
