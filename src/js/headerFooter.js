@@ -208,7 +208,7 @@ window.addEventListener("load", function (event) {
   if (localStorage.getItem("usuarios_registro") != null) {
     imgUsuario = ` <img src="../img/icons/huella-2.png" alt="icono" class="nabImg">`
     modalUsuario = `<li><a class="dropdown-item" href="../html/perfil.html"><button id="registrate">Perfil</button></a></li>
-    <li><a class="dropdown-item" href="/index.html"><button id="cerrar-sesion">Cerrar Sesión</button></a></li>`
+    <li><a class="dropdown-item" href="../../index.html"><button id="cerrar-sesion">Cerrar Sesión</button></a></li>`
 
   } else {
     imgUsuario = ` <img src="../img/icons/usuario-de-perfil-2.png" alt="icono" class="nabImg"> `
@@ -228,7 +228,7 @@ ${imgUsuario}
   navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
     <div class="container" id="divNavBar">
       <!-- Logo -->
-      <a class=" navbar navbar-brand" href="/index.html"><img src="../img/Imagotipo.png" alt="" width="100rem"></a>
+      <a class=" navbar navbar-brand" href="../../index.html"><img src="../img/Imagotipo.png" alt="" width="100rem"></a>
       <button class="navbar navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation" style="color: #D16D79">
@@ -239,7 +239,7 @@ ${imgUsuario}
           <!-- Hipervínculo Home -->
 
           <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active" aria-current="page" href="/index.html"
+            <a class="nav-link active" aria-current="page" href="../../index.html"
               style="color: #252F48; font-size: 20px;">Home</a>
           </li>
           <!-- Hipernvínculo Productos -->
