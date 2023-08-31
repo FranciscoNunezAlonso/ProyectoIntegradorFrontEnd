@@ -1,7 +1,7 @@
 // ******** Header y Footer ****************
 
-let navbar = document.getElementById("headerjs");
-let footer = document.getElementById("footerjs");
+let navbar = document.getElementById("headerMainjs");
+let footer = document.getElementById("footerMainjs");
 
 //Acción insertar Footer ----------------------------------------------------------------------------
 footer.insertAdjacentHTML("afterEnd", `
@@ -124,7 +124,7 @@ Estamos emocionados de compartir nuestra pasión por los recuerdos personalizado
 
 <!-- Cuerpo del footer-->
 <div class="container d-flex justify-content-around">
-  <img src="../img/Perrito.png" alt="perritoMirador" class="img-fluid">
+  <img src="./src/img/Perrito.png" alt="perritoMirador" class="img-fluid">
 </div>
 <div>
   <footer class="py-5 footer-bg">
@@ -194,7 +194,7 @@ Estamos emocionados de compartir nuestra pasión por los recuerdos personalizado
                         </div>
                     </div>
                     <div class="flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                    <p class="text-center">&copy; 2023 Team 1, Generation México | <a href="../html/formularioAdmin.html" class="link_ch29">CH29</a></p>
+                    <p class="text-center">&copy; 2023 Team 1, Generation México | <a href="./src/html/formularioAdmin.html" class="link_ch29">CH29</a></p>
     </div>
   </footer>
 </div>`);//Acción insertar Footer.
@@ -206,14 +206,14 @@ window.addEventListener("load", function (event) {
   let modalUsuario = "";
 
   if (localStorage.getItem("usuarios_registro") != null) {
-    imgUsuario = ` <img src="../img/icons/huella-2.png" alt="icono" class="nabImg">`
-    modalUsuario = `<li><a class="dropdown-item" href="../html/perfil.html"><button id="registrate">Perfil</button></a></li>
-    <li><a class="dropdown-item" href="/index.html"><button id="cerrar-sesion">Cerrar Sesión</button></a></li>`
+    imgUsuario = ` <img src="./src/img/icons/huella-2.png" alt="icono" class="nabImg">`
+    modalUsuario = `<li><a class="dropdown-item" href="./src/html/perfil.html"><button id="registrate">Perfil</button></a></li>
+    <li><a class="dropdown-item" href="./index.html"><button id="cerrar-sesion">Cerrar Sesión</button></a></li>`
 
   } else {
-    imgUsuario = ` <img src="../img/icons/usuario-de-perfil-2.png" alt="icono" class="nabImg"> `
-    modalUsuario = `<li><a class="dropdown-item" href="../html/registro.html"><button id="registrate">Regístrate</button></a></li>
-    <li><a class="dropdown-item" href="../html/usuario.html"><button id="inicia-sesion">Inicia Sesión</button></a></li>`
+    imgUsuario = ` <img src="./src/img/icons/usuario-de-perfil-2.png" alt="icono" class="nabImg"> `
+    modalUsuario = `<li><a class="dropdown-item" href="./src/html/registro.html"><button id="registrate">Regístrate</button></a></li>
+    <li><a class="dropdown-item" href="./src/html/usuario.html"><button id="inicia-sesion">Inicia Sesión</button></a></li>`
   }
 
   let iconoPerfil = `<li class="nav-item dropdown dropstart">
@@ -228,7 +228,7 @@ ${imgUsuario}
   navbar.insertAdjacentHTML("afterBegin", `<nav class="navbar navbar-expand-lg">
     <div class="container" id="divNavBar">
       <!-- Logo -->
-      <a class=" navbar navbar-brand" href="/index.html"><img src="../img/Imagotipo.png" alt="" width="100rem"></a>
+      <a class=" navbar navbar-brand" href="./index.html"><img src="./src/img/Imagotipo.png" alt="" width="100rem"></a>
       <button class="navbar navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation" style="color: #D16D79">
@@ -239,22 +239,22 @@ ${imgUsuario}
           <!-- Hipervínculo Home -->
 
           <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active" aria-current="page" href="/index.html"
+            <a class="nav-link active" aria-current="page" href="./index.html"
               style="color: #252F48; font-size: 20px;">Home</a>
           </li>
           <!-- Hipernvínculo Productos -->
           <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active " aria-current="page" href="../html/productos.html"
+            <a class="nav-link active " aria-current="page" href="./src/html/productos.html"
               style="color: #252F48; font-size: 20px;">Productos</a>
           </li>
           <!-- Hipervínculo Nosotros -->
           <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active" aria-current="page" href="../html/nosotros.html"
+            <a class="nav-link active" aria-current="page" href="./src/html/nosotros.html"
               style="color: #252F48; font-size: 20px;">Nosotros</a>
           </li>
           <!-- Hipervínculo Contacto -->
           <li class="nav-item navbar-margin-l rounded">
-            <a class="nav-link active" aria-current="page" href="../html/contacto.html"
+            <a class="nav-link active" aria-current="page" href="./src/html/contacto.html"
               style="color: #252F48; font-size: 20px;">Contacto</a>
           </li>
         </ul>
@@ -264,7 +264,7 @@ ${imgUsuario}
           <!-- icono usuario -->
           <li class="navbar nav-item navbar-icon">
 
-          <a href="../html/usuario.html" class="navbar nav-link active">
+          <a href="./src/html/usuario.html" class="navbar nav-link active">
         
             </a>
           </li>
@@ -272,7 +272,7 @@ ${imgUsuario}
           ${iconoPerfil}
           <!-- icono carrito -->
           <li class="navbar nav-item navbar-icon">
-            <a href="../html/carrito.html" class="navbar nav-link active">
+            <a href="./src/html/carrito.html" class="navbar nav-link active">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-cart4 "
                 viewBox="0 0 16 16">
                 <path
@@ -306,12 +306,8 @@ cerrar_sesion.addEventListener('click', function (e) {
 
 
   setTimeout(() => {
-    window.location.href = '../../index.html';
+    window.location.href = './index.html';
   }, 800);
 });
 
 }); 
-
-
-
-
