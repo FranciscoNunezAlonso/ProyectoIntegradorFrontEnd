@@ -75,7 +75,7 @@ btnEnviar.addEventListener('click', (e) => {
     price.value = price.value.trim();
     description.value = description.value.trim();
 
-    if (!title.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) || (title.value.length < 4)) {
+    if (!title.value.match(/^[a-zA-Z0-9áÁéÉíÍóÓúÚñÑüÜ\s.,!?¿¡()-]*$/) || (title.value.length < 4)) {
         alertValidacionesTextoNombre.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
         alertValidacionesNombre.style.display = "block";
         title.style.border = "solid 2px #B4016C";
@@ -92,15 +92,6 @@ btnEnviar.addEventListener('click', (e) => {
     } else {
         flagPrice = true;
     }
-
-/*     if (description.value.length < 5) {
-        alertValidacionesTextoDescripcion.insertAdjacentHTML("beforeend", `La <strong> descripción </strong> no es válida</br>`);
-        alertValidacionesDescripcion.style.display = "block";
-        description.style.border = "solid 2px #B4016C";
-        flagDescription = false;
-    } else {
-        flagDescription = true;
-    } */
 
 
     if (!description.value.match(/^(?=(.*[a-zA-Z]){1})(?!.*\d{11}).{20,}$/) || (description.value.length < 20)) {

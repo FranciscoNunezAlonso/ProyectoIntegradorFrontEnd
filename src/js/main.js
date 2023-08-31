@@ -66,12 +66,12 @@ const validarEmail = (email) => {
 };
 
 const validarNombre = (nombre) => {
-    const expresionRegular = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
+    const expresionRegular =/^(?!.*([a-zA-ZáÁéÉíÍóÓúÚñÑüÜ])\1{2})[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]*$/;
     return expresionRegular.test(nombre);
 };
 
 const validarApellido = (apellido) => {
-    const expresionRegular = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
+    const expresionRegular =/^(?!.*([a-zA-ZáÁéÉíÍóÓúÚñÑüÜ])\1{2})[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]*$/;
     return expresionRegular.test(apellido);
 };
 

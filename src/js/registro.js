@@ -96,7 +96,7 @@ btnEnviar.addEventListener('click', (e) => {
         flagEmail = true;
     }
 
-    if (!nombre.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) || (nombre.value.length < 3)) {
+    if (!nombre.value.match(/^(?!.*([a-zA-ZáÁéÉíÍóÓúÚñÑüÜ])\1{2})[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]*$/) || (nombre.value.length <3)) {
         alertValidacionesTextoNombre.insertAdjacentHTML("beforeend", `El <strong> nombre </strong> no es válido</br>`);
         alertValidacionesNombre.style.display = "block";
         nombre.style.border = "solid 2px #B4016C";
@@ -105,7 +105,7 @@ btnEnviar.addEventListener('click', (e) => {
         flagNombre = true;
     }
 
-    if (!apellido.value.match(/^([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/) || (apellido.value.length < 4)) {
+    if (!apellido.value.match(/^(?!.*([a-zA-ZáÁéÉíÍóÓúÚñÑüÜ])\1{2})[a-zA-ZáÁéÉíÍóÓúÚñÑüÜ\s]*$/) || (apellido.value.length <3)) {
         alertValidacionesTextoApellido.insertAdjacentHTML("beforeend", `El <strong> apellido </strong> no es válido</br>`);
         alertValidacionesApellido.style.display = "block";
         apellido.style.border = "solid 2px #B4016C";
