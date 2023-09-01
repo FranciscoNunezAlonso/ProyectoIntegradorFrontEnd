@@ -270,7 +270,7 @@ ${imgUsuario}
           </li>
           
           ${iconoPerfil}
-          <!-- icono carrito -->
+          <!-- icono carrito 
           <li class="navbar nav-item navbar-icon">
             <a href="./src/html/carrito.html" class="navbar nav-link active">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor" class="bi bi-cart4 "
@@ -280,6 +280,7 @@ ${imgUsuario}
               </svg>
             </a>
           </li>
+          -->
         </ul>
 
       </div>
