@@ -40,7 +40,7 @@ Esta estructura proporciona una navegación clara y coherente para los usuarios,
 - Daniela Heredia Tolumes (https://github.com/DanHT22)
 - Dominique Marin Vicente (https://github.com/DominiqueMv)
 - Francisco Núñez Alonso (https://github.com/FranciscoNunezAlonso)
-- Jose Luis Soto Chávez (https://github.com/joseLuisppp90)
+
 
 --------------------------------------------------------------------------------
 
